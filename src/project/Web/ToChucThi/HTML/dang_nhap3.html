@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/dang_nhap2.css">
+  <title>Giảng viên</title>
+</head>
+
+<body>
+  <div class="bai-tap-nhom">
+    <div class="hinh">
+      <div class="anh"></div>
+      <br>
+      <p><u>U</u>se your Username and</p>
+      <p>Password to access this website.</p>
+      <div class="anh-them"></div>
+    </div>
+
+    <div class="dang-nhap">
+      <div class="khung">
+        <div class="form">
+          <header>
+            <div><h4>LECTURER</h4></div>
+          </header>
+          <nav></nav>
+          <main>
+            <input type="text" placeholder="Username Lecturer" id="tk" onclick="TaiKhoan_Hien()">
+            <input type="password" placeholder="Password Lecturer" id="mk" onclick="MatKhau_Hien()">
+            <a href="giang_vien.html"><button>LOGIN</button></a>
+          </main>
+        </div>
+        <footer>
+          <a href="dang_nhap.html"><button><i>Chuyển giao diện</i></button></a>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function TaiKhoan_Hien() {
+      document.getElementById("tk").value = "Trần Thị Mai";
+    }
+
+    function MatKhau_Hien() {
+      document.getElementById("mk").value = "trần thị mai";
+    }
+  </script>
+</body>
+</html>

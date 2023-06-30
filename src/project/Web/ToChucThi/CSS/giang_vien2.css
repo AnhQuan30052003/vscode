@@ -1,0 +1,285 @@
+/* Khởi tạo */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Phần khung */
+.bai-tap-nhom {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/* Phàn header */
+header {
+  width: 100%;
+  height: 15vh;
+  padding-bottom: 10px;
+  color: white;
+  background-color: #08457c;
+}
+
+header > hr {
+  height: 4px;
+  background-color: white;
+}
+
+header > .tren {
+  width: 100%;
+  height: 50%;
+}
+
+.tren > .ma-truong {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  float: left;
+  padding-bottom: 2px;
+}
+
+.tren > .tuong-tac {
+  width: 75%;
+  height: 100%;
+  float: left;
+}
+
+.tuong-tac > .icon {
+  width: 65%;
+  height: 100%;
+  float: left;
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  align-items: end;
+}
+
+.tuong-tac > .dang-xuat {
+  width: 35%;
+  height: 100%;
+  float: left;
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  justify-content: end;
+  padding-right: 20px;
+}
+
+.dang-xuat > a {
+  color: yellow;
+  text-decoration: none;
+}
+
+header > a {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  transform: translate(-1%, -1%);
+  width: 100px;
+  height: 100px;
+}
+
+header > a > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+.duoi > .thong-tin {
+  width: 70%;
+  height: 100%;
+  padding-left: 8.2%;
+  float: left;
+}
+
+.duoi > .nguoi-truy-cap {
+  width: 30%;
+  height: 100%;
+  float: left;
+  margin-top: 10px;
+  margin-left: -10px;
+  font-size: 25px;
+}
+
+.thong-tin > h2 {
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.thong-tin > h1 {
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.thong-tin > h2 {
+  font-size: 15px;
+}
+
+/* Điều hướng */
+.dieu-huong {
+  width: 100%;
+  height: 4vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.dieu-huong > a {
+  text-decoration: none;
+  color: black;
+}
+
+.dieu-huong > a:hover {
+  color: blue;
+}
+
+/* nav */
+
+nav {
+  width: 100%;
+  height: 3vh;
+  background-color: #5B6CFF;
+}
+
+/* main */
+main {
+  width: 100%;
+  height: 78vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+table {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+thead {
+  height: 5vh;
+}
+
+thead > tr {
+  background-color: #456EFF;
+  color: white;
+}
+
+tbody > tr {
+  height: 4vh;
+}
+
+tbody > tr:nth-child(even) {
+  background-color: #D9D9D9;
+}
+
+tbody > tr:hover {
+  background-color: #9b9ea0;
+}
+
+tbody > tr > td > a {
+  color: black;
+  text-decoration: none;
+}
+
+.tb_ct {
+  color: blue;
+}
+.lvt{
+  cursor: pointer;
+}
+
+.canh-trai {
+  text-align: left;
+  padding-left: 19px;
+}
+.chuong {
+  position: absolute;
+  top: 1%;
+  right: 5%;
+  animation: quay 0.3s ease infinite alternate;
+}
+
+.chuong > img {
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes quay {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+#thong-bao {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 1px;
+  width: 50%;
+  height: 70%;
+  background-color: #fff;
+  border-radius: 10px;
+  display: none;
+}
+
+#thong-bao > .dau {
+  width: 100%;
+  height: 20%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#thong-bao > .giua {
+  width: 100%;
+  height: 70%;
+  padding: 10px;
+}
+
+.khung-noi-dung {
+  width: 99%;
+  border: solid 10px #5B6CFF;
+  height: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#thong-bao > .cuoi {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: end;
+  padding: 0 10px 3px 0;
+}
+
+#thong-bao > div > h3 {
+  margin-left: 1.5%;
+}
+
+.cuoi > button {
+  width: 100px;
+  height: 90%;
+  border-radius: 5px;
+  background-color: #5B6CFF;
+  border: none;
+  cursor: pointer;
+}
+
+.cuoi > button:hover {
+  color: white;
+  background-color: red;
+}

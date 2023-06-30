@@ -1,0 +1,215 @@
+﻿\\laptop\\1.jpg
+Laptop Acer Aspire 7 Gaming A715 42G R4XX R5
+CPU: Ryzen 55500U 2.1GHz
+RAM: 8 GB DDR4 2 khe 3200 MHz
+Ổ cứng: 256 GB SSD NVMe PCIe 
+Màn hình: 15.6"Full HD
+Card màn hình: Card rời GTX 1650 4GB
+Hệ điều hành: Windows 11 Home SL
+Thiết kế: Vỏ nhựa
+Thời điểm ra mắt: 2021
+15990000
+
+\\laptop\\2.jpg
+Laptop Acer Aspire 7 Gaming A715 42G R05G R5
+CPU: Ryzen 55500U 2.1GHz
+RAM: 8 GB DDR4 2 khe (1 khe 8 GB + 1 khe rời)3200 MHz
+Ổ cứng: 512 GB SSD NVMe PCIe
+Màn hình: 15.6"Full HD (1920 x 1080) 144Hz
+Card màn hình: Card rờiGTX 1650 4GB
+Hệ điều hành: Windows 11 Home SL
+Thiết kế: Vỏ nhựa
+Thời điểm ra mắt: 2021
+18700000
+
+\\laptop\\3.jpg
+Laptop Asus Gaming ROG Flow Z13
+CPU: i7 12700H 2.30 GHz
+RAM: 16 GB LPDDR5 (8 GB Onboard + 8 GB Onboard)5200 MHz
+Ổ cứng: 512 GB SSD NVMe PCIe
+Màn hình: 13.4"WUXGA (1920 x 1200)120Hz
+Card màn hình: Card rờiRTX 3050 4GB
+Hệ điều hành: Windows 11 Home SL
+Thiết kế: Vỏ nhựa - nắp lưng bằng kim loại
+Thời điểm ra mắt: 2022
+52990000
+
+\\laptop\\4.jpg
+Laptop Asus ROG Strix Gaming G513IH R7
+CPU: Ryzen 74800H 2.9GHz
+RAM: 8 GB DDR4 2 khe (1 khe 8 GB + 1 khe rời)3200 MHz
+Ổ cứng: 512 GB SSD NVMe PCIePCIe mở rộng (nâng cấp tối đa 1 TB)
+Màn hình: 15.6"Full HD (1920 x 1080) 144Hz
+Card màn hình: Card rờiGTX 1650 4GB
+Hệ điều hành: Windows 11 Home SL
+Thiết kế: Vỏ nhựa - nắp lưng bằng kim loại
+Thời điểm ra mắt: 2021
+22900000
+
+\\laptop\\5.jpg
+Laptop Asus TUF Gaming FX506LHB i5
+CPU: i5 10300H 2.5GHz
+RAM: 8 GB DDR4 2 khe (1 khe 8 GB + 1 khe rời)2933 MHz
+Ổ cứng: 512 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 1 TB)
+Màn hình: 15.6"Full HD (1920 x 1080) 144Hz
+Card màn hình: Card rờiGTX 1650 4GB
+Hệ điều hành: Windows 11 Home SL
+Thiết kế: Vỏ nhựa
+Thời điểm ra mắt: 2021
+17890000
+
+\\laptop\\6.jpg
+Laptop Asus TUF Gaming FX517ZC i5
+CPU: i5 12450H 2GHz
+RAM: 8 GB DDR5 2 khe (1 khe 8 GB + 1 khe trống)4800 MHz
+Ổ cứng: 512 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 1 TB)Hỗ trợ thêm 1 khe cắm SSD M.2 PCIe mở rộng (nâng cấp tối đa 1 TB)
+Màn hình: 15.6"Full HD (1920 x 1080) 144Hz
+Card màn hình: Card rờiRTX 3050 4GB
+Hệ điều hành: Windows 11 Home SL
+Thiết kế: Vỏ nhựa
+Thời điểm ra mắt: 2022
+28990000
+
+\\laptop\\7.jpg
+Laptop Dell Gaming Alienware m15 R6 i7
+CPU: i7 11800H 2.30 GHz
+RAM: 32 GB DDR4 2 khe (1 khe 16 GB + 1 khe 16 GB)3200 MHz
+Ổ cứng: 1 TB SSD M.2 PCIe
+Màn hình:15.6"QHD (2560 x 1440)240Hz
+Card màn hình: Card rờiRTX 3070 8GB
+Hệ điều hành: Windows 11 Home SL + Office Home & Student vĩnh viễn
+Thiết kế: Vỏ nhựa
+Thời điểm ra mắt:2021
+58990000
+
+\\laptop\\8.jpg
+Laptop HP VICTUS 16 d0292TX i5
+CPU: i5 11400H 2.7GHz
+RAM: 8 GB DDR4 2 khe (1 khe 4 GB + 1 khe 4 GB)3200 MHz
+Ổ cứng: 512 GB SSD NVMe PCIe
+Màn hình: 16.1"Full HD (1920 x 1080) 144Hz
+Card màn hình: Card rờiRTX 3050Ti 4GB
+Hệ điều hành: Windows 11 Home SL
+Thiết kế: Vỏ nhựa
+Thời điểm ra mắt: 2022
+21590000
+
+\\laptop\\9.jpg
+Laptop Lenovo Ideapad Gaming 3 15IAH7 i5
+CPU: i5 12500H 2.5GHz
+RAM: 8 GB DDR4 2 khe (1 khe 8 GB + 1 khe rời)3200 MHz
+Ổ cứng: 512 GB SSD NVMe PCIe
+Màn hình: 15.6"Full HD (1920 x 1080) 120Hz
+Card màn hình: Card rờiRTX 3050 4GB
+Hệ điều hành: Windows 11 Home SL
+Thiết kế: Vỏ nhựa
+Thời điểm ra mắt: 2022
+26990000
+
+\\laptop\\10.jpg
+Lenovo-gaming-legion-5
+CPU:Ryzen 55600H3.3GHz
+RAM:8 GBDDR4 2 khe (1 khe 8 GB + 1 khe rời)3200 MHz
+Ổ cứng:512 GB SSD NVMe PCIe
+Màn hình:15.6"Full HD (1920 x 1080) 165Hz
+Card màn hình:Card rờiRTX 3050 4GB
+Hệ điều hành:Windows 11 Home SL
+Thiết kế:Vỏ nhựa
+Thời điểm ra mắt:2021
+25900000
+
+\\laptop\\11.jpg
+Lenovo-legio5
+CPU:i512500H2.5GHz
+RAM:8 GBDDR5 2 khe (1 khe 8 GB + 1 khe trống)4800 MHz
+Ổ cứng:512 GB SSD NVMe PCIe
+Màn hình:15.6"Full HD (1920 x 1080) 165Hz
+Card màn hình:Card rờiRTX 3050Ti 4GB
+Hệ điều hành:Windows 11 Home SL
+Thiết kế:Vỏ nhựa - nắp lưng bằng kim loại
+Thời điểm ra mắt:2022
+35550000
+
+\\laptop\\12.jpg
+MSI-creator-Z16
+CPU:i712700H2.30 GHz
+RAM:32 GBDDR5 2 khe (1 khe 16 GB + 1 khe 16 GB)5200 MHz
+Ổ cứng:2 TB SSD NVMe PCIe
+Màn hình:16"QHD+ (2560 x 1600)165Hz
+Card màn hình:Card rờiRTX 3070Ti Max-Q 8GB
+Hệ điều hành:Windows 11 Home SL
+Thiết kế:Vỏ kim loại
+Thời điểm ra mắt:2022
+79990000
+
+\\laptop\\13.jpg
+MSI-Gaming-Ge66(vn58)
+CPU:i711800H2.30 GHz
+RAM:32 GBDDR4 2 khe (1 khe 16 GB + 1 khe 16 GB)3200 MHz
+Ổ cứng:2 TB SSD NVMe PCIe
+Màn hình:15.6"QHD (2560 x 1440)240Hz
+Card màn hình:Card rờiRTX 3080 16GB
+Hệ điều hành:Windows 10 Home SL
+Thiết kế:Vỏ kim loại
+Thời điểm ra mắt:2021
+35550000
+
+\\laptop\\14.jpg
+MSI-Gaming-Ge66(vn59)
+CPU:i711800H2.30 GHz
+RAM:32 GBDDR4 2 khe (1 khe 16 GB + 1 khe 16 GB)3200 MHz
+Ổ cứng:2 TB SSD NVMe PCIe
+Màn hình:15.6"QHD (2560 x 1440)240Hz
+Card màn hình:Card rờiRTX 3080 16GB
+Hệ điều hành:Windows 10 Home SL
+Thiết kế:Vỏ kim loại
+Thời điểm ra mắt:2021
+65300000
+
+\\laptop\\15.jpg
+MSI-Gaming-GF65
+CPU:i510500H2.5GHz
+RAM:16 GBDDR4 2 khe (1 khe 8 GB + 1 khe 8 GB)3200 MHz
+Ổ cứng:512 GB SSD NVMe PCIe
+Màn hình:15.6"Full HD (1920 x 1080) 144Hz
+Card màn hình:Card rờiRTX 3060 Max-Q 6GB
+Hệ điều hành:Windows 10 Home SL
+Thiết kế:Nắp lưng và chiếu nghỉ tay bằng kim loại
+Thời điểm ra mắt:2021
+49990000
+
+\\laptop\\16.jpg
+MSI-Gaming-GS6
+CPU:i711800H2.30 GHz
+RAM:32 GBDDR4 2 khe (1 khe 16 GB + 1 khe 16 GB)3200 MHz
+Ổ cứng:2 TB SSD NVMe PCIe
+Màn hình:15.6"Full HD (1920 x 1080) 360Hz
+Card màn hình:Card rờiRTX 3070 Max-Q 8GB
+Hệ điều hành:Windows 10 Home SL
+Thiết kế:Vỏ kim loại
+Thời điểm ra mắt:2021
+45190000
+
+\\laptop\\17.jpg
+MSI-Gaming-Pulse
+CPU:i711800H2.30 GHz
+RAM:16 GBDDR4 2 khe (1 khe 8 GB + 1 khe 8 GB)3200 MHz
+Ổ cứng:512 GB SSD NVMe PCIe
+Màn hình:15.6"Full HD (1920 x 1080) 144Hz
+Card màn hình:Card rờiRTX 3050Ti 4GB
+Hệ điều hành:Windows 10 Home SL
+Thiết kế:Vỏ nhựa - nắp lưng bằng kim loại
+Thời điểm ra mắt:2021
+37890000
+
+\\laptop\\18.jpg
+MSI-Gaming-vector-Gp66
+CPU:i712700H2.30 GHz
+RAM:16 GBDDR4 2 khe (1 khe 8 GB + 1 khe 8 GB)3200 MHz
+Ổ cứng:1 TB SSD M.2 PCIe
+Màn hình:15.6"QHD (2560 x 1440)165Hz
+Card màn hình:Card rờiRTX 3070Ti 8GB
+Hệ điều hành:Windows 11 Home SL
+Thiết kế:Vỏ kim loại
+Thời điểm ra mắt:2022
+56660000

@@ -1,0 +1,15 @@
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\obj\Debug\net6.0\tuan 10.csproj.AssemblyReference.cache
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\obj\Debug\net6.0\tuan 10.GeneratedMSBuildEditorConfig.editorconfig
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\obj\Debug\net6.0\tuan 10.AssemblyInfoInputs.cache
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\obj\Debug\net6.0\tuan 10.AssemblyInfo.cs
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\obj\Debug\net6.0\tuan 10.csproj.CoreCompileInputs.cache
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\bin\Debug\net6.0\tuan 10.exe
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\bin\Debug\net6.0\tuan 10.deps.json
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\bin\Debug\net6.0\tuan 10.runtimeconfig.json
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\bin\Debug\net6.0\tuan 10.dll
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\bin\Debug\net6.0\tuan 10.pdb
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\obj\Debug\net6.0\tuan 10.dll
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\obj\Debug\net6.0\refint\tuan 10.dll
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\obj\Debug\net6.0\tuan 10.pdb
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\obj\Debug\net6.0\tuan 10.genruntimeconfig.cache
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\1.truong\tuan 10\obj\Debug\net6.0\ref\tuan 10.dll

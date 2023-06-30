@@ -1,0 +1,1 @@
+// Liệt kê các kết quả của bài toán 8 hậu dưới dạng bàn cờ.

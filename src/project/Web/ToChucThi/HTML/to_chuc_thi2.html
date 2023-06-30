@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/to_chuc_thi2.css">
+  <title>Thêm lịch thi</title>
+</head>
+
+<body>
+  <div class="bai-tap-nhom">
+    <!-- Header trang web -->
+    <header>
+      <div class="tren">
+        <div class="ma-truong"><p>Mã trường: TSN</p></div>
+        <div class="tuong-tac">
+          <div class="icon">
+            <img src="../photo/icon-tiếng-anh.jpg" alt="tiếng anh" style="border-radius: 50%; width: 30px; height: 30px;">
+            <img src="../photo/icon-tiếng-việt.jpg" alt="tiếng việt" style="border-radius: 50%; width: 30px; height: 30px;">
+          </div>
+          <div class="dang-xuat">
+            <img src="../photo/icon-chìa-khoá.png" alt="">
+            <a href="dang_nhap5.html">Đăng xuất</a>
+            <p>| <span style="text-decoration: underline;">Trầm Phương Anh</span></p>
+            <img src="../photo/icon-tổ-chức-thi.jpg" alt="logo truy cập" style="border-radius: 50%; width: 45px; height: 45px">
+          </div>
+        </div>
+      </div>
+      <hr>
+      <a href="to_chuc_thi.html"><img src="https://inkythuatso.com/uploads/thumbnails/800/2021/12/logo-dai-hoc-nha-trang-inkythuatso-1-02-14-45-38.jpg" alt="Logo trường Đại học Nha Trang"></a>
+      <div class="duoi">
+        <div class="thong-tin">
+          <h1>TRƯỜNG ĐẠI HỌC NHA TRANG</h1>
+          <h2>HỆ THỐNG TÍCH HỢP THÔNG TIN</h2>
+        </div>
+        <div class="nguoi-truy-cap">Vai trò tổ chức thi</div>
+      </div>
+    </header>
+
+    <!-- Thanh ngang điều hướng -->
+    <nav>
+      <a href="to_chuc_thi.html">Tra cứu lịch thi</a>
+      <a href="to_chuc_thi2.html">Thêm lịch thi</a>
+    </nav>
+
+    <!-- Thông tin thời gian -->
+    <aside>
+      <div class="hien-thi-dang-chon"><p>Thêm lịch thi</p></div>
+      <div class="thong-tin">
+        <div class="form">
+          <div class="ten">
+            <label for="#">Năm học</label>
+            <label for="#">Học kỳ</label>
+          </div>
+          <div class="thuoc-tinh">
+            <select name="#" id="nam-hoc">
+              <option value="">2015-2016</option>
+              <option value="">2016-2017</option>
+              <option value="">2017-2018</option>
+              <option value="">2018-2019</option>
+              <option value="">2019-2020</option>
+              <option value="">2020-2021</option>
+              <option value="">2021-2022</option>
+              <option value="" selected>2022-2023</option>
+            </select>
+            <select name="#" id="hoc-ky">
+              <option value="">1</option>
+              <option value="" selected>2</option>
+              <option value="">Hè</option>
+            </select>
+          </div>
+          <div class="them">
+            <div class="them-moi" onclick="HienThiBangThem()">
+              <img src="../photo/icon-thêm.jpg" alt="" style="width: 15px; height: 15px; border-radius: 50%;">
+              <span>Thêm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    
+    <!-- Nội dung chính main -->
+    <main>
+      <fieldset id="khung-them">
+        <div class="them-trai">
+          <div class="ten">
+            <label for="#">Địa điểm</label>
+            <label for="#">Phòng</label>
+            <label for="#">Ngày thi</label>
+            <label for="#">Giờ thi</label>
+            <label for="#">Ca thi</label>
+            <label for="#">Mã giảng viên 1</label>
+            <label for="#">Họ và tên</label>
+          </div>
+          <div class="thuoc-tinh">
+            <select class="dien">
+              <option value="">G1</option>
+              <option value="">G2</option>
+              <option value="">G3</option>
+              <option value="">G4</option>
+              <option value="">G5</option>
+              <option value="">G6</option>
+              <option value="">G7</option>
+              <option value="">G8</option>
+            </select>
+            <select class="dien">
+              <option value="#">101</option>
+              <option value="#">102</option>
+              <option value="#">103</option>
+              <option value="#">104</option>
+              <option value="#">105</option>
+            </select>
+            <input class="dien" type="text">
+            <input class="dien" type="text">
+            <select class="dien">
+              <option value="#">Sáng</option>
+              <option value="#">Chiều</option>
+            </select>
+            <input class="dien" type="text">
+            <input class="dien" type="text">
+          </div>
+        </div>
+        <div class="them-phai">
+          <div class="ten">
+            <label for="#">Mã học phần</label>
+            <label for="#">Tên học phần</label>
+            <label for="#">Hình thức thi</label>
+            <label for="#">Thời gian thi (phút)</label>
+            <br>
+            <label for="#">Mã giảng viên 2</label>
+            <label for="#">Họ và tên</label>
+          </div>
+          <div class="thuoc-tinh">
+            <input class="dien" type="text">
+            <input class="dien" type="text">
+            <select class="dien">
+              <option value="">Tự luận</option>
+              <option value="">Trắc nghiệm</option>
+              <option value="">Vấn đáp</option>
+              <option value="">Máy tính</option>
+            </select>
+            <input class="dien" type="text">
+            <br>
+            <input class="dien" type="text">
+            <input class="dien" type="text">
+          </div>
+        </div>
+        <div class="khu-vuc-nut">
+          <div class="hai-nut">
+            <div class="nut-luu" onclick="Luu()">
+              <img src="../photo/icon-lưu.png" alt="" style="width: 15px; height: 15px">
+              <span>Lưu</span>
+            </div>
+            <div class="nut-huy">
+              <img src="../photo/icon-huỷ.png" alt="" style="width: 15px; height: 15px">
+              <span>Huỷ</span>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </main>
+  </div>
+</body>
+
+<script>
+  // HIển thị bảng thêm
+  function HienThiBangThem() {
+    document.getElementById('khung-them').style.display = 'block';
+  }
+
+  // Lưu dữ liệu thêm
+  function Luu() {
+    alert('Lưu thành công');
+    location.href = "to_chuc_thi3.html";
+  }
+</script>
+</html>

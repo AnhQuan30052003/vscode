@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/sinh-vien3-1.css">
+  <title>Xem lịch thi</title>
+</head>
+
+<body>
+  <div class="bai-tap-nhom">
+    <!-- Header trang web -->
+    <header>
+      <div class="tren">
+        <div class="ma-truong"><p>Mã trường: TSN</p></div>
+        <div class="tuong-tac">
+          <div class="icon">
+            <img src="../photo/icon-tiếng-anh.jpg" alt="tiếng anh" style="border-radius: 50%; width: 30px; height: 30px;">
+            <img src="../photo/icon-tiếng-việt.jpg" alt="tiếng việt" style="border-radius: 50%; width: 30px; height: 30px;">
+          </div>
+          <div class="dang-xuat">
+            <img src="../photo/icon-chìa-khoá.png" alt="">
+            <a href="dang_nhap2.html">Đăng xuất</a>
+            <p>| <span style="text-decoration: underline;">Lường Văn Thành</span></p>
+            <img src="../photo/icon-sinh-viên.png" alt="logo truy cập" style="border-radius: 50%; width: 45px; height: 45px">
+          </div>
+        </div>
+      </div>
+      <hr>
+      <a href="sinh-vien.html"><img src="https://inkythuatso.com/uploads/thumbnails/800/2021/12/logo-dai-hoc-nha-trang-inkythuatso-1-02-14-45-38.jpg" alt="Logo trường Đại học Nha Trang"></a>
+      <div class="duoi">
+        <div class="thong-tin">
+          <h1>TRƯỜNG ĐẠI HỌC NHA TRANG</h1>
+          <h2>HỆ THỐNG TÍCH HỢP THÔNG TIN</h2>
+        </div>
+        <div class="nguoi-truy-cap">Vai trò sinh viên</div>
+      </div>
+    </header>
+
+    <!-- Phần điều hướng -->
+    <nav>
+      <a href="#">
+        <img src="../photo/icon-thời-khoá-biểu.png" alt="">
+        <span>Thời khoá biểu</span>
+      </a>
+      <a href="sinh-vien2-1.html">
+        <img src="../photo/icon-kết-quả-học-tập.png" alt="">
+        <span>Kết quả học tập</span>
+      </a>
+      <a href="#">
+        <img src="../photo/icon-thông-tin-sinh-viên.png" alt="">
+        <span>Thông tin sinh viên</span>
+      </a>
+      <a href="sinh-vien3-1.html" style="background-color: yellow">
+        <img src="../photo/icon-xem-lịch-thi.png" alt="">
+        <span>Lịch thi</span>
+      </a>
+      <a href="#">
+        <img src="../photo/icon-học-phí.png" alt="">
+        <span>Học phí</span>
+      </a>
+      <a href="#">
+        <img src="../photo/icon-ký-túc-xá.png" alt="">
+        <span>Ký túc xá</span>
+      </a>
+    </nav>    
+    
+    <!-- Nội dung chính main -->
+    <main>
+      <div class="phan-tra-cuu">
+          <div class="khung-xanh">
+            <div class="khung-tim">              
+              <div class="nam-hoc">
+                <img src="../photo/icon-tìm-kiếm.png" alt="">
+                <input type="text" placeholder="Nhập năm học" onclick="HienThiNamHoc()" id="nam-hoc">
+              </div>
+              <div class="hoc-ky">
+                <img src="../photo/icon-tìm-kiếm.png" alt="">
+                <input type="text" placeholder="Nhập học kỳ" onclick="HienThiHocKy()" id="hoc-ky">
+              </div>
+              <button onclick="HienThiLichThi()">Xem điểm</button>
+            </div>  
+          </div>
+        </div>
+
+      <div class="thong-tin-tra-cuu">
+        <div class="trong-du-lieu">
+          <div class="khung-anh"><img src="../photo/icon-không-có-dữ-liệu.png" alt=""></div>
+          <div class="khung-chu"><p>Dữ liệu thi chưa được cập nhật</p></div>
+        </div>
+        <div class="co-du-lieu">
+          <fieldset>
+            <legend class="tieude">Lịch thi năm học 2022-2023 học kỳ 2</legend>
+            <table>
+              <thead>
+                <tr id="h0">
+                    <th colspan="10" class="hang_dau">Thông tin lịch thi học kỳ 2</th>
+                </tr>
+                <tr id="h1">
+                  <th class="th_d">STT</th>
+                  <th class="th_d">Mã học phần</th>
+                  <th class="th_d">Tên học phần</th>
+                  <th class="th_d">Hình thức thi</th>
+                  <th class="th_d">Giờ thi</th>
+                  <th class="th_d">Ngày thi</th>
+                  <th class="th_d">Ca thi</th>
+                  <th class="th_d">Thời gian thi(phút)</th>
+                  <th class="th_d">Địa chỉ thi</th>
+                  <th class="th_d">Phòng thi</th>
+                </tr>
+              </thead>
+    
+              <tbody>
+                <tr id="h2" class="table_white">
+                    <td class="diem Diem_dam">1</td>
+                    <td class="Diem_dam">HP001</td>
+                    <td class="Diem_dam">Giáo dục thể chất(chạy)</td>
+                    <td class="diem Diem_dam">Tự luận</td>
+                    <td class="diem Diem_dam">9:30 PM</td>
+                    <td class="diem Diem_dam">26/04/2023</td>
+                    <td class="diem Diem_dam">Sáng</td>
+                    <td class="diem Diem_dam">75 Phút</td>
+                    <td class="diem Diem_dam">G4</td>
+                    <td class="diem Diem_dam">102</td>
+                </tr>
+                <tr id="h3" class="table_dark">
+                    <td class="diem Diem_dam">2</td>
+                    <td class="Diem_dam">HP002</td>
+                    <td class="Diem_dam">Phương Pháp tính</td>
+                    <td class="diem Diem_dam">Trắc nghiệm</td>
+                    <td class="diem Diem_dam">9:30 PM</td>
+                    <td class="diem Diem_dam">28/04/2023</td>
+                    <td class="diem Diem_dam">Sáng</td>
+                    <td class="diem Diem_dam">50 phút</td>
+                    <td class="diem Diem_dam">G4</td>
+                    <td class="diem Diem_dam">101</td>
+                </tr>
+                <tr id="h4" class="table_white">
+                    <td class="diem Diem_dam">3</td>
+                    <td class="Diem_dam">HP003</td>
+                    <td class="Diem_dam">Điện tử hóa thông tin</td>
+                    <td class="diem Diem_dam">Trắc nghiệm</td>
+                    <td class="diem Diem_dam">3:30 AM</td>
+                    <td class="diem Diem_dam">30/04/2023</td>
+                    <td class="diem Diem_dam">Chiều</td>
+                    <td class="diem Diem_dam">50 phút</td>
+                    <td class="diem Diem_dam">G4</td>
+                    <td class="diem Diem_dam">102</td>
+                </tr>
+                <tr id="h5" class="table_dark">
+                    <td class="diem Diem_dam">4</td>
+                    <td class="Diem_dam">HP004</td>
+                    <td class="Diem_dam">Công nghệ phần mềm</td>
+                    <td class="diem Diem_dam">Tự luận</td>
+                    <td class="diem Diem_dam">9:30 PM</td>
+                    <td class="diem Diem_dam">02/05/2023</td>
+                    <td class="diem Diem_dam">Sáng</td>
+                    <td class="diem Diem_dam">75 phút</td>
+                    <td class="diem Diem_dam">G4</td>
+                    <td class="diem Diem_dam">104</td>
+                </tr>
+                <tr id="h6" class="table_white">
+                    <td class="diem Diem_dam">5</td>
+                    <td class="Diem_dam">HP005</td>
+                    <td class="Diem_dam">Bảo mật thông tin</td>
+                    <td class="diem Diem_dam">Tự luận</td>
+                    <td class="diem Diem_dam">7:30 PM</td>
+                    <td class="diem Diem_dam">26/05/2023</td>
+                    <td class="diem Diem_dam">Sáng</td>
+                    <td class="diem Diem_dam">45 phút</td>
+                    <td class="diem Diem_dam">G4</td>
+                    <td class="diem Diem_dam">104</td>
+              </tbody>
+            </table>
+            <a href="sinh-vien3-2.html">
+              <img src="../photo/icon-in-lịch-thi.png" alt="">
+              <span>In lịch thi</span>
+            </a>
+        </fieldset>
+        </div>
+      </div>
+    </main>
+</body>
+
+<script>
+  // Hiển thị dữ liệu ô học kỳ
+  function HienThiHocKy() {
+    document.getElementById('hoc-ky').value = '2';
+  }
+
+  // Hiển thị dữ liệu ô năm học
+  function HienThiNamHoc() {
+    document.getElementById('nam-hoc').value = '2022-2023';
+  }
+  // Hiển thị lịch thi
+  function HienThiLichThi() {
+    document.getElementsByClassName('trong-du-lieu')[0].style.display = 'none';
+    document.getElementsByClassName('co-du-lieu')[0].style.display = 'block';
+  }
+</script>
+</html>

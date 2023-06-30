@@ -1,0 +1,300 @@
+/* Khởi tạo */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Phần khung */
+.bai-tap-nhom {
+  width: 100%;
+  height: 161vh;
+  margin: 0 auto;
+}
+
+/* Phàn header */
+header {
+  width: 100%;
+  height: 15vh;
+  padding-bottom: 10px;
+  color: white;
+  background-color: #08457c;
+}
+
+header > hr {
+  height: 4px;
+  background-color: white;
+}
+
+header > .tren {
+  width: 100%;
+  height: 50%;
+}
+
+.tren > .ma-truong {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  float: left;
+  padding-bottom: 2px;
+}
+
+.tren > .tuong-tac {
+  width: 75%;
+  height: 100%;
+  float: left;
+}
+
+.tuong-tac > .icon {
+  width: 65%;
+  height: 100%;
+  float: left;
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  align-items: end;
+}
+
+.tuong-tac > .dang-xuat {
+  width: 35%;
+  height: 100%;
+  float: left;
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  justify-content: end;
+  padding-right: 20px;
+}
+
+.dang-xuat > a {
+  color: yellow;
+  text-decoration: none;
+}
+
+header > a {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  transform: translate(-1%, -1%);
+  width: 100px;
+  height: 100px;
+}
+
+header > a > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+.duoi > .thong-tin {
+  width: 70%;
+  height: 100%;
+  padding-left: 8.2%;
+  float: left;
+}
+
+.duoi > .nguoi-truy-cap {
+  width: 30%;
+  height: 100%;
+  float: left;
+  margin-top: 10px;
+  margin-left: -10px;
+  font-size: 25px;
+}
+
+.thong-tin > h2 {
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.thong-tin > h1 {
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.thong-tin > h2 {
+  font-size: 15px;
+}
+
+/* Phần nav */
+nav {
+  width: 100%;
+  height: 6vh;
+  background-color: #5AB7E4;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav > a {
+  text-decoration: none;
+  width: 13%;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255, 250, 250, 0.61);
+  border-radius: 10px;
+  color: #033A6C;
+}
+
+nav > a:hover {
+  background-color: yellow;
+}
+
+nav > a > img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Phần nội dung chính trang web */
+main {
+  width: 100%;
+  height: 110vh;
+  border: solid 1px;
+}
+
+main > .khung-anh {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.anh1 {
+  left: 0;
+}
+
+.anh2 {
+  left: 100%;
+}
+
+.anh3 {
+  left: 200%;
+}
+
+.anh {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: load 5s ease-in infinite alternate; 
+}
+
+@keyframes load {
+  0% {
+    transform: translate(-0%);
+  } 
+  20% {
+    transform: translate(-0%);
+  }
+  40% {
+    transform: translate(-100%);
+  } 
+  60% {
+    transform: translate(-100%);
+  }
+  80% {
+    transform: translate(-200%);
+  }
+  100% {
+    transform: translate(-200%);
+  }
+}
+
+.anh > img {
+  width: 100%;
+  height: 100%;
+}
+
+main > .khung-tin-tuc {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0C4396;
+  color: white;
+}
+
+.khung-tin-tuc > h1 {
+  text-align: center;
+  margin: 10px 0 3px 0;
+}
+
+.khung-ngoai {
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: url("../photo/ảnh-nền-khung-ngoài.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.khung-ngoai > .tin-tuc {
+  width: 13%;
+  height: 80%;
+  position: relative;
+  font-weight: bold;
+}
+
+.khung-ngoai > .tin-tuc > img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+.khung-ngoai > .tin-tuc:hover > img {
+  opacity: 1;
+}
+
+.khung-ngoai > .tin-tuc:hover > p:nth-child(3) {
+  color: red;
+}
+
+.tin-tuc > p:nth-child(1) {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+}
+
+.tin-tuc > p:nth-child(3) {
+  text-align: center;
+  position: absolute;
+  bottom: -15px;
+  width: 50%;
+  left: 25%;
+  font-size: 15px;
+}
+
+/* Phần footer */
+footer {
+  width: 100%;
+  height: 30vh;
+  background-color: #14003F;
+  color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+footer:hover {
+  background-color: #3A42FF;
+}
+
+footer > div, footer > div > div {
+  display: flex;
+  gap: 10px;
+}
+
+footer > div > img, footer > div > div > img {
+  width: 20px;
+  height: 20px;
+}

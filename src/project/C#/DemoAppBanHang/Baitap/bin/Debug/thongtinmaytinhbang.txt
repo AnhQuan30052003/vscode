@@ -1,0 +1,215 @@
+﻿\\maytinhbang\\1.jpg
+Lenovo Tab M8
+3190000
+Màn hình: 8"IPS LCD
+Hệ điều hành:Android 10
+Chip:MediaTek Helio A22
+RAM: 3 GB
+Dung lượng lưu trữ:32 GB
+Camera sau:5 MP
+Camera trước:2 MP
+Pin, Sạc:5000 mAh5 W
+
+\\maytinhbang\\2.jpg
+Nokia Tab T20 4G
+4990000
+Màn hình:10.4"IPS LCD
+Hệ điều hành:Android 11
+Chip:Unisoc T610
+RAM:4 GB
+Dung lượng lưu trữ: 64 GB
+Camera sau: 8 MP
+Camera trước: 5 MP
+Pin, Sạc: 8200 mAh15 W
+
+\\maytinhbang\\3.jpg
+Samsung Galaxy Tab S7
+12990000
+Màn hình:12.4"TFT LCD
+Hệ điều hành:Android 11
+Chip:Snapdragon 778G
+RAM:4 GB
+Dung lượng lưu trữ:64 GB
+Camera sau:8 MP
+Camera trước:5 MP
+Pin, Sạc:10090 mAh45 W
+
+\\maytinhbang\\4.jpg
+Huawei MatePad T10
+3090000
+Màn hình:9.7"IPS LCD
+Hệ điều hành:Android 10 (Không có Google)
+Chip:Kirin 710A
+RAM:2 GB
+Dung lượng lưu trữ:32 GB
+Camera sau:5 MP
+Camera trước:2 MP
+Pin, Sạc:5100 mAh5 W
+
+\\maytinhbang\\5.jpg
+Samsung Galaxy Tab S8 5G
+19490000
+Màn hình:11"LTPS
+Hệ điều hành:Android 12
+Chip:Snapdragon 8 Gen 1
+RAM:8 GB
+Dung lượng lưu trữ:128 GB
+Camera sau:Chính 13 MP & Phụ 6 MP
+Camera trước:12 MP
+Pin, Sạc:8000 mAh45 W
+
+\\maytinhbang\\6.jpg
+Samsung Galaxy Tab A7 Lite
+3990000
+Màn hình:8.7"TFT LCD
+Hệ điều hành:Android 11
+Chip:MediaTek MT8768T
+RAM:3 GB
+Dung lượng lưu trữ:32 GB
+Camera sau:8 MP
+Camera trước:2 MP
+Pin, Sạc:5100 mAh15 W
+
+\\maytinhbang\\7.jpg
+iPad Pro M1
+41990000
+Màn hình:11"Liquid Retina
+Hệ điều hành:iPadOS 15
+Chip:Apple M1
+RAM:16 GB
+Dung lượng lưu trữ:1 TB
+Camera sau:Chính 12 MP & Phụ 10 MP, TOF 3D LiDAR
+Camera trước:12 MP
+Pin, Sạc:28.65 Wh (~ 7538 mAh)20 W
+
+\\maytinhbang\\8.jpg
+iPad Pro M2
+35990000
+Màn hình:12.9"Liquid Retina XDR
+Hệ điều hành:iPadOS 16
+Chip:Apple M2 8 nhân
+RAM:8 GB
+Dung lượng lưu trữ:128 GB
+Camera sau:Chính 12 MP & Phụ 10 MP, TOF 3D LiDAR
+Camera trước:12 MP
+Pin, Sạc:40.88 Wh (~ 10.835 mAh)20 W
+
+\\maytinhbang\\9.jpg
+iPad Pro M1
+29290000
+Màn hình:12.9"Liquid Retina XDR
+Hệ điều hành:iPadOS 15
+Chip:Apple M1
+RAM:8 GB
+Dung lượng lưu trữ:128 GB
+Camera sau:Chính 12 MP & Phụ 10 MP, TOF 3D LiDAR
+Camera trước:12 MP
+Pin, Sạc:40.88 Wh (~ 10.835 mAh)20 W
+
+\\maytinhbang\\10.jpg
+iPad mini 6
+13490000
+Màn hình:8.3"LED-backlit IPS LCD
+Hệ điều hành:iPadOS 15
+Chip:Apple A15 Bionic
+RAM:4 GB
+Dung lượng lưu trữ:64 GB ,Kết nối:Nghe gọi qua FaceTime
+Camera sau:12 MP
+Camera trước:12 MP
+Pin, Sạc:19.3 Wh (~ 5175 mAh)20 W
+
+\\maytinhbang\\11.jpg
+Lenovo Yoga Tab 11
+9990000
+Màn hình:11"IPS LCD
+Hệ điều hành:Android 11
+Chip:MediaTek Helio G90T
+RAM:4 GB
+Dung lượng lưu trữ:128 GB
+Camera sau:8 MP
+Camera trước:8 MP
+Pin, Sạc:7500 mAh20 W
+
+\\maytinhbang\\12.jpg
+Samsung Galaxy Tab S6 Lite
+9990000
+Màn hình:10.4"PLS LCD
+Hệ điều hành:Android 10
+Chip:Exynos 9611
+RAM:4 GB
+Dung lượng lưu trữ:64 GB
+Camera sau:8 MP
+Camera trước:5 MP
+Pin, Sạc:7040 mAh10 W
+
+\\maytinhbang\\13.jpg
+Xiaomi Pad 5
+10190000
+Màn hình:11"IPS LCD
+Hệ điều hành:Android 11
+Chip:Snapdragon 860
+RAM:6 GB
+Dung lượng lưu trữ:256 GB
+Camera sau:13 MP
+Camera trước:8 MP
+Pin, Sạc:8720 mAh33 W
+
+\\maytinhbang\\14.jpg
+iPad 9
+11490000
+Màn hình:10.2"Retina IPS LCD
+Hệ điều hành:iPadOS 15
+Chip:Apple A13 Bionic
+RAM:3 GB
+Dung lượng lưu trữ:64 GB
+Camera sau:8 MP
+Camera trước:12 MP
+Pin, Sạc:32.4 Wh (~ 8600 mAh)20 W
+
+\\maytinhbang\\15.jpg
+Huawei MatePad 11
+12190000
+Màn hình:10.9"IPS LCD
+Hệ điều hành:HarmonyOS 2.0
+Chip:Snapdragon 865
+RAM:6 GB
+Dung lượng lưu trữ:128 GB
+Camera sau:13 MP
+Camera trước:8 MP
+Pin, Sạc:7250 mAh18 W
+
+\\maytinhbang\\16.jpg
+iPad 10
+16990000
+Màn hình:10.9"Retina IPS LCD
+Hệ điều hành:iPadOS 16
+Chip:Apple A14 Bionic
+RAM:4 GB
+Dung lượng lưu trữ:64 GB
+Camera sau:12 MP
+Camera trước:12 MP
+Pin, Sạc:28.6 Wh (~ 7587 mAh)20 W
+
+\\maytinhbang\\17.jpg
+Samsung Galaxy Tab S7
+12990000
+Màn hình:12.4"TFT LCD
+Hệ điều hành:Android 11
+Chip:Snapdragon 778G
+RAM:4 GB
+Dung lượng lưu trữ:64 GB
+Camera sau:8 MP
+Camera trước:5 MP
+Pin, Sạc:10090 mAh45 W
+
+\\maytinhbang\\18.jpg
+Masstel Tab 8.2
+2690000
+Màn hình:8"IPS LCD
+Hệ điều hành:Android 11
+Chip:SCT310
+RAM:3 GB
+Dung lượng lưu trữ:32 GB
+Camera sau:5 MP
+Camera trước:2 MP
+Pin, Sạc:5500 mAh6 W

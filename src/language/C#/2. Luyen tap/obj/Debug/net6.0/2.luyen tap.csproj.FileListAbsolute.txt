@@ -1,0 +1,30 @@
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\bin\Debug\net6.0\2.luyen tap.exe
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\bin\Debug\net6.0\2.luyen tap.deps.json
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\bin\Debug\net6.0\2.luyen tap.runtimeconfig.json
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\bin\Debug\net6.0\2.luyen tap.dll
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\bin\Debug\net6.0\2.luyen tap.pdb
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.csproj.AssemblyReference.cache
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.GeneratedMSBuildEditorConfig.editorconfig
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.AssemblyInfoInputs.cache
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.AssemblyInfo.cs
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.csproj.CoreCompileInputs.cache
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.dll
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\obj\Debug\net6.0\refint\2.luyen tap.dll
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.pdb
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.genruntimeconfig.cache
+d:\.documents\documents import\MyCode()\C#\2.luyen tap\obj\Debug\net6.0\ref\2.luyen tap.dll
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\bin\Debug\net6.0\2.luyen tap.exe
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\bin\Debug\net6.0\2.luyen tap.deps.json
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\bin\Debug\net6.0\2.luyen tap.runtimeconfig.json
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\bin\Debug\net6.0\2.luyen tap.dll
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\bin\Debug\net6.0\2.luyen tap.pdb
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.csproj.AssemblyReference.cache
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.GeneratedMSBuildEditorConfig.editorconfig
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.AssemblyInfoInputs.cache
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.AssemblyInfo.cs
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.csproj.CoreCompileInputs.cache
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.dll
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\obj\Debug\net6.0\refint\2.luyen tap.dll
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.pdb
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\obj\Debug\net6.0\2.luyen tap.genruntimeconfig.cache
+d:\.documents\documents import\MyCode()\.save folder\C#\2.luyen tap\obj\Debug\net6.0\ref\2.luyen tap.dll

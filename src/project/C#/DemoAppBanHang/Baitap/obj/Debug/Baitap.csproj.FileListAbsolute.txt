@@ -1,0 +1,237 @@
+D:\OOP\Windowsform\Baitap\Baitap\bin\Debug\Baitap.exe.config
+D:\OOP\Windowsform\Baitap\Baitap\bin\Debug\Baitap.exe
+D:\OOP\Windowsform\Baitap\Baitap\bin\Debug\Baitap.pdb
+D:\OOP\Windowsform\Baitap\Baitap\obj\Debug\Baitap.csproj.AssemblyReference.cache
+D:\OOP\Windowsform\Baitap\Baitap\obj\Debug\Baitap.csproj.SuggestedBindingRedirects.cache
+D:\OOP\Windowsform\Baitap\Baitap\obj\Debug\Baitap.csproj.CoreCompileInputs.cache
+D:\OOP\Windowsform\Baitap\Baitap\obj\Debug\Baitap.exe
+D:\OOP\Windowsform\Baitap\Baitap\obj\Debug\Baitap.pdb
+D:\OOP\Windowsform\Baitap\Baitap\obj\Debug\Baitap.Dangnhap.resources
+D:\OOP\Windowsform\Baitap\Baitap\obj\Debug\Baitap.csproj.GenerateResource.cache
+C:\Users\QuocHuyNe\Desktop\New folder\Baitap\Baitap\Baitap\obj\Debug\Baitap.csproj.AssemblyReference.cache
+C:\Users\QuocHuyNe\Desktop\New folder\Baitap\Baitap\Baitap\obj\Debug\Baitap.csproj.SuggestedBindingRedirects.cache
+C:\Users\QuocHuyNe\Desktop\New folder\Baitap\Baitap\Baitap\obj\Debug\baitapnhom.Form1.resources
+C:\Users\QuocHuyNe\Desktop\New folder\Baitap\Baitap\Baitap\obj\Debug\Baitap.Dangnhap.resources
+C:\Users\QuocHuyNe\Desktop\New folder\Baitap\Baitap\Baitap\obj\Debug\THI_NGHIEM_DU_AN.Form1.resources
+C:\Users\QuocHuyNe\Desktop\New folder\Baitap\Baitap\Baitap\obj\Debug\Baitap.csproj.GenerateResource.cache
+C:\Users\QuocHuyNe\Desktop\New folder\Baitap\Baitap\Baitap\obj\Debug\Baitap.csproj.CoreCompileInputs.cache
+C:\Users\QuocHuyNe\Desktop\New folder\Baitap\Baitap\Baitap\obj\Debug\Baitap.exe
+C:\Users\QuocHuyNe\Desktop\New folder\Baitap\Baitap\Baitap\obj\Debug\Baitap.pdb
+C:\Users\QuocHuyNe\Desktop\New folder\Baitap\Baitap\Baitap\bin\Debug\Baitap.exe.config
+C:\Users\QuocHuyNe\Desktop\New folder\Baitap\Baitap\Baitap\bin\Debug\Baitap.exe
+C:\Users\QuocHuyNe\Desktop\New folder\Baitap\Baitap\Baitap\bin\Debug\Baitap.pdb
+C:\Users\Administrator\Downloads\Baitap\Baitap\bin\Debug\Baitap.exe.config
+C:\Users\Administrator\Downloads\Baitap\Baitap\bin\Debug\Baitap.exe
+C:\Users\Administrator\Downloads\Baitap\Baitap\bin\Debug\Baitap.pdb
+C:\Users\Administrator\Downloads\Baitap\Baitap\obj\Debug\Baitap.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\Baitap\Baitap\obj\Debug\Baitap.csproj.SuggestedBindingRedirects.cache
+C:\Users\Administrator\Downloads\Baitap\Baitap\obj\Debug\baitapnhom.Dangky.resources
+C:\Users\Administrator\Downloads\Baitap\Baitap\obj\Debug\Baitap.Dangnhap.resources
+C:\Users\Administrator\Downloads\Baitap\Baitap\obj\Debug\THI_NGHIEM_DU_AN.Form1.resources
+C:\Users\Administrator\Downloads\Baitap\Baitap\obj\Debug\Baitap.csproj.GenerateResource.cache
+C:\Users\Administrator\Downloads\Baitap\Baitap\obj\Debug\Baitap.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\Baitap\Baitap\obj\Debug\Baitap.exe
+C:\Users\Administrator\Downloads\Baitap\Baitap\obj\Debug\Baitap.pdb
+C:\Users\QuocHuyNe\Desktop\New folder (2)\Baitap (1)\Baitap\Baitap\bin\Debug\Baitap.exe.config
+C:\Users\QuocHuyNe\Desktop\New folder (2)\Baitap (1)\Baitap\Baitap\bin\Debug\Baitap.exe
+C:\Users\QuocHuyNe\Desktop\New folder (2)\Baitap (1)\Baitap\Baitap\bin\Debug\Baitap.pdb
+C:\Users\QuocHuyNe\Desktop\New folder (2)\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.csproj.AssemblyReference.cache
+C:\Users\QuocHuyNe\Desktop\New folder (2)\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.csproj.SuggestedBindingRedirects.cache
+C:\Users\QuocHuyNe\Desktop\New folder (2)\Baitap (1)\Baitap\Baitap\obj\Debug\baitapnhom.Dangky.resources
+C:\Users\QuocHuyNe\Desktop\New folder (2)\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.Dangnhap.resources
+C:\Users\QuocHuyNe\Desktop\New folder (2)\Baitap (1)\Baitap\Baitap\obj\Debug\THI_NGHIEM_DU_AN.Form1.resources
+C:\Users\QuocHuyNe\Desktop\New folder (2)\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.csproj.GenerateResource.cache
+C:\Users\QuocHuyNe\Desktop\New folder (2)\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.csproj.CoreCompileInputs.cache
+C:\Users\QuocHuyNe\Desktop\New folder (2)\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.exe
+C:\Users\QuocHuyNe\Desktop\New folder (2)\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.pdb
+C:\Users\QuocHuyNe\Desktop\New folder (2)\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.Properties.Resources.resources
+D:\OOP\Windowsform\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.csproj.AssemblyReference.cache
+D:\OOP\Windowsform\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.csproj.SuggestedBindingRedirects.cache
+D:\OOP\Windowsform\Baitap (1)\Baitap\Baitap\obj\Debug\baitapnhom.Dangky.resources
+D:\OOP\Windowsform\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.csproj.GenerateResource.cache
+D:\OOP\Windowsform\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.exe
+D:\OOP\Windowsform\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.pdb
+D:\OOP\Windowsform\Baitap (1)\Baitap\Baitap\obj\Debug\Baitapnhom.Dangnhap.resources
+D:\OOP\Windowsform\Baitap (1)\Baitap\Baitap\obj\Debug\Baitapnhom.Giao_dien.resources
+D:\OOP\Windowsform\Baitap (1)\Baitap\Baitap\bin\Debug\Baitap.exe.config
+D:\OOP\Windowsform\Baitap (1)\Baitap\Baitap\bin\Debug\Baitap.exe
+D:\OOP\Windowsform\Baitap (1)\Baitap\Baitap\bin\Debug\Baitap.pdb
+D:\OOP\Windowsform\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.Properties.Resources.resources
+D:\OOP\Windowsform\Baitap (1)\Baitap\Baitap\obj\Debug\Baitap.csproj.CoreCompileInputs.cache
+D:\OOP\Windowsform\Baitap (1)\Baitap\Baitap\obj\Debug\Baitapnhom.giohang.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.AssemblyReference.cache
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.SuggestedBindingRedirects.cache
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\SanPham.ChiTiet.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\SanPham.DienThoai.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\SanPham.MaytinhBang.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\Baitap.Properties.Resources.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\SanPham.ThanhToan.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.GenerateResource.cache
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.CoreCompileInputs.cache
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\Baitap.exe
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\Baitap.pdb
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\bin\Debug\Baitap.exe.config
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\bin\Debug\Baitap.exe
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\bin\Debug\Baitap.pdb
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\bin\Debug\Baitap.exe.config
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\bin\Debug\Baitap.exe
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\bin\Debug\Baitap.pdb
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.SuggestedBindingRedirects.cache
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\SanPham.ChiTiet.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\Baitapnhom.Dangky.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\Baitapnhom.Dangnhap.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\SanPham.DienThoai.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\Baitapnhom.Giao_dien.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\MayTinh.Laptop.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\SanPham.MaytinhBang.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\Baitap.Properties.Resources.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\SanPham.ThanhToan.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.GenerateResource.cache
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\Baitap.exe
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\Baitap.pdb
+C:\Users\Administrator\Downloads\Chinh\Chinh\Baitap\obj\Debug\Baitapnhom.giohang.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\bin\Debug\Baitap.exe.config
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\bin\Debug\Baitap.exe
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\bin\Debug\Baitap.pdb
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.AssemblyReference.cache
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.SuggestedBindingRedirects.cache
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.ChiTiet.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitapnhom.Dangky.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitapnhom.Dangnhap.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.DienThoai.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitapnhom.Giao_dien.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitapnhom.giohang.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\MayTinh.Laptop.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.MaytinhBang.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitap.Properties.Resources.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.ThanhToan.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.GenerateResource.cache
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitap.exe
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitap.pdb
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.Giao_dien.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.Dangky.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.Dangnhap.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.giohang.resources
+C:\Users\dell\Desktop\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.Laptop.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\bin\Debug\Baitap.exe.config
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\bin\Debug\Baitap.exe
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\bin\Debug\Baitap.pdb
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.SuggestedBindingRedirects.cache
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.ChiTiet.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.Dangky.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.Dangnhap.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.DienThoai.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.Giao_dien.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.giohang.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.Laptop.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.MaytinhBang.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitap.Properties.Resources.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\SanPham.ThanhToan.resources
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.GenerateResource.cache
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitap.exe
+C:\Users\Administrator\Downloads\Chinh\Chinh\Chinh\Baitap\obj\Debug\Baitap.pdb
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\SanPham.Dangky.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\SanPham.Dangnhap.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\SanPham.Giao_dien.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\SanPham.giohang.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\Chinh\Chinh\Baitap\obj\Debug\SanPham.Laptop.resources
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\bin\Debug\Baitap.exe.config
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\bin\Debug\Baitap.exe
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\bin\Debug\Baitap.pdb
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\SanPham.ChiTiet.resources
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\SanPham.Dangky.resources
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\SanPham.Dangnhap.resources
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\SanPham.DienThoai.resources
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\SanPham.Giao_dien.resources
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\SanPham.giohang.resources
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\SanPham.Laptop.resources
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\SanPham.MaytinhBang.resources
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\Baitap.Properties.Resources.resources
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\SanPham.ThanhToan.resources
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\Baitap.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\Baitap.exe
+C:\Users\Admin\Desktop\Chinh\Chinh\Baitap\obj\Debug\Baitap.pdb
+C:\Users\Admin\Desktop\App\Baitap\bin\Debug\Baitap.exe.config
+C:\Users\Admin\Desktop\App\Baitap\bin\Debug\Baitap.exe
+C:\Users\Admin\Desktop\App\Baitap\bin\Debug\Baitap.pdb
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\Baitap.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\Baitap.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\SanPham.ChiTiet.resources
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\SanPham.Dangky.resources
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\SanPham.Dangnhap.resources
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\SanPham.DienThoai.resources
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\SanPham.Giao_dien.resources
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\SanPham.giohang.resources
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\SanPham.Laptop.resources
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\SanPham.MaytinhBang.resources
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\Baitap.Properties.Resources.resources
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\SanPham.ThanhToan.resources
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\Baitap.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\Baitap.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\Baitap.exe
+C:\Users\Admin\Desktop\App\Baitap\obj\Debug\Baitap.pdb
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\bin\Debug\Baitap.exe.config
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\bin\Debug\Baitap.exe
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\bin\Debug\Baitap.pdb
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\Baitap.csproj.AssemblyReference.cache
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\Baitap.csproj.SuggestedBindingRedirects.cache
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\SanPham.ChiTiet.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\SanPham.Dangky.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\SanPham.Dangnhap.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\SanPham.DienThoai.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\SanPham.Giao_dien.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\SanPham.giohang.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\SanPham.Laptop.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\SanPham.MaytinhBang.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\Baitap.Properties.Resources.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\SanPham.ThanhToan.resources
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\Baitap.csproj.GenerateResource.cache
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\Baitap.csproj.CoreCompileInputs.cache
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\Baitap.exe
+C:\Users\QuocHuyNe\Desktop\baitapnhom\App\App\Baitap\obj\Debug\Baitap.pdb
+C:\Users\dell\Desktop\App\App\Baitap\bin\Debug\Baitap.exe.config
+C:\Users\dell\Desktop\App\App\Baitap\bin\Debug\Baitap.exe
+C:\Users\dell\Desktop\App\App\Baitap\bin\Debug\Baitap.pdb
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\Baitap.csproj.AssemblyReference.cache
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\Baitap.csproj.SuggestedBindingRedirects.cache
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\SanPham.ChiTiet.resources
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\SanPham.Dangky.resources
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\SanPham.Dangnhap.resources
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\SanPham.DienThoai.resources
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\SanPham.Giao_dien.resources
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\SanPham.giohang.resources
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\SanPham.Laptop.resources
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\SanPham.MaytinhBang.resources
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\Baitap.Properties.Resources.resources
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\SanPham.ThanhToan.resources
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\Baitap.csproj.GenerateResource.cache
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\Baitap.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\Baitap.exe
+C:\Users\dell\Desktop\App\App\Baitap\obj\Debug\Baitap.pdb
+C:\Users\Admin\Desktop\App\App\Baitap\bin\Debug\Baitap.exe.config
+C:\Users\Admin\Desktop\App\App\Baitap\bin\Debug\Baitap.exe
+C:\Users\Admin\Desktop\App\App\Baitap\bin\Debug\Baitap.pdb
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\Baitap.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\Baitap.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\SanPham.ChiTiet.resources
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\SanPham.Dangky.resources
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\SanPham.Dangnhap.resources
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\SanPham.DienThoai.resources
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\SanPham.Giao_dien.resources
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\SanPham.giohang.resources
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\SanPham.Laptop.resources
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\SanPham.MaytinhBang.resources
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\Baitap.Properties.Resources.resources
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\SanPham.ThanhToan.resources
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\Baitap.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\Baitap.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\Baitap.exe
+C:\Users\Admin\Desktop\App\App\Baitap\obj\Debug\Baitap.pdb

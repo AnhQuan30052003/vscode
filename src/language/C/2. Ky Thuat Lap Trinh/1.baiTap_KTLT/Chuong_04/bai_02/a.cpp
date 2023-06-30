@@ -1,0 +1,1 @@
+// Cho mảng 1 chiều có n số nguyên. Viết hàm đệ qui dếm số lượng các giá trị phân biệt có trong mảng

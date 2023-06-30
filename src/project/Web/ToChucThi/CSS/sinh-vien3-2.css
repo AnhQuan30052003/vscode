@@ -1,0 +1,161 @@
+/* Khởi tạo */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Chua_tat_ca {
+  width: 100%;
+  height: 650px;
+
+}
+
+/*css cho phần phần trên*/
+.Phan_thongtin_truong {
+  display: flex;
+  flex-direction: column;
+  margin-left: 45px;
+  margin-top: 15px;
+}
+
+.Phan_thongtin_truong>#Ten_truong {
+  font-weight: 700;
+  line-height: 30px;
+  font-size: 24px;
+}
+
+.Lich_thi_nam_nao {
+
+  display: flex;
+  justify-content: center;
+  height: 100px;
+
+}
+
+#nam_2022-2023 {
+  font-size: 22px;
+  padding-top: 60px;
+}
+
+.khung_bao_boc_thong_tin {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  line-height: 30px;
+  font-size: 17px;
+}
+
+.boc_thong_tin_1 {
+  display: flex;
+
+}
+
+.boc_thong_tin_2 {
+  display: flex;
+
+}
+
+.truong_1 {
+
+  width: 100px;
+
+}
+
+.truong_3 {
+
+  width: 100px;
+  margin-left: 360px;
+}
+
+/*css cai bang in*/
+table {
+  width: 94%;
+  margin: 20px auto;
+  border: solid 2px black;
+  border-collapse: collapse;
+}
+
+table thead {
+  background: black;
+  color: black;
+  height: 6vh;
+
+}
+
+table tbody tr:nth-child(odd) {
+  background: white;
+
+}
+
+table tbody tr:nth-child(even) {
+  background: white;
+}
+
+table>tbody>tr {
+  height: 5.5vh;
+
+}
+
+
+table .diem {
+  text-align: center;
+  border: solid 2px black;
+  font-weight: 700;
+}
+
+table .diem1 {
+  margin-left: 80px;
+  border: solid 2px black;
+}
+
+.th_d {
+  text-align: center;
+  font-weight: 650;
+  border: solid 2px black;
+
+}
+
+.tieude {
+  color: white;
+  background-color: white;
+  margin-left: 1.6%;
+  height: 25px;
+  font-weight: bold;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  border: solid 2px black;
+}
+
+#h1 {
+  line-height: 37px;
+  background-color: white;
+  border: solid 2px black;
+
+}
+
+#h0 {
+  background-color: white;
+  line-height: 28px;
+  border: solid 2px black;
+}
+
+.tuong_tac {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+#xuat,
+#dong {
+  text-decoration: none;
+  border: solid 2px;
+  width: 60px;
+  text-align: center;
+  color: black;
+}
+
+#xuat {
+  margin-right: 35px;
+}

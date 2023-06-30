@@ -1,0 +1,15 @@
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\bin\Debug\net6.0\Buoi 04 - tuan 09.exe
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\bin\Debug\net6.0\Buoi 04 - tuan 09.deps.json
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\bin\Debug\net6.0\Buoi 04 - tuan 09.runtimeconfig.json
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\bin\Debug\net6.0\Buoi 04 - tuan 09.dll
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\bin\Debug\net6.0\Buoi 04 - tuan 09.pdb
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\obj\Debug\net6.0\Buoi 04 - tuan 09.csproj.AssemblyReference.cache
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\obj\Debug\net6.0\Buoi 04 - tuan 09.GeneratedMSBuildEditorConfig.editorconfig
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\obj\Debug\net6.0\Buoi 04 - tuan 09.AssemblyInfoInputs.cache
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\obj\Debug\net6.0\Buoi 04 - tuan 09.AssemblyInfo.cs
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\obj\Debug\net6.0\Buoi 04 - tuan 09.csproj.CoreCompileInputs.cache
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\obj\Debug\net6.0\Buoi 04 - tuan 09.dll
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\obj\Debug\net6.0\refint\Buoi 04 - tuan 09.dll
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\obj\Debug\net6.0\Buoi 04 - tuan 09.pdb
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\obj\Debug\net6.0\Buoi 04 - tuan 09.genruntimeconfig.cache
+d:\.documents\documents import\MyCode()\C#\1.code\2.lap trinh huong doi tuong\3.thuc hanh\Buoi 04 - tuan 09\obj\Debug\net6.0\ref\Buoi 04 - tuan 09.dll
