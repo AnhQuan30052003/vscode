@@ -1,1 +1,1 @@
-#SERVER-CODE: lưu trữ mÃ nguồn các ngôn ngữ và dự án !#
+#SERVER-CODE: lưu trữ mã nguồn các ngôn ngữ tôi học !
