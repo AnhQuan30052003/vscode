@@ -1,1 +1,0 @@
-// Cho vị trí của quân mã trên bàn cờ. Hãy tìm cách đi quân mã đến tất cả các ô trên bàn cờ.

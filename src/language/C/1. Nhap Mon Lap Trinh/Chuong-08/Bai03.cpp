@@ -1,1 +1,0 @@
-// Viết chương trình khai báo kiểu dữ liệu biểu diễn khái niệm đơn thức P(x) = axn trong toán học và định nghĩa hàm nhập, hàm xuất cho kiểu dữ liệu này.

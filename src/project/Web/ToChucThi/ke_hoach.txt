@@ -1,7 +1,0 @@
-﻿1. Trang giới thiệu (Quân)
-2. Trang chủ (Quân)
-3. Trang từng người:
-3.1: Vinh: sinh viên
-3.2: Lập : giảng viên
-3.3: Huy : giám sát & duyệt điểm
-3.4: Thư : nhân viên tổ chức

@@ -1,5 +1,0 @@
-namespace Test {
-    class Nguoi {
-        
-    }
-}

@@ -1,1 +1,1 @@
-#SERVER-CODE: lưu trữ mã nguồn các ngôn ngữ tôi học !
+# VScode: lưu toàn bộ code tạm với phần mềm VScode

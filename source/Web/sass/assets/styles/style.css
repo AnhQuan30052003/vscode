@@ -1,0 +1,42 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.active-use {
+  color: orange;
+}
+
+main {
+  width: 150px;
+  border-radius: 10px;
+  background-color: #ccc;
+  transition: 0.25s;
+}
+main button {
+  display: block;
+  border: none;
+  outline: none;
+  margin: 20px auto;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.4s;
+}
+main .menu {
+  display: none;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+main .menu li {
+  margin: 5px 0;
+}
+main .menu li:hover {
+  color: blue;
+}/*# sourceMappingURL=style.css.map */

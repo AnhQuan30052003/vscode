@@ -1,0 +1,3 @@
+function cls() {
+  console.clear();
+}
