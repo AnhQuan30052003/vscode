@@ -1,7 +1,7 @@
-package Chao;
+package chao;
 
 public class Chao {
   public static void XinChao(String ten) {
-    System.out.print("Xin chao " + ten);
+    System.out.println("Xin chao " + ten);
   }
 }
