@@ -1,65 +1,6 @@
 import java.util.List;
 import java.util.ArrayList;
 
-// Class Chuyến xe
-abstract class ChuyenXe {
-  protected String maSoChuyen, hoTenTaiXe;  
-  protected int soXe;
-  protected double doanhThu;
-
-  public ChuyenXe(String maSoChuyen, String hoTenTaiXe, int soXe, double doanhThu) {
-    this.maSoChuyen = maSoChuyen;
-    this.hoTenTaiXe = hoTenTaiXe;
-    this.soXe = soXe;
-    this.doanhThu = doanhThu;
-  }
-
-  public void ThongTinChuyenXe() {
-    System.out.println("Ma so chuyen: " + maSoChuyen);
-    System.out.println("Ho ten tai xe: " + hoTenTaiXe);
-    System.out.println("So xe: " + soXe);
-    System.out.println("Doanh thu: " + doanhThu);
-  }
-}
-
-// Class Xe ngoại thành
-class XeNgoaiThanh extends ChuyenXe {
-  private String noiDen;
-  private int soNgayDi;
-
-  public XeNgoaiThanh(String maSoChuyen, String hoTenTaiXe, int soXe, double doanhThu, String noiDen, int soNgayDi) {
-    super(maSoChuyen, hoTenTaiXe, soXe, doanhThu);
-    this.noiDen = noiDen;
-    this.soNgayDi = soNgayDi;
-  }
-
-  @Override
-  public void ThongTinChuyenXe() {
-    super.ThongTinChuyenXe();
-    System.out.println("Noi den: " + noiDen);
-    System.out.println("So ngay di: " + soNgayDi);
-  }
-}
-
-// Class Xe nội thành
-class XeNoiThanh extends ChuyenXe {
-  private int soTuyen, soKmDiDuoc;
-
-  public XeNoiThanh(String maSoChuyen, String hoTenTaiXe, int soXe, double doanhThu, int soTuyen, int soKmDiDuoc) {
-    super(maSoChuyen, hoTenTaiXe, soXe, doanhThu);
-    this.soTuyen = soTuyen;
-    this.soKmDiDuoc = soKmDiDuoc;
-  }
-
-  @Override
-  public void ThongTinChuyenXe() {
-    super.ThongTinChuyenXe();
-    System.out.println("So tuyen: " + soTuyen);
-    System.out.println("So km di duoc: " + soKmDiDuoc);
-  }
-}
-
-// Class Quản lý chuyến xe
 class QuanLyChuyenXe {
   private List<ChuyenXe> danhSachChuyenXe = new ArrayList<>();
 

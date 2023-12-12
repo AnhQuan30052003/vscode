@@ -1,14 +1,5 @@
-import java.util.List;
-import java.util.ArrayList;
-
-// Giao diện interface
-interface IQuanLy {
-  public void Them(NhanVien nv);
-  public void InDanhSach();
-}
-
 // Lớp nhân viên
-public class NhanVien {
+class NhanVien {
   private String ten, diaChi;
   private int tuoi, tongSoGioLam;
   private double tienLuong;
@@ -55,26 +46,5 @@ public class NhanVien {
     if (tongSoGioLam >= 200) return tienLuong * 0.2;
     else if (tongSoGioLam >= 100) return tienLuong * 0.1;
     return 0;
-  }
-}
-
-// Lớp quản lý nhân viên
-class QuanLyNhanVien implements IQuanLy {
-  List<NhanVien> ListNhanVien = new ArrayList<>();
-
-  // Thêm mới nhân viên
-  @Override
-  public void Them(NhanVien nv) {
-    ListNhanVien.add(nv);
-  }
-  
-  // In danh sách nhân viên
-  @Override
-  public void InDanhSach() {
-    int stt = 1;
-    for (NhanVien nv : ListNhanVien) {
-      System.out.println("Nhan vien " + stt++);
-      System.out.println(nv.GetThongTin() + "\n");
-    }
   }
 }
