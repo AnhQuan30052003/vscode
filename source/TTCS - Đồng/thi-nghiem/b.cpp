@@ -1,40 +1,33 @@
 #include <iostream>
 using namespace std;
 
-void AdjustHeap(short a[], short n, short i) {
-    short k = i, p = 2*i+1, r = 2*i+2;
-    if (p < n && a[p]> a[k]) k = p;	
-    if (r < n && a[r] > a[k]) k = r;	
-    if (k != i) {
-	    swap(a[i], a[k]);
-	    AdjustHeap(a, n, k);
-    }
-}
+void QuickSort(int a[], int left, int right) {
+	if (left > right) return;
+	int p = (left + right) / 2;
+	int _left = left, _right = right;
 
-void BuildHeap(short a[], short n) {
-    for (short i = n/2-1; i >= 0; i--) {
-        AdjustHeap(a, n, i);
-    }
-}
+	while (_left < _right) {
+		while (a[_left] < a[p] && _left <= right) _left += 1;
+		while (a[_right] > a[p] && _right >= left) _right -= 1;
 
-void Print_Arr(short a[], short n) {
-    for (short i = 0; i < n; i++) {
-        cout << a[i] << " ";
-    }
-    cout << endl;
+		if (_left <= _right) {
+			swap(a[_left], a[_right]);
+			_left += 1;
+			_right -= 1;
+		}
+	}
+
+	if (_left < right) QuickSort(a, _left, right);
+	if (left < _right) QuickSort(a, left, _right);
 }
 
 int main() {
-    system("cls");
-    short a[] = {1, 3, 2, 5, 6};
-    short n = size(a);
+	system("cls");
+	int a[] = {1, 3, 2, 5, 6};
+	int n = size(a);
+	QuickSort(a, 0, n-1);
 
-    BuildHeap(a, n);
-    Print_Arr(a, n);
-    while (n > 1) {
-	    swap(a[0], a[n-1]);
-        n -= 1;
-	    AdjustHeap(a, n, 0);
-        Print_Arr(a, n);
-    } 		
+	for (int i = 0; i < n; i++) {
+		cout << a[i] << " ";
+	}
 }

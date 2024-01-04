@@ -4,9 +4,6 @@
 #include "QuickSort.cpp"
 #include "MergeSort.cpp"
 
-// Biến điều chỉnh
-int luaChon = 0;
-
 void InMang(int a[], int n) {
   for(int i = 0; i < n; i++) {
     cout << a[i] << " ";
@@ -15,20 +12,13 @@ void InMang(int a[], int n) {
 }
 
 int main() {
-  system("cls");
-  int n;
-  cout << "Nhập vào kích thước mảng: ";
-  cin >> n;
-
+  int n = 1, luaChon = 0;
   int a[n];
-  cout << "Nhập vào các phần tử mảng: ";
-  for(int i = 0; i < n; i++) {
-    cin >> a[i];
-  }
 
   while (true) {
     HienThiGiaoDienLucDau(luaChon);
-    if (luaChon == 0) break;
+    if (luaChon == 5) break;
+
     // Xử lý
     switch (luaChon) {
       case 1: {
@@ -50,6 +40,11 @@ int main() {
         cout << "Mảng đã sắp xếp bằng Merge Sort: ";
         InMang(a, n);
         break;
+      }
+
+      case 4: {
+        NhapMang(a, n);
+        cout << "Nhập thành công mảng" << endl;
       }
     }
     getch();

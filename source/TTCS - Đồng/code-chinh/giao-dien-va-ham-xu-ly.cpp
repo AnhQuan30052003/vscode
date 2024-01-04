@@ -19,14 +19,32 @@ void HienThiGiaoDienLucDau(int& luaChon) {
     cout << "\t| 1. Quick Sort                   |" << endl;
     cout << "\t| 2. Heap Sort                    |" << endl;
     cout << "\t| 3. Merge Sort                   |" << endl;
-    cout << "\t| 0. Thoát                        |" << endl;
+    cout << "\t| 4. Nhập mảng mới                |" << endl;
+    cout << "\t| 5. Thoát                        |" << endl;
     cout << "\t+---------------------------------+" << endl << endl;
     cout << "Nhập lựa chọn: ";
     getline(cin, nhap);
 
     if (KiemTraNhapSo(nhap) == false || nhap.size() == 0) continue;
     luaChon = stoi(nhap);
-    if (luaChon >= 0 && luaChon <= 3) break;
+    if (luaChon >= 1 && luaChon <= 5) break;
+  }
+}
+
+// Nhập mảng
+void NhapMang(int a[], int& n) {
+  string nhap = "";
+  while (true) {
     system("cls");
+    cout << "Nhâp kích thước của mảng: ";
+    getline(cin, nhap);
+    if (KiemTraNhapSo(nhap) == false || nhap.size() == 0) continue;
+    n = stoi(nhap);
+    if (n > 0) break;
+  }
+
+  cout << "Nhập " << n << " phần tử của mảng: ";
+  for (int i = 0; i < n; i++) {
+    cin >> a[i];
   }
 }
