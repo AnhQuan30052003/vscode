@@ -35,8 +35,8 @@
 //   })
 // })
 
-$(document).ready(function() {
-  if ($('.mod-slider-demo').length) {
+$(function() {
+  // if ($('.banner-page').length) {
     $('.slider').slick({
       infinite: true,
       arrows: true,
@@ -47,23 +47,8 @@ $(document).ready(function() {
       nextArrow: `<button type='button' class='slick-next slick-arrow'><i class="fa-solid fa-arrow-right"></i></button>`,
       
       mobileFirst: true,
-      slidesToShow: 1,
+      slidesToShow: 3,
       slidesToScroll: 1,
-
-      responsive: [
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2,
-          }         
-        },
-        {
-          breakpoint: 1279,
-          settings: {
-            slidesToShow: 3,
-          }
-        },
-      ]
     });
-  }
-});
+  // }
+})
