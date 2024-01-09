@@ -39,7 +39,7 @@ int reduceArray(int a[], int& n) {
 
 int main() {
   system("cls");
-  int a[] = {5, 2, 6, 7, 11, 8, 13, 5, 3, 15};
+  int a[] = {1, 3, 5, 6, 2, 7, 4, 10, 11, 13, 25, 0};
   int n = size(a);
 
   int soLuongChuoiConSoNguyenTo = reduceArray(a, n);
