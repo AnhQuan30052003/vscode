@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock</title>
+  <link rel="stylesheet" href="https://anhquan30052003.github.io/framework-css/style-main.css">
+
+  <style>
+    .khung-nut .btn {
+    background-color: transparent;
+    color: white;
+    border: solid 1px;
+    width: 30%;
+    padding: 10px 15px;
+  }
+  </style>
+</head>
+
+<body class="bg-orange text-white">
+  <div class="clock w-400 mx-auto mt-200">
+    <h1 class="text-center fw-700 my-20">Stopwatch</h1>
+    <p class="text-center my-10">
+      <span id="hour">00</span>:<span id="minute">00</span>:<span id="sec">00</span>:<span id="ten">00</span>
+    </p>
+    <div class="khung-nut flex justify-content-between">
+      <button id="button-start" class="btn btn-click">Start</button>
+      <button id="button-stop" class="btn btn-click">Stop</button>
+      <button id="button-reset" class="btn btn-click">Reset</button>
+    </div>
+  </div>  
+</body>
+
+<script>
+  window.onload = function() {
+    var hour = 0, minute = 0, sec = 0, ten = 0
+    var cardTen = document.getElementById("ten")
+    var cardSec = document.getElementById("sec")
+    var cardMinute = document.getElementById("minute")
+    var cardHour = document.getElementById("hour")
+    var buttonStart = document.getElementById("button-start")
+    var buttonStop = document.getElementById("button-stop")
+    var buttonReset = document.getElementById("button-reset")
+    var clock
+
+    buttonStart.onclick = function() {
+      clearInterval(clock)
+      clock = setInterval(Time, 10)
+      buttonStart.innerHTML = "Start"
+    }
+    
+    buttonStop.onclick = function() {
+      clearInterval(clock)
+      buttonStart.innerHTML = "Resume"
+    }
+
+    buttonReset.onclick = function() {
+      clearInterval(clock)
+      buttonStart.innerHTML = "Start"
+      hour = minute = sec = ten = 0
+      cardHour.innerHTML = cardMinute.innerHTML = cardSec.innerHTML = cardTen.innerHTML = "00"
+    }
+
+    function Time() {
+      ten += 1
+      if (ten == 100) {
+        ten = 0
+        sec += 1;
+        if (sec == 60) {
+          sec = 0
+          minute += 1
+          if (minute == 60) {
+            hour += 1
+          }
+        }
+      }
+
+      if (ten < 10) cardTen.innerHTML = "0" + ten
+      else cardTen.innerHTML = ten
+
+      if (sec < 10) cardSec.innerHTML = "0" + sec
+      else cardSec.innerHTML = sec
+
+      if (minute < 10) cardMinute.innerHTML = "0" + minute
+      else cardMinute.innerHTML = minute
+
+      if (hour < 10) cardHour.innerHTML = "0" + hour
+      else cardHour.innerHTML = hour
+    }
+  }
+</script>
+</html>
