@@ -1,18 +1,14 @@
-var activeStopwatch = true, activeCountdown = false
-
 $(function() {
   var box = $('.box')
   $('.button-stopwatch').click(function() {
     if ($(box).hasClass('animation-translate')) {
       $(box).removeClass('animation-translate')
-      activeStopwatch = true
     }
   })
   
   $('.button-countdown').click(function() {
     if (!$(box).hasClass('animation-translate')) {
       $(box).addClass('animation-translate')
-      activeCountdown = true
     }
   })
 })
@@ -30,10 +26,11 @@ window.onload = function() {
   var buttonReset = document.getElementsByClassName('button-reset')
   var clockStopwatch, clockCountdown
   var cmd = ['Start', 'Resume']
-  var setupTime = false
+  var setupTime = false, activeStopwatch = false, activeCountdown = false
 
     // StopWatch click
   buttonStart[0].onclick = function() {
+    activeStopwatch = true
     clearInterval(clockStopwatch)
     clockStopwatch = setInterval(Time_StopWatch, 10)
     buttonStart[0].innerHTML = cmd[0]
@@ -48,12 +45,14 @@ window.onload = function() {
     clearInterval(clockStopwatch)
     buttonStart[0].innerHTML = cmd[0]
     sw_hour = sw_minute = sw_sec = sw_ten = 0
+    activeStopwatch = false
     cardHour[0].innerHTML = cardMinute[0].innerHTML = cardSec[0].innerHTML = cardTen[0].innerHTML = '00'
   }
 
   // CountDown click
   buttonStart[1].onclick = function() {
     if (setupTime == false) SetupValueTime()
+    activeCountdown = true
 
     clearInterval(clockCountdown)
     clockCountdown = setInterval(Time_CountDown, 10)
@@ -67,7 +66,7 @@ window.onload = function() {
   buttonReset[1].onclick = function() {
     clearInterval(clockCountdown)
     buttonStart[1].innerHTML = cmd[0]
-    setupTime = false
+    setupTime = activeCountdown = false
     sw_hour = sw_minute = sw_sec = sw_ten = 0
     cardHour[1].innerHTML = cardMinute[1].innerHTML = cardSec[1].innerHTML = cardTen[1].innerHTML = '00'
 
