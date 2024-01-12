@@ -5,19 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clock</title>
   <link rel="stylesheet" href="https://anhquan30052003.github.io/framework-css/style-main.css">
-  <link rel="stylesheet" href="./styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="./main.js"></script>
+
+  <style>
+    .animation-translate {
+      transform: translateX(-100%);
+    }
+
+    .box {
+      transition: 0.5s;
+    }    
+  </style>
 </head>
 
 <body class="bg-orange text-white flex flex-x-y w-100vw h-100vh relative">
   <nav class="absolute top-10 w-250 flex justify-content-between">
-    <button class="stopwatch btn btn-hover-opacity py-5 px-10 fw-500 w-120 rounder-3">Stopwatch</button>
-    <button class="countdown btn btn-hover-opacity py-5 px-10 fw-500 w-120 rounder-3">Countdown</button>
+    <button class="button-stopwatch btn btn-hover-opacity py-5 px-10 fw-500 w-120 rounder-3">Stopwatch</button>
+    <button class="button-countdown btn btn-hover-opacity py-5 px-10 fw-500 w-120 rounder-3">Countdown</button>
   </nav>
 
-  <div class="clock w-full sm-w-500 h-500 sm-h-300 overflow-hidden">
-    <div class="box w-full h-full relative an">
+  <div class="clock w-full sm-w-500 h-500 sm-h-300 overflow-hiddenx">
+    <div class="box w-full h-full relative">
       <div class="stopwatch absolute w-full sm-w-500 top-0 left-0">
         <h1 class="text-center fw-700 my-20 fs-60 sm-fs-70">Stopwatch</h1>
     
