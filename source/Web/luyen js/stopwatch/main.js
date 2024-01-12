@@ -13,6 +13,12 @@ $(function() {
   })
 })
 
+// Chuông hết giờ
+function PlayVoice() {
+  var audio = new Audio('./voice.mp3');
+  audio.play();
+}
+
 window.onload = function() {
   // Variable
   var sw_hour = 0, sw_minute = 0, sw_sec = 0, sw_ten = 0
@@ -95,7 +101,10 @@ window.onload = function() {
   // Đồng hồ của CountDown
   function Time_CountDown() {
     // Nếu thời gian hết
-    if (cd_hour == 0 && cd_minute == 0 && cd_sec == 0 && cd_ten == 0) return
+    if (cd_hour == 0 && cd_minute == 0 && cd_sec == 0 && cd_ten == 0) {
+      PlayVoice()
+      return
+    }
 
     cd_ten -= 1
     if (cd_ten == -1) {
