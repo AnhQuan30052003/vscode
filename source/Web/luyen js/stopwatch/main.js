@@ -13,12 +13,6 @@ $(function() {
   })
 })
 
-// Chuông hết giờ
-function PlayVoice() {
-  var audio = new Audio('./voice.mp3');
-  audio.play();
-}
-
 window.onload = function() {
   // Variable
   var sw_hour = 0, sw_minute = 0, sw_sec = 0, sw_ten = 0
@@ -62,6 +56,7 @@ window.onload = function() {
 
     clearInterval(clockCountdown)
     clockCountdown = setInterval(Time_CountDown, 10)
+    buttonStart[1].innerHTML = cmd[0]
   }
   
   buttonStop[1].onclick = function() {
@@ -193,5 +188,11 @@ window.onload = function() {
       if (cd_hour < 10) cardHour[1].innerHTML = '0' + cd_hour
       else cardHour[1].innerHTML = cd_hour
     }
+  }
+
+  // Chuông hết giờ
+  function PlayVoice() {
+    var audio = new Audio('./voice.mp3');
+    audio.play();
   }
 }
