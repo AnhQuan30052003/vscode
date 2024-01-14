@@ -68,7 +68,6 @@ window.onload = function() {
     clearInterval(clockCountdown)
     buttonStart[1].innerHTML = cmd[0]
     setupTime = activeCountdown = false
-    sw_hour = sw_minute = sw_sec = sw_ten = 0
     cardHour[1].innerHTML = cardMinute[1].innerHTML = cardSec[1].innerHTML = cardTen[1].innerHTML = '00'
 
     document.getElementById('input-hour').value = '';
@@ -96,10 +95,7 @@ window.onload = function() {
   // Đồng hồ của CountDown
   function Time_CountDown() {
     // Nếu thời gian hết
-    if (cd_hour == 0 && cd_minute == 0 && cd_sec == 0 && cd_ten == 0) {
-      PlayVoice()
-      return
-    }
+    if (cd_hour == 0 && cd_minute == 0 && cd_sec == 0 && cd_ten == 0) return
 
     cd_ten -= 1
     if (cd_ten == -1) {
