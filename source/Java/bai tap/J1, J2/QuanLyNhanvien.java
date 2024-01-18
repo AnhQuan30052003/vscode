@@ -7,8 +7,8 @@ class QuanLyNhanVien implements IQuanLy {
 
   // Thêm mới nhân viên
   @Override
-  public void Them(NhanVien nv) {
-    ListNhanVien.add(nv);
+  public void Them(NhanVien nvm) {
+    ListNhanVien.add(nvm);
   }
   
   // In danh sách nhân viên
@@ -16,8 +16,8 @@ class QuanLyNhanVien implements IQuanLy {
   public void InDanhSach() {
     int stt = 1;
     for (NhanVien nv : ListNhanVien) {
-      System.out.println("Nhan vien " + stt++);
-      System.out.println(nv.GetThongTin() + "\n");
+      System.out.println("Nhan vien " + stt++ + ":");
+      System.out.println(nv.GetThongTin());
     }
   }
 }
