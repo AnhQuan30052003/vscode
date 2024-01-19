@@ -1,23 +1,23 @@
-int Sum(var a, var b) => a + b;
-
 class Cat {
-  var name, leg;
+  String name, voice;
+  int leg;
 
-  Cat(this.name, this.leg);
+  Cat(this.name, this.leg, this.voice);
 
-  String get getName {
+  // void setName(String name) => this.name = name;
+  // void set setName(String name) => this.name = name;
+
+  String getName() {
     return name;
   }
 
-  String get getLeg {
-    return leg;
+  void Voice() {
+    print(this.voice);
   }
-
-  void Voice() => print(this.name);
 }
 
-
 void main() {
-  Cat a = Cat("Tom", 4);
-  print(a.getLeg);
+  Cat a = new Cat("Tom", 4, "Meow");
+  // a.setName("Mèo Tom A");
+  print(a.getName());
 }
