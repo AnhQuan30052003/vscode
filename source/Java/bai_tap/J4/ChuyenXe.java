@@ -1,7 +1,7 @@
-abstract class ChuyenXe {
-  public String maSoChuyen, hoTenTaiXe;
-  public int soXe;
-  public double doanhThu;
+public class ChuyenXe {
+  protected String maSoChuyen, hoTenTaiXe;
+  protected int soXe;
+  protected double doanhThu;
 
   public ChuyenXe(String maSoChuyen, String hoTenTaiXe, int soXe, double doanhThu) {
     this.maSoChuyen = maSoChuyen;
@@ -11,9 +11,9 @@ abstract class ChuyenXe {
   }
 
   public void ThongTinChuyenXe() {
-    System.out.println("Ma so chuyen: " + maSoChuyen);
-    System.out.println("Ho ten tai xe: " + hoTenTaiXe);
-    System.out.println("So xe: " + soXe);
+    System.out.println("Mã số chuyến: " + maSoChuyen);
+    System.out.println("Họ tên tài xế: " + hoTenTaiXe);
+    System.out.println("Số xe: " + soXe);
     System.out.println("Doanh thu: " + doanhThu);
   }
 }

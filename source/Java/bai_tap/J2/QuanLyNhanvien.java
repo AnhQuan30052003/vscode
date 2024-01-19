@@ -16,8 +16,9 @@ class QuanLyNhanVien implements IQuanLy {
   public void InDanhSach() {
     int stt = 1;
     for (NhanVien nv : listNhanVien) {
-      System.out.println("Nhan vien " + stt++ + ":");
+      System.out.println("Nhân viên " + stt++ + ":");
       System.out.println(nv.GetThongTin());
+      System.out.println();
     }
   }
 }

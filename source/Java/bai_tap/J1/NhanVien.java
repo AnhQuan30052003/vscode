@@ -38,7 +38,7 @@ class NhanVien {
 
   // GetThongTin
   public String GetThongTin() {
-    return "Ten: " + ten + "\nTuoi: " + tuoi + "\nDiaChi " + diaChi + "\nTien luong: " + tienLuong + "\nTong so gio lam: " + tongSoGioLam;
+    return "Tên: " + ten + "\nTuổi: " + tuoi + "\nĐịa chỉ " + diaChi + "\nTiền lương: " + tienLuong + "\nTổng số giờ làm: " + tongSoGioLam;
   }
 
   // Tính thưởng

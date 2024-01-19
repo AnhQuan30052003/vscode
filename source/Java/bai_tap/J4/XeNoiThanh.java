@@ -10,7 +10,7 @@ class XeNoiThanh extends ChuyenXe {
   @Override
   public void ThongTinChuyenXe() {
     super.ThongTinChuyenXe();
-    System.out.println("So tuyen: " + soTuyen);
-    System.out.println("So km di duoc: " + soKmDiDuoc);
+    System.out.println("Số tuyến: " + soTuyen);
+    System.out.println("Số km đi được: " + soKmDiDuoc);
   }
 }

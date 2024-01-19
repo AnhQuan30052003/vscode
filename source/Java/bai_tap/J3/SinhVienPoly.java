@@ -10,14 +10,14 @@ abstract class SinhVienPoly {
 
   public String HocLuc() {
     double diem = GetDiem();
-    if (diem < 5) return "Yeu";
+    if (diem < 5) return "Yếu";
     else if (diem < 6.5) return "Trung binh";
-    else if (diem < 7.5) return "Kha";
-    else if (diem < 9) return "Gioi";
-    return "Xuat sac";
+    else if (diem < 7.5) return "Khá";
+    else if (diem < 9) return "Giỏi";
+    return "Xuất sắc";
   }
   
   public void Xuat() {
-    System.out.println("Ho ten: " + hoTen + ", nganh: " + nganh);
+    System.out.println("Họ tên: " + hoTen + "\nNgành: " + nganh);
   }
 }

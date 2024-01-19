@@ -11,7 +11,7 @@ class XeNgoaiThanh extends ChuyenXe {
   @Override
   public void ThongTinChuyenXe() {
     super.ThongTinChuyenXe();
-    System.out.println("Noi den: " + noiDen);
-    System.out.println("So ngay di: " + soNgayDi);
+    System.out.println("Nơi đến: " + noiDen);
+    System.out.println("Số ngày đi: " + soNgayDi);
   }
 }
