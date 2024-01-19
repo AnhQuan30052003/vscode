@@ -10,7 +10,7 @@ class GiaoVien extends CaNhan{
   @Override
   public void HienThiThongTin() {
     super.HienThiThongTin();
-    System.out.println("Mon day: " + monDay);
-    System.out.println("To bo mon: " + toBoMon);
+    System.out.println("Môn dạy: " + monDay);
+    System.out.println("Tổ bộ môn: " + toBoMon);
   }
 }

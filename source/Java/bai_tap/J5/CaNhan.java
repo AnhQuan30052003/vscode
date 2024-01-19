@@ -9,10 +9,7 @@ abstract class CaNhan {
     this.soDienThoai = soDienThoai;
   }
 
-  public void HienThiThongTin() {
-    System.out.println("Ho ten: " + hoTen);
-    System.out.println("Tuoi: " + tuoi);
-    System.out.println("Dia chi: " + diaChi);
-    System.out.println("So dien thoai: " + soDienThoai);
+  public String HienThiThongTin() {
+    return "Họ tên: " + hoTen + "\nTuổi: " + tuoi + "\nĐịa chỉ: " + diaChi + "\nSố điện thoại: " + soDienThoai;
   }
 }

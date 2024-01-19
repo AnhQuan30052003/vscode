@@ -10,7 +10,7 @@ class HocSinh extends CaNhan{
   @Override
   public void HienThiThongTin() {
     super.HienThiThongTin();
-    System.out.println("Lop: " + lop);
-    System.out.println("Nang khieu: " + nangKhieu);
+    System.out.println("Lớp: " + lop);
+    System.out.println("Năng khiếu: " + nangKhieu);
   }
 }

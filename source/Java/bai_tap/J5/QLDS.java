@@ -5,20 +5,21 @@ class QLDS implements IQLDS{
   List<CaNhan> ds = new ArrayList<>();
 
   @Override
-  public void Them(CaNhan cn) {
+  public int Them(CaNhan cn) {
     ds.add(cn);
+    return 0;
   }
 
   @Override
-  public void Xoa(String ten) {
-
+  public int Xoa(String ten) {
+    return 0;
   }
 
   @Override
   public void InDS() {
-    System.out.println("Danh sach:");
+    System.out.println("Danh sách:");
     for (CaNhan x : ds) {
-      x.HienThiThongTin();
+      System.out.print(x.HienThiThongTin());
       System.out.println("---------------------");
     }
   }
