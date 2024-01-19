@@ -1,4 +1,4 @@
-public class Program {
+public class Main {
   public static void main(String[] args)   {
     SinhVienPoly sv1 = new SinhVienIT("Nguyen Anh A", "Cong nghe thong tin", 10, 10, 10);
     sv1.Xuat();

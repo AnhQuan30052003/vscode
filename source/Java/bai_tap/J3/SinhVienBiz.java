@@ -1,5 +1,5 @@
 class SinhVienBiz extends SinhVienPoly {
-  private double marketing, sales;
+  public double marketing, sales;
   
   public SinhVienBiz(String hoTen, String nganh, double marketing, double sales) {
     super(hoTen, nganh);

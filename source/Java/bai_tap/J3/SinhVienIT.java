@@ -1,5 +1,5 @@
 class SinhVienIT extends SinhVienPoly {
-  private double java, html, css;
+  public double java, html, css;
 
   public SinhVienIT(String hoTen, String nganh, double java, double html, double css) {
     super(hoTen, nganh);

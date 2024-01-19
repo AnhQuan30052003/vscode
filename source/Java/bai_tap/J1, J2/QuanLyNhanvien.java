@@ -3,19 +3,19 @@ import java.util.ArrayList;
 
 // Lớp Quản lý nhân viên
 class QuanLyNhanVien implements IQuanLy {
-  List<NhanVien> ListNhanVien = new ArrayList<>();
+  List<NhanVien> listNhanVien = new ArrayList<>();
 
   // Thêm mới nhân viên
   @Override
   public void Them(NhanVien nvm) {
-    ListNhanVien.add(nvm);
+    listNhanVien.add(nvm);
   }
   
   // In danh sách nhân viên
   @Override
   public void InDanhSach() {
     int stt = 1;
-    for (NhanVien nv : ListNhanVien) {
+    for (NhanVien nv : listNhanVien) {
       System.out.println("Nhan vien " + stt++ + ":");
       System.out.println(nv.GetThongTin());
     }

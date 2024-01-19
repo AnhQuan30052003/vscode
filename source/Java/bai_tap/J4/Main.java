@@ -1,4 +1,4 @@
-public class Program {
+public class Main {
   public static void main(String[] args) {
     XeNgoaiThanh xngt1 = new XeNgoaiThanh("CX001", "Nguyen Van 1", 101, 10000, "Khanh Hoa", 2);
     XeNgoaiThanh xngt2 = new XeNgoaiThanh("CX002", "Nguyen Van 2", 102, 10000, "Da Nang", 3);
@@ -9,7 +9,7 @@ public class Program {
     
     QuanLyChuyenXe quanLyChuyenXe = new QuanLyChuyenXe();
     quanLyChuyenXe.ThemChuyenXe(xngt1);    
-    quanLyChuyenXe.ThemChuyenXe(xngt2);    
+    quanLyChuyenXe.ThemChuyenXe(xngt2);  
     quanLyChuyenXe.ThemChuyenXe(xngt3);    
     quanLyChuyenXe.ThemChuyenXe(xnt1);    
     quanLyChuyenXe.ThemChuyenXe(xnt2);    

@@ -1,5 +1,5 @@
 abstract class SinhVienPoly {
-  protected String hoTen, nganh;
+  public String hoTen, nganh;
 
   public SinhVienPoly(String hoTen, String nganh) {
     this.hoTen = hoTen;

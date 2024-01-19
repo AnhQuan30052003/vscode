@@ -1,7 +1,7 @@
 abstract class ChuyenXe {
-  protected String maSoChuyen, hoTenTaiXe;  
-  protected int soXe;
-  protected double doanhThu;
+  public String maSoChuyen, hoTenTaiXe;
+  public int soXe;
+  public double doanhThu;
 
   public ChuyenXe(String maSoChuyen, String hoTenTaiXe, int soXe, double doanhThu) {
     this.maSoChuyen = maSoChuyen;

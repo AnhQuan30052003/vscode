@@ -1,4 +1,4 @@
-public class Program {
+public class Main {
   public static void Main(String[] args) {
     
   }  
