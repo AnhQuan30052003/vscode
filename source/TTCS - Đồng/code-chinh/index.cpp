@@ -22,7 +22,7 @@ int main() {
     // Xử lý
     switch (luaChon) {
       case 1: {
-        quick_sort(a, 0, n - 1);
+        QuickSort(a, 0, n - 1);
         cout << "Mảng đã sắp xếp bằng Quick Sort: ";
         InMang(a, n);
         break;
