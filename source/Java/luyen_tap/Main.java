@@ -3,12 +3,23 @@ import java.util.ArrayList;
 
 public class Main {
   public static void main(String[] args) {
-    List<Integer> arr = new ArrayList<>();
+    List<String> ds = new ArrayList<>();
+    ds.add("Anh Quân");
+    ds.add("Văn Đồng");
 
-    arr.add(arr.size(), 10);
+    System.out.println("Danh sách hiện có:");
+    for (String _ds : ds) {
+      System.err.println(_ds);
+    }
 
-    for (int a : arr) {
-      System.out.print(a + " ");
+    System.err.println("Sau khi xoá một người: ");
+    for (int i = 0; i < ds.size(); i++) {
+      if (ds.get(i).equalsIgnoreCase("quân")) {
+        ds.remove(i);
+      }
+    }
+    for (String _ds : ds) {
+      System.err.println(_ds);
     }
   }
 }
