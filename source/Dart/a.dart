@@ -1,23 +1,16 @@
-class Cat {
-  String name, voice;
-  int leg;
+class Nguoi {
+  String ten;
+  static int soLuong = 0;
 
-  Cat(this.name, this.leg, this.voice);
-
-  // void setName(String name) => this.name = name;
-  // void set setName(String name) => this.name = name;
-
-  String getName() {
-    return name;
-  }
-
-  void Voice() {
-    print(this.voice);
+  Nguoi(this.ten) {
+    soLuong += 1;
   }
 }
 
 void main() {
-  Cat a = new Cat("Tom", 4, "Meow");
-  // a.setName("Mèo Tom A");
-  print(a.getName());
+  Nguoi a = new Nguoi("a");
+  Nguoi b = new Nguoi("b");
+  Nguoi c = new Nguoi("c");
+
+  print(Nguoi.soLuong);
 }
