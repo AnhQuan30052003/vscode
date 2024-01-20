@@ -1,9 +1,7 @@
 import os
 
-from datetime import datetime
-
 os.system('cls')
 
-now = datetime.now()
+text = "   Anh Quân"
 
-print('Now = ', now)
+print(text.strip())
