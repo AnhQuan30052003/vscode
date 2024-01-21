@@ -2,8 +2,8 @@
 
 
 void main() {
-  int a = 1;
-  int b = a?.5;
+  var list = [1, 2, 3, 4, 0];
 
-  // print
+  list.sort();
+  print(list);
 }

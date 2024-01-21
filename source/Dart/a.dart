@@ -8,9 +8,9 @@ class Nguoi {
 }
 
 void main() {
-  Nguoi a = new Nguoi("a");
-  Nguoi b = new Nguoi("b");
-  Nguoi c = new Nguoi("c");
+  // Nguoi a = new Nguoi("a");
+  // Nguoi b = new Nguoi("b");
+  // Nguoi c = new Nguoi("c");
 
   print(Nguoi.soLuong);
 }
