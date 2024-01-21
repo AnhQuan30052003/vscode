@@ -1,16 +1,9 @@
-class Nguoi {
-  String ten;
-  static int soLuong = 0;
 
-  Nguoi(this.ten) {
-    soLuong += 1;
-  }
+void XinChao({String? ten, int? tuoi}) {
+  print("Xin chào $ten, ra la bạn đã $tuoi tuổi.");
 }
 
 void main() {
-  // Nguoi a = new Nguoi("a");
-  // Nguoi b = new Nguoi("b");
-  // Nguoi c = new Nguoi("c");
-
-  print(Nguoi.soLuong);
+  XinChao(tuoi: 21, ten: "Nguyễn Anh Quân");
+  XinChao(ten: "Bùi Văn Đồng", tuoi: 21);
 }
