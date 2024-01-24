@@ -9,7 +9,7 @@ public class Main {
 
     System.out.println("Danh sách hiện có:");
     for (String _ds : ds) {
-      System.err.println(_ds);
+      System.out.println(_ds);
     }
 
     System.err.println("Sau khi xoá một người: ");
