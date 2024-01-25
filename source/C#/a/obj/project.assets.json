@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\f - github\\vscode\\source\\C#\\b\\test-c-sharp.csproj",
-      "projectName": "test-c-sharp",
-      "projectPath": "f:\\f - github\\vscode\\source\\C#\\b\\test-c-sharp.csproj",
+      "projectUniqueName": "F:\\f - github\\vscode\\source\\C#\\a\\a.csproj",
+      "projectName": "a",
+      "projectPath": "F:\\f - github\\vscode\\source\\C#\\a\\a.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "f:\\f - github\\vscode\\source\\C#\\b\\obj\\",
+      "outputPath": "F:\\f - github\\vscode\\source\\C#\\a\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

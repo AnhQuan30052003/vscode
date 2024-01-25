@@ -26,3 +26,17 @@ f:\f - github\vscode\src\4.c_sharp\b\obj\Debug\net7.0\refint\test-c-sharp.dll
 f:\f - github\vscode\src\4.c_sharp\b\obj\Debug\net7.0\test-c-sharp.pdb
 f:\f - github\vscode\src\4.c_sharp\b\obj\Debug\net7.0\test-c-sharp.genruntimeconfig.cache
 f:\f - github\vscode\src\4.c_sharp\b\obj\Debug\net7.0\ref\test-c-sharp.dll
+f:\f - github\vscode\source\C#\b\bin\Debug\net7.0\test-c-sharp.exe
+f:\f - github\vscode\source\C#\b\bin\Debug\net7.0\test-c-sharp.deps.json
+f:\f - github\vscode\source\C#\b\bin\Debug\net7.0\test-c-sharp.runtimeconfig.json
+f:\f - github\vscode\source\C#\b\bin\Debug\net7.0\test-c-sharp.dll
+f:\f - github\vscode\source\C#\b\bin\Debug\net7.0\test-c-sharp.pdb
+f:\f - github\vscode\source\C#\b\obj\Debug\net7.0\test-c-sharp.GeneratedMSBuildEditorConfig.editorconfig
+f:\f - github\vscode\source\C#\b\obj\Debug\net7.0\test-c-sharp.AssemblyInfoInputs.cache
+f:\f - github\vscode\source\C#\b\obj\Debug\net7.0\test-c-sharp.AssemblyInfo.cs
+f:\f - github\vscode\source\C#\b\obj\Debug\net7.0\test-c-sharp.csproj.CoreCompileInputs.cache
+f:\f - github\vscode\source\C#\b\obj\Debug\net7.0\test-c-sharp.dll
+f:\f - github\vscode\source\C#\b\obj\Debug\net7.0\refint\test-c-sharp.dll
+f:\f - github\vscode\source\C#\b\obj\Debug\net7.0\test-c-sharp.pdb
+f:\f - github\vscode\source\C#\b\obj\Debug\net7.0\test-c-sharp.genruntimeconfig.cache
+f:\f - github\vscode\source\C#\b\obj\Debug\net7.0\ref\test-c-sharp.dll

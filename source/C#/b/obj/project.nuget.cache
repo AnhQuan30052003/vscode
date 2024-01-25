@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LW6kvOp9VsbsMfuMMvS3r4hEEdmuF4/zOyZBG6ZG6tzriAnT3O37OcJ1wSmDjCsvk/P6Vz3uAmo2VcK0GAdkNw==",
+  "dgSpecHash": "5Fu9HBRxFUbeRHyj+zK+k1NaolCwBOJbs7tzEVTqFEeqFgWAjvmXK/oIV4Tml+5FcEhSd6BXQPDaStpv9pG4WA==",
   "success": true,
-  "projectFilePath": "f:\\f - github\\vscode\\src\\4.c_sharp\\b\\test-c-sharp.csproj",
+  "projectFilePath": "f:\\f - github\\vscode\\source\\C#\\b\\test-c-sharp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
