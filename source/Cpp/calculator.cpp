@@ -8,27 +8,45 @@ int tinhHauTo(string text);
 
 int main() {
   system("cls");
-  string text = "(100 + 2) / 2 + 10";
+  string text = "(100 + 2) / 2 + 10"; // 100 2 + 2 / 10 + 
   chuyenSangHauTo(text);
   cout << text;
   // cout << tinhHauTo(text);
 }
 
+// Tính ra độ ưu tiên
 short doUuTien(char c) {
   if (c == '+' || c == '-') return 1;
-  if (c == '*') return 2;
+  if (c == '*' || c == '/') return 2;
   return 0;
 }
 
+// Kiểm tra xem ký tự c là số hay không ?
 bool laSo(char c) {
   if (c >= '0' && c <= '9') return true;
   return false;
 }
 
+// Chuyển biểu thức sang hậu tố
 void chuyenSangHauTo(string& text) {
+  stack<float> s;
+  for (int i = 0; i < text.size(); i++) {
+    char t = text[i];
+    if (t == ' ') {
 
+      continue;
+    }
+
+    if (s.size() > 0 && doUuTien(s.top()) >= doUuTien(t)) {
+      
+    }
+    else {
+      s.push(t);
+    }
+  }
 }
 
+// Tính toán biểu thức hậu tố
 int tinhHauTo(string text) {
   char so[10000];
   int _so = 0;

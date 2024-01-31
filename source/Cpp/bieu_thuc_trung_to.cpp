@@ -14,8 +14,7 @@ int main() {
 	system("cls");
 	// getline(cin, input);
 
-	input = "12 + 3";
-	cout << input << endl;
+	input = "-2+4";
 
 	chuyenSangHauTo();
 	cout << input << endl;
