@@ -1,9 +1,10 @@
 
 
-console.clear()
+console.clear();
 
-let i = 0
+function hienThi1(text) {
+  console.log(text);
+}
 
-const Print = setTimeout(function() {
-  console.log(i)
-}, 1000)
+let text = "Nguyễn Anh Quân";
+hienThi1(text);
