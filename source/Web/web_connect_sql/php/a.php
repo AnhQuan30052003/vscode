@@ -1,3 +1,4 @@
+<html>
 <?php
     $server = "ADMIN\SQLEXPRESS";
     // $username = "your_username"; // Thay your_username bằng username của bạn
@@ -11,7 +12,8 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT cmt as CCCD, ten as 'Họ và tên', tuoi as Tuổi FROM Nguoi";
+    // $sql = "SELECT cmt as CCCD, ten as 'Họ và tên', tuoi as Tuổi FROM Nguoi";
+    $sql = "SELECT * FROM Nguoi";
     $result = $conn->query($sql);
 
     $data = array();
@@ -26,3 +28,4 @@
 
     $conn->close();
 ?>
+</html>
