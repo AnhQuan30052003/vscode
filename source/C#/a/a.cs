@@ -1,7 +1,11 @@
 namespace System {
-  public class Change {
-    public static void changeValue(int[,] a, int x, int y) {
-      a[x, y] = 1;
+  public class TraiCay {
+    public string ten;
+    public ThongTin thongTin;
+
+    public TraiCay(string ten, ThongTin thongTin) {
+      this.ten = ten;
+      this.thongTin = thongTin;
     }
   }
 }
