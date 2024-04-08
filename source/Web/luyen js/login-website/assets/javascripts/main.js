@@ -90,7 +90,7 @@ function changePassword() {
   updateDatabase(user);
 
   alert("Đổi mật khẩu thành công");
-  // window.location.href = link.home;
+  window.location.href = link.home;
 }
 
 function xoaDoiTuongTrongDataBase() {

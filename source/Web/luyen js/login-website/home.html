@@ -11,10 +11,8 @@
 </head>
 
 <script>
-  // xoaDoiTuongTrongDataBase();
-  // localStorage.removeItem("userLogin");
-  var isLogin = false;
   console.log(JSON.parse(localStorage.getItem("accounts")));
+  var isLogin = false;
   var userLogin = localStorage.getItem("userLogin");
   if (userLogin == null) {
     window.location.href = link.login;
@@ -52,13 +50,11 @@
   </section>
 
   <script>
-    // console.log("Đã chạy đoạn kiểm tra islogin");
     if (isLogin == true) {
       var xinChao = document.querySelector("#xin-chao");
       var user = JSON.parse(userLogin)
       xinChao.innerHTML = `Xin chào ${user.name}`;
     }
-    console.log(`islogin: ${isLogin}`);
   </script>
 </body>
 </html>
