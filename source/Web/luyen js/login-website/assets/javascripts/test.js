@@ -28,5 +28,14 @@ function fix(list, nguoi) {
 // fix(list, nguoi1);
 
 
-list.pop();
-console.log(list)
+// list.pop();
+// console.log(list)
+
+var a = [1, 2, 3, 4];
+var n = 3;
+
+a.forEach((_a, i, arr) => {
+  if (_a == n) arr[i] = _a * 10;
+});
+
+console.log(a)

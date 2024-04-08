@@ -7,20 +7,22 @@ const link = {
   home: "./home.html",
 };
 
+var accounts = [];
+var getAccounts = localStorage.getItem("accounts");
+if (getAccounts != null) accounts = JSON.parse(getAccounts);
 
-function saveDatabase(acc, isFix) {
-  var accounts = JSON.parse(localStorage.getItem("accounts"));
-  if (accounts == null) accounts = [];
+function saveDatabase(acc) {
+  accounts.push(acc);
+  localStorage.setItem("accounts", JSON.stringify(accounts));
+}
 
-  if (isFix == true) {
-    accounts.map((a) => {
-      if (a.user == acc.user) {
-        a = acc;
-        console.log("Đã tìm thấy thấy và xác nhận đổi mậts khẩu");
-      }
-    });
-  } else accounts.push(acc);
-  console.log(accounts);
+function updateDatabase(acc) {
+  accounts = accounts.map((a) => {
+    if (a.user == acc.user) {
+      return acc;
+    }
+    return a;
+  });
   localStorage.setItem("accounts", JSON.stringify(accounts));
 }
 
@@ -72,7 +74,7 @@ function showChangePassword() {
   changePass.classList.remove("hidden");
 }
 
-function doiMatKhau() {
+function changePassword() {
   var passOld, passNew, pError;
   passOld = document.querySelector("#pass-old").value;
   passNew = document.querySelector("#pass-new").value;
@@ -85,7 +87,7 @@ function doiMatKhau() {
   }
 
   user.password = passNew;
-  saveDatabase(user, true);
+  updateDatabase(user);
 
   alert("Đổi mật khẩu thành công");
   // window.location.href = link.home;

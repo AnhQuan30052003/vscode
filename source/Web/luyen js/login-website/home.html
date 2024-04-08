@@ -45,14 +45,14 @@
             <input class="w-full h-35 p-5 outline-none" type="text" id="pass-new" placeholder="Mật khẩu mới">
             <input class="w-full h-35 p-5 outline-none" type="text" id="pass-confirm" placeholder="Xác nhận mật khẩu mới">
           </div>
-          <button class="w-full p-5 btn btn-success btn-click btn-hover-opacity" onclick="doiMatKhau()">Đổi</button>
+          <button class="w-full p-5 btn btn-success btn-click btn-hover-opacity" onclick="changePassword()">Đổi</button>
         </div>
       </div>
     </div>
   </section>
 
   <script>
-    console.log("Đã chạy đoạn kiểm tra islogin");
+    // console.log("Đã chạy đoạn kiểm tra islogin");
     if (isLogin == true) {
       var xinChao = document.querySelector("#xin-chao");
       var user = JSON.parse(userLogin)
