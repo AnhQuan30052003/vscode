@@ -1,1 +1,1 @@
-# VScode: lưu toàn bộ code tạm với phần mềm VScode
+# VScode: lưu toàn bộ code tạm (thí nghiệm) với phần mềm VScode
