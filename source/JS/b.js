@@ -1,10 +1,14 @@
-
-
 console.clear();
 
-function hienThi1(text) {
-  console.log(text);
-}
+let plusFive = (number) => {
+  // return number + 5;
+  console.log(number + 5);
+};
 
-let text = "Nguyễn Anh Quân";
-hienThi1(text);
+let f = plusFive;
+
+// console.log(plusFive(3));
+// console.log(f(9));
+
+plusFive(3);
+f(9);

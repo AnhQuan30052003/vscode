@@ -1,7 +1,7 @@
 console.clear();
 
-let a = 1;
+const xinChao = function(text = "User") {
+  console.log(`Xin chào ${text}`);
+}
 
-let b = ++a + a--;
-
-console.log(b);
+xinChao("Anh Quân");
