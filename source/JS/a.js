@@ -1,7 +1,22 @@
 console.clear();
 
-const xinChao = function(text = "User") {
-  console.log(`Xin chào ${text}`);
+class Nguoi {
+  constructor(ten, tuoi) {
+    this.ten = ten;
+    this.tuoi = tuoi;
+  }
+
+  static say() {
+    console.log("Đây là class Nguoi");
+  }
+
+  intro() {
+    console.log(`Tên tôi là ${this.ten}, tôi ${this.tuoi} tuổi.`);
+  }
 }
 
-xinChao("Anh Quân");
+Nguoi.say();
+
+const nguoi = new Nguoi("Nguyễn Anh Quân", 21);
+
+nguoi.intro();
