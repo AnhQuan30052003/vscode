@@ -2,6 +2,8 @@ import os
 
 os.system('cls')
 
-text = "   Anh Quân"
+list = {1: "Một", 2: "Hai"}
 
-print(text.strip())
+list.update({3: "Ba"})
+
+print(list)
