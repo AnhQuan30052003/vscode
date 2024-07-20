@@ -31,6 +31,5 @@ int main() {
       break;
   }
   
-  // Thay đổi trên máy chỗ  này !
   return 0;
 }
