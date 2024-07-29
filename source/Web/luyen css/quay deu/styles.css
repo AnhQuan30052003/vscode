@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(132, 125, 125);
+}
+
+.frame {
+  padding: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.box {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(red, blue);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: (-50%, -50%);
+  animation: 3s spin infinite linear;
+  transform-origin: left top;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
