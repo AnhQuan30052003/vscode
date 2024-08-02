@@ -4,10 +4,9 @@ using namespace std;
 int main() {
   system("cls");
 
-  int x = 10, y = x;
-  int b = --x >> 2 / y++;
-
-  cout << b;
+  int b = 16, c = 2;
+  int div = b/c*c;
+  cout << "Div: " << div;
 
   return 0;
 }
