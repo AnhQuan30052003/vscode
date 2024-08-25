@@ -1,10 +1,9 @@
-
-
-const a_var = {
+const a = {
+  // variable
   ten: "Anh Quân",
-}
 
-const a_fun = {
+
+  // function
   cls() {
     console.clear();
   },
@@ -14,9 +13,8 @@ const a_fun = {
   }
 };
 
-module.exports = {
-  a_var,
-  a_fun
-};
+a.ten = "Quân";
+
+module.exports = a;
 
 console.log("Run file a.js");

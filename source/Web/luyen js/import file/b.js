@@ -1,5 +1,7 @@
-const { a_var, a_fun } = require("./a.js");
+const aa = require("./a.js");
 
-a_fun.cls();
+aa.cls();
 
-console.log(a_var.ten);
+var myName = aa.ten;
+
+console.log(myName);

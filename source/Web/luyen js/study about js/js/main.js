@@ -1,10 +1,51 @@
-
-
 var body = document.querySelector("#body");
 body.classList.add("w-100vw", "h-100vh", "flex", "justify-content-center", "align-items-center");
 
 var root = document.querySelector("#root");
-root.classList.add("m-20");
+root.className = "h-full flex flex-col justify-content-around";
+
+var select = document.createElement("select");
+select.className = "py-5 px-3 outline-none w-150";
+
+var option1 = document.createElement("option");
+option1.value = option1.innerText = "buble";
+
+var option2 = document.createElement("option");
+option2.value =option2.innerText = "dump";
+
+select.append(option1, option2)
+
+var box = getBox();
+
+root.append(select);
+root.append(box);
+
+
+var listColor = ["text-red", "text-blue", "text-black", "text-orange", "text-green"];
+
+for (let i = 0; i < listColor.length; i++) {
+  let p = getP(listColor[i], i+1);
+  let item = getItem(p);
+  box.append(item);
+}
+
+function buble(div, status) {
+  if (status == "mouseover") {
+    div.style.scale = 1.5;
+  }
+  else {
+    div.style.scale = 1;
+  }
+}
+
+function dump(div, status) {
+  if (status == "mouseover") {
+    div.classList.add("transY");
+  }
+  else {
+    div.classList.remove("transY");
+  }
+}
 
 function getBox() {
   var box = document.createElement("div");
@@ -26,11 +67,21 @@ function getItem(p) {
   );
   
   div.addEventListener("mouseover", function() {
-    div.style.scale = 1.5;
+    if (select.value == "buble") {
+      buble(div, "mouseover");
+    }
+    else {
+      dump(div, "mouseover");
+    }
   });
 
   div.addEventListener("mouseout", function() {
-    div.style.scale = 1;
+    if (select.value == "buble") {
+      buble(div, "mouseout");
+    }
+    else {
+      dump(div, "mouseout");
+    }
   });
 
   div.append(p);
@@ -44,17 +95,5 @@ function getP(color, text) {
 
   return p;
 }
-
-var listColor = ["text-red", "text-blue", "text-black", "text-orange", "text-green"];
-
-var box = getBox();
-
-for (let i = 0; i < listColor.length; i++) {
-  let p = getP(listColor[i], i+1);
-  let item = getItem(p);
-  box.append(item);
-}
-
-root.append(box);
 
 console.log("Đã chạy file");
