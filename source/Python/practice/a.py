@@ -1,9 +1,14 @@
 import os
 
+# Lệnh xoá màn hình khi thông dịch chương trình
 os.system('cls')
 
-list = {1: "Một", 2: "Hai"}
+name = "Anh"
+fullName = "Nguyễn Anh Quân"
 
-list.update({3: "Ba"})
+print(fullName.find(name))
 
-print(list)
+if fullName.find(name):
+  print("Có nằm trong")
+else:
+  print("Không nằm trong full name !")
