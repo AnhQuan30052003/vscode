@@ -1,14 +1,15 @@
 import os
+import array
 
 # Lệnh xoá màn hình khi thông dịch chương trình
-os.system('cls')
+os.system("cls")
 
-name = "Anh"
-fullName = "Nguyễn Anh Quân"
+arr = array.array("i", [1, 2, 3])
 
-print(fullName.find(name))
+arr.append(4)
+arr.insert(0, 0)
 
-if fullName.find(name):
-  print("Có nằm trong")
-else:
-  print("Không nằm trong full name !")
+arr2 = arr[0: len(arr) - 2]
+
+for i in arr2:
+  print(i, end=" ")
