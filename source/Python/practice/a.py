@@ -4,10 +4,10 @@ import array as arr
 # Lệnh xoá màn hình khi thông dịch chương trình
 os.system("cls" if os.name == "nt" else "clear")
 
-a = [1, 3, 2]
-b = (1, 3, 2)
+myDict = {
+  "ten": "Anh Quân",
+  "tuoi": 21
+}
 
-a.sort()
-
-print(a[0])
-print(b[0])
+for k, v in myDict.items():
+  print(f"Key: {k}. Value: {v}")

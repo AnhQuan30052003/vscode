@@ -18,9 +18,9 @@
   * for ✔️
   * while ✔️
   * for else ✔️
-* [❌] Mảng, danh sách
-  * list  ✔️
-  * tuple  
-  * set
-  * dict
+* [✔️] Mảng, danh sách
+  * list ✔️
+  * tuple ✔️ 
+  * set ✔️
+  * dict ✔️
 * [❌] Đọc/ghi file
