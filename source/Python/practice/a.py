@@ -9,5 +9,7 @@ myDict = {
   "tuoi": 21
 }
 
+myDict["ngheNghiep"] = "Sinh viên"
+
 for k, v in myDict.items():
-  print(f"Key: {k}. Value: {v}")
+  print(f"{k} => {v}")
