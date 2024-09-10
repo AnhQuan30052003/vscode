@@ -3,17 +3,14 @@ from random import randint as rand
 
 os.system("cls" if os.name == "nt" else "clear")
 
-numbers = []
+def helloUser(name: str, age: int):
+  text = f"Xin chào {name}, {age} tuổi 😃"
+  return text
 
-for number in range(10):
-  number = rand(0, 9)
-  numbers.append(number)
+def main():
+  myName = "Nguyễn Anh Quân"
+  myAge = 21
 
-def isFirstEven():
-  for even in numbers:
-    if even % 2 == 0:
-      return even
+  print(helloUser(name=myName, age=myAge))
 
-print(numbers)
-
-print(f"\nSố chẵn đầu tiên: {isFirstEven()}")
+main()
