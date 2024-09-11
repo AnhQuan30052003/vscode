@@ -4,8 +4,8 @@ import os
 os.system("cls")
 
 # Khởi tạo
-listDinh = {}
-reverseListDinh = {}
+listPeak = {}
+reverseListPeak = {}
 _open = []
 _close = []
 
@@ -32,34 +32,34 @@ def setUpMatrix():
       matrix.append(listTemp)
 
 def setUpDict():
-  global listDinh, reverseListDinh
+  global listPeak, reverseListPeak
 
   key = 1
   for char in range(65, 65 + 26):
-    if chr(char) != listDinh[0]:
-      listDinh[key] = chr(char)
+    if chr(char) != listPeak[0]:
+      listPeak[key] = chr(char)
       key += 1
 
-  reverseListDinh = dict(map(reversed, listDinh.items()))
+  reverseListPeak = dict(map(reversed, listPeak.items()))
 
-def printRoadmap(diemBatDau: int, diemKetThuc: int):
-  listResult = [diemKetThuc]
+def printRoadmap(startPoint: int, endPoint: int):
+  listResult = [endPoint]
 
   i = 0
-  while i < diemKetThuc:
-    if matrix[i][diemKetThuc] == 1:
+  while i < endPoint:
+    if matrix[i][endPoint] == 1:
       listResult.insert(0, i)
-      if i == diemBatDau:
+      if i == startPoint:
         break
 
-      diemKetThuc = i
+      endPoint = i
       i = 0
     else:
       i += 1
 
-  print(listDinh[0], end="")
+  print(listPeak[0], end="")
   for i in range(1, len(listResult)):
-    print(f" -> {listDinh[listResult[i]]}", end="")
+    print(f" -> {listPeak[listResult[i]]}", end="")
 
 def main():
   global _open, _close
@@ -67,43 +67,45 @@ def main():
   setUpMatrix()
 
   # Nhập đỉnh đầu và cuối
-  diemBatDau = input("Điểm bắt đầu: ").upper()
-  diemKetThuc = input("Điểm kết thúc: ").upper()
+  startPoint = input("Điểm bắt đầu: ").upper()
+  endPoint = input("Điểm kết thúc: ").upper()
 
-  listDinh[0] = diemBatDau
+  listPeak[0] = startPoint
   setUpDict()
   
-  keyDiemBatDau = reverseListDinh[diemBatDau]
-  keyDiemKetThuc = reverseListDinh[diemKetThuc]
+  keyStartPoint = reverseListPeak[startPoint]
+  keyEndPoint = reverseListPeak[endPoint]
 
-  _open.append(keyDiemBatDau)
+  _open.append(keyStartPoint)
 
   # Bắt đầu duyệt
   while len(_open) > 0:
     n = _open.pop(0)
 
-    if n == keyDiemKetThuc:
+    # Khi đã tìm thấy
+    if n == keyEndPoint:
       # Xử lý in ra
-      printRoadmap(diemBatDau=keyDiemBatDau, diemKetThuc=keyDiemKetThuc)
+      printRoadmap(startPoint=keyStartPoint, endPoint=keyEndPoint)
       return
 
     # Đánh dấu đỉnh này đã xét
     _close.append(n)
 
     # Tìm đỉnh tiềm năng từ đỉnh n
-    dinhTiemNang = []
+    peakPotential = []
     for i in range(0, len(matrix[n])):
       if matrix[n][i] == 1:
-        dinhTiemNang.append(i)
+        peakPotential.append(i)
 
     # Loại bỏ các đỉnh tiềm năng đã có hoặc đã duyệt
-    dinhDaLoc = []
-    for i in dinhTiemNang:
+    peakFiltered = []
+    for i in peakPotential:
       if i not in _open and i not in _close:
-        dinhDaLoc.append(i)
+        peakFiltered.append(i)
 
     # Thêm đỉnh tiềm năng vào _open
-    _open += dinhDaLoc
+    _open = _open + peakFiltered # BFS
+    # _open = peakFiltered + _open # DFS
 
   print("Không có đường đi !")
 
