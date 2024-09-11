@@ -107,4 +107,5 @@ def main():
 
   print("Không có đường đi !")
 
-main()
+if __name__ == "__main__":
+  main()
