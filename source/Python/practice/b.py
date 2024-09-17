@@ -2,16 +2,16 @@ import os
 
 os.system("cls")
 
-a = [1, 2, 3, 3]
+a = [2, 4, 3, 1]
+b = ['b', 'd', 'c', 'a']
 
-b = set(a)
-
-c = list(b)
-
-print(a)
+c = list(zip(a, b))
 print(c)
 
-if a == c:
-  print("2 list giống nhau")
-else:
-  print("Khác !")
+c[0], c[1] = c[1], c[0]
+print(c)
+
+a, b = zip(*c)
+
+print(a)
+print(b)
