@@ -2,16 +2,46 @@ import os
 
 os.system("cls")
 
-a = [2, 4, 3, 1]
-b = ['b', 'd', 'c', 'a']
+def main():
+  dictOneText = {}
+  dictTwoText = {}
+  text = "toi dang hoc tai truong dai hoc nha trang"
 
-c = list(zip(a, b))
-print(c)
+  quetMotKyTu(text=text, dictSave=dictOneText)
 
-c[0], c[1] = c[1], c[0]
-print(c)
+  text = text.replace('a', 'w')
+  print()
+  print(text)
+  # print()
+  # quetHaiKyTu(text=text, dictSave=dictTwoText)
 
-a, b = zip(*c)
+def quetHaiKyTu(text: str, dictSave: dict):
+  text = text.replace(' ', '')
 
-print(a)
-print(b)
+  for i in range(len(text)-1):
+    char = text[i] + text[i+1]
+    count = text.count(char)
+    dictSave[char] = count
+
+  printResult(dictSave)
+
+def quetMotKyTu(text: str, dictSave: dict):
+  setText = set(text)
+  for t in setText:
+    if t != ' ':
+      count = text.count(t)
+      dictSave[t] = count
+
+  printResult(dictSave)
+
+def printResult(dictSave: dict):
+  dictSave = dict(sorted(dictSave.items(), key= lambda item: item[1], reverse=True))
+
+  char = list(dictSave.keys())
+  number = list(dictSave.values())
+
+  for i in range(len(number)):
+    # if number[i] > 1:
+    print(f"{number[i]}: {char[i]}", end="; ")
+
+main()

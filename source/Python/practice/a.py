@@ -3,9 +3,20 @@ import os
 
 os.system("cls" if os.name == "nt" else "clear")
 
-text = input("Text: ")
+a = [1, 2, 3]
+ten = "Quân"
 
-for t in set(text):
-  count = text.count(t)
-  if t != ' ':
-    print(f"{count} {t}")
+print(a)
+print(ten)
+
+def change(array: list, name: str):
+  number = 0
+  array.insert(0, number)
+
+  name = "Anh Quân"
+  array.append(name)
+
+change(a, ten)
+
+print(a)
+print(ten)
