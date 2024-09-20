@@ -1,4 +1,5 @@
 import tkinter as tkt
+from tkinter import ttk
 
 # variables
 root = tkt.Tk()
@@ -17,7 +18,7 @@ def buildFrame():
   obj = tkt.Frame(
     root,
     width=window_width * 1/2,
-    # height=window_height,
+    height=window_height,
   )
   return obj
 
@@ -46,3 +47,16 @@ def buildTextbox(frame: tkt.Tk, edit: bool):
   )
   return obj
 
+def buildTreeView(frame: tkt.Tk):
+  tree = ttk.Treeview(frame, columns=("chu", "tanSo", "thay"), show="headings")
+
+  tree.heading("chu", text="Chữ")
+  tree.heading("tanSo", text="Tần số")
+  tree.heading("thay", text="Thay")
+
+  minWidth = 5
+  tree.column("chu", anchor="center", width=minWidth)
+  tree.column("tanSo", anchor="center", width=minWidth)
+  tree.column("thay", anchor="center", width=minWidth)
+
+  return tree

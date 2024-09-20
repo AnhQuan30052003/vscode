@@ -1,42 +1,46 @@
-# import tkinter as tk
-
-# root = tk.Tk()
-# root.geometry("1000x300")
-# root.title("Đoạn văn bản")
-
-# frame = tk.Frame(root, width=100, height=10, bd=1, bg="gray")
-# frame.pack(anchor="nw")
-
-# text_area = tk.Text(frame, wrap='word', height=3, bg="red")
-# text_area.pack(padx=10, pady=10, fill="x")
-
-# # scrollbar = tk.Scrollbar(text_area)
-# # scrollbar.pack(side='right', fill='y')
-# # text_area.config(yscrollcommand=scrollbar.set)
-# # scrollbar.config(command=text_area.yview)
-
-# root.mainloop()
-
-
-
 import tkinter as tk
+from tkinter import ttk
 
-def get_text():
-    text = text_area.get("1.0", tk.END)  # Lấy toàn bộ nội dung từ vị trí 1 đến cuối
-    print(text)
-
-# Tạo cửa sổ giao diện
 root = tk.Tk()
-root.geometry("500x300")
-root.title("Text Area Example")
 
-# Tạo một text area đơn giản
-text_area = tk.Text(root, height=10, width=50)
-text_area.pack(padx=10, pady=10, anchor="nw")
+# Tạo Treeview với các cột
+style = ttk.Style()
+style.configure("Treeview", rowheight=25)  # Tăng chiều cao của hàng để tạo khoảng cách
 
-# Tạo một nút để lấy nội dung của text area
-btn_get_text = tk.Button(root, text="Get Text", command=get_text)
-btn_get_text.pack(pady=5)
+tree = ttk.Treeview(root, columns=("ID", "Name", "Age"), show="headings")
+tree.pack(fill="both", expand=True)
 
-# Chạy vòng lặp chính của giao diện
+# Định nghĩa tiêu đề và căn giữa nội dung cho từng cột
+tree.heading("ID", text="ID")
+tree.heading("Name", text="Name")
+tree.heading("Age", text="Age")
+
+# Định nghĩa cột với padding để tạo không gian giữa các hàng
+tree.column("ID", anchor=tk.CENTER, width=50, minwidth=50)
+tree.column("Name", anchor=tk.CENTER, width=150, minwidth=100)
+tree.column("Age", anchor=tk.CENTER, width=50, minwidth=50)
+
+# Thêm dữ liệu vào Treeview
+tree.insert("", "end", values=(1, "John Doe", 25))
+tree.insert("", "end", values=(1, "John Doe", 25))
+tree.insert("", "end", values=(1, "John Doe", 25))
+tree.insert("", "end", values=(1, "John Doe", 25))
+tree.insert("", "end", values=(1, "John Doe", 25))
+tree.insert("", "end", values=(1, "John Doe", 25))
+tree.insert("", "end", values=(2, "Jane Smith", 30))
+tree.insert("", "end", values=(2, "Jane Smith", 30))
+tree.insert("", "end", values=(2, "Jane Smith", 30))
+tree.insert("", "end", values=(2, "Jane Smith", 30))
+tree.insert("", "end", values=(2, "Jane Smith", 30))
+tree.insert("", "end", values=(2, "Jane Smith", 30))
+tree.insert("", "end", values=(2, "Jane Smith", 30))
+tree.insert("", "end", values=(2, "Jane Smith", 30))
+tree.insert("", "end", values=(2, "Jane Smith", 30))
+tree.insert("", "end", values=(2, "Jane Smith", 30))
+
+# Thay đổi kiểu hiển thị cho Treeview để tạo khoảng cách giữa các cột
+# style.layout("Treeview", [
+#     ('Treeview.treearea', {'sticky': 'nswe'})  # Tạo không gian cho khu vực Treeview
+# ])
+
 root.mainloop()

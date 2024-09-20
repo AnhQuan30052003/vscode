@@ -43,6 +43,10 @@ textboxOutput.pack(fill="both")
 #----
 # frame right
 frameRight = buildFrame()
-frameRight.pack(side="right")
+frameRight.pack(side="left")
+
+# Bảng 26 ký tự
+table26KyTu = buildTreeView(frameRight)
+table26KyTu.pack(side="left", anchor="n")
 
 root.mainloop()
