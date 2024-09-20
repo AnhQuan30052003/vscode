@@ -15,7 +15,7 @@ matrix = []
 def setUpMatrix():
   global matrix
 
-  localPath = "\source\Python\practice\BFS_DFS"
+  localPath = "\source\Python\AI\BFS_DFS"
   path = os.getcwd() + localPath
   nameFile = "\matrix.txt"
 
