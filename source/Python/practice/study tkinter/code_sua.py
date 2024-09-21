@@ -8,7 +8,8 @@ data = [
     [3, 'Name 3', 'Editable 3']
 ]
 
-def edit_cell(event):
+def edit_cell(text: str, event):
+    print(text)
     """Xử lý sự kiện khi nhấp đúp chuột vào ô cột c để chỉnh sửa."""
     item_id = tree.selection()[0]  # Lấy ID của item được chọn
     column = tree.identify_column(event.x)  # Xác định cột
@@ -56,6 +57,6 @@ for row in data:
     tree.insert('', tk.END, values=row)
 
 # Gán sự kiện nhấp đúp chuột để chỉnh sửa cột c
-tree.bind("<Double-1>", edit_cell)
+tree.bind("<Double-1>", edit_cell("Đang theo dõi..."))
 
 root.mainloop()
