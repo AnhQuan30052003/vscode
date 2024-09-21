@@ -3,11 +3,13 @@ import os
 
 os.system("cls" if os.name == "nt" else "clear")
 
-s1 = "ac"
-s2 = "abc"
-s3 = "a"
-s4 = "de"
+text = """UZQSOVUOHXMOPVGPOZPEVSGZWSZOPFPESXUDBMETSXAIZ VUEPHZHMDZSHZOWSFPAPPDTSVPQUZWYMXUZUHSX EPYEPOPDZSZUFPOMBZWPPDPTGUDTMOHMQ """
 
-a = s1 + s2 + s3 + s4
-
-print(a)
+for t in text:
+  if t < 'A' or t > 'Z':
+    if t == '\n':
+      print('_')
+    else:
+      print(f"-", end="")
+  else:
+    print(t, end="")

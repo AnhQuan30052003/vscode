@@ -1,5 +1,5 @@
 import os, tkinter as tkt
-from tkinter import ttk
+from tkinter import ttk, messagebox
 
 #--------------------------------------
 # Hàm UI
@@ -40,7 +40,8 @@ def buildTextbox(frame: tkt.Tk):
   obj = tkt.Text(
     frame,
     height=20,
-    relief="groove"
+    relief="groove",
+    font=100
   )
   return obj
 
@@ -75,39 +76,28 @@ def boiMau(event=None):
     end_line, end_char = map(int, end.split("."))
 
     textboxInput.tag_add("highlight", f"{start_line}.{start_char}", f"{end_line}.{end_char}")
-  except tkinter.TclError:
+  except tkt.TclError:
     pass
 
 # Quét 1 ký tự
 def quetMotKyTu(text: str):
   dictSave = {}
   setText = set(text)
+  setText.remove('\n') if '\n' in setText else None
+
   for t in setText:
-    if t != ' ':
-      count = text.count(t)
-      dictSave[t] = count
+    count = text.count(t)
+    dictSave[t] = count
 
   return dictSave
 
-# Quét 2 ký tự
-def quetHaiKyTu(text: str):
+# Quét 2-3 ký tự
+def quetHaiDenBaKyTu(text: str, soKytu: int):
   text = text.replace(' ', '')
   dictSave = {}
 
-  for i in range(len(text)-1):
-    char = text[i] + text[i+1]
-    count = text.count(char)
-    dictSave[char] = count
-
-  return dictSave
-
-# Quét 3 ký tự
-def quetBaKyTu(text: str):
-  text = text.replace(' ', '')
-  dictSave = {}
-
-  for i in range(len(text)-2):
-    char = text[i] + text[i+1] + text[i+2]
+  for i in range(len(text)-(soKytu-1)):
+    char = text[i:i+soKytu]
     count = text.count(char)
     dictSave[char] = count
 
@@ -129,13 +119,13 @@ def thongKe():
   # Lấy và hiện nội dung giải mã ra output
   content = textboxInput.get("1.0", "end-1c")
 
-  dictTemp = quetMotKyTu(content)
+  dictTemp = quetMotKyTu(text=content)
   showData(dictSave=dictTemp, treeData=table1KyTu)
 
-  dictTemp = quetHaiKyTu(content)
+  dictTemp = quetHaiDenBaKyTu(text=content, soKytu=2)
   showData(dictSave=dictTemp, treeData=table2KyTu)
 
-  dictTemp = quetBaKyTu(content)
+  dictTemp = quetHaiDenBaKyTu(text=content, soKytu=3)
   showData(dictSave=dictTemp, treeData=table3KyTu)
 
 # Sửa dữ liệu của ô trong bảng treeview
@@ -163,7 +153,19 @@ def edit_cell(event, treeData: ttk.Treeview):
 
     def on_enter(event):
       newValue = entryEdit.get()
-      treeData.item(itemID, values=(treeData.item(itemID, 'values')[0], treeData.item(itemID, 'values')[1], newValue))
+      chu = treeData.item(itemID, 'values')[0]
+      tanSo = treeData.item(itemID, 'values')[1]
+      thayThe = newValue
+      
+      sizeChu = len(chu)
+      sizeThayThe = len(thayThe)
+
+      if sizeThayThe != sizeChu and sizeThayThe > 0:
+        messagebox.showerror(title="Lỗi !", message=f"Chiều dài chuỗi nhập phải là {sizeChu} ký tự")
+        entryEdit.focus()
+        return
+
+      treeData.item(itemID, values=(chu, tanSo, thayThe))
       entryEdit.destroy()
 
     # Gán sự kiện Enter cho ô nhập
@@ -183,34 +185,52 @@ def editTable3(event):
   edit_cell(event, treeData=table3KyTu)
 
 # Xử lý thay đổi/chỉnh sửa
-def xuLyThayDoi(text: str, treeData: ttk.Treeview):
+def xuLyThayDoi(textInput: str, textOutput: str, treeData: ttk.Treeview):
   for row in treeData.get_children():
     a = list(treeData.item(row, "values"))
-    if len(a[2]) > 0:
-      text = text.replace(a[0], a[2])
+    text = a[2]
+    size = len(text)
+    if size > 0:
+      listViTri = []
+      chuoiCon = a[0]
+      viTriHienTai = textInput.find(chuoiCon)
 
-  return text
+      while viTriHienTai != -1:
+        listViTri.append(viTriHienTai)
+        viTriHienTai = textInput.find(chuoiCon, viTriHienTai + 1)
+      
+      if len(listViTri) > 0:
+        for vt in listViTri:
+            textOutput = textOutput[:vt] + text + textOutput[vt + size:]
+
+  return textOutput
 
 # Giải mã
 def phaMa():
   # Lấy nội dung cần giải
   content = textboxInput.get("1.0", "end-1c")
+  text = ""
+  for t in content:
+    if (t < 'A' or t > 'Z') and t == '\n':
+      text += "\n"
+    elif t == ' ':
+      text += t
+    else:
+      text += '_'
+
 
   # Xử lý thay thế 3 ký tự
-  content = xuLyThayDoi(text=content, treeData=table3KyTu)
+  text = xuLyThayDoi(textInput=content, textOutput=text, treeData=table3KyTu)
 
   # Xử lý thay thế 2 ký tự
-  content = xuLyThayDoi(text=content, treeData=table2KyTu)
+  text = xuLyThayDoi(textInput=content, textOutput=text, treeData=table2KyTu)
 
   # Xử lý thay thế 1 ký tự
-  content = xuLyThayDoi(text=content, treeData=table1KyTu)
-
-  # Xử lý in ra khoảng cách - ký tự chưa đuọc thay
-  pass
+  text = xuLyThayDoi(textInput=content, textOutput=text, treeData=table1KyTu)
 
   # Hiển thị ra chỗ output
   textboxOutput.delete("1.0", "end")
-  textboxOutput.insert("1.0", content)
+  textboxOutput.insert("1.0", text)
 
 
 
