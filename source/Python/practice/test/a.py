@@ -3,6 +3,11 @@ import os
 
 os.system("cls" if os.name == "nt" else "clear")
 
-a = (1, 2, 3)
+s1 = "ac"
+s2 = "abc"
+s3 = "a"
+s4 = "de"
 
-print(a[0])
+a = s1 + s2 + s3 + s4
+
+print(a)

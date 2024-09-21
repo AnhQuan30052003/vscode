@@ -128,8 +128,6 @@ def showData(dictSave: dict, treeData: ttk.Treeview):
 def thongKe():
   # Lấy và hiện nội dung giải mã ra output
   content = textboxInput.get("1.0", "end-1c")
-  textboxOutput.delete("1.0", "end")
-  textboxOutput.insert("1.0", content)
 
   dictTemp = quetMotKyTu(content)
   showData(dictSave=dictTemp, treeData=table1KyTu)
@@ -198,14 +196,17 @@ def phaMa():
   # Lấy nội dung cần giải
   content = textboxInput.get("1.0", "end-1c")
 
-  # Xử lý 1 ký tự
-  content = xuLyThayDoi(text=content, treeData=table1KyTu)
+  # Xử lý thay thế 3 ký tự
+  content = xuLyThayDoi(text=content, treeData=table3KyTu)
 
-  # Xử lý 2 ký tự
+  # Xử lý thay thế 2 ký tự
   content = xuLyThayDoi(text=content, treeData=table2KyTu)
 
-  # Xử lý 3 ký tự
-  content = xuLyThayDoi(text=content, treeData=table3KyTu)
+  # Xử lý thay thế 1 ký tự
+  content = xuLyThayDoi(text=content, treeData=table1KyTu)
+
+  # Xử lý in ra khoảng cách - ký tự chưa đuọc thay
+  pass
 
   # Hiển thị ra chỗ output
   textboxOutput.delete("1.0", "end")
