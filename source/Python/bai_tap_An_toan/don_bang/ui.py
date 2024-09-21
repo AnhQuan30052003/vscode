@@ -3,7 +3,7 @@ from tkinter import ttk
 
 # variables
 root = tkt.Tk()
-window_width = 1300
+window_width = 1220
 window_height = 700
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
@@ -17,7 +17,7 @@ def setupUI():
 def buildFrame():
   obj = tkt.Frame(
     root,
-    width=window_width * 1/2,
+    width=window_width * 6/10,
     height=window_height,
   )
   return obj
@@ -25,7 +25,7 @@ def buildFrame():
 def buildFrameText(frame: tkt.Tk):
   obj = tkt.Frame(
     frame,
-    width=window_width * 1 / 2,
+    width=window_width * 6/10 + 100,
   )
   return obj
 
@@ -43,20 +43,20 @@ def buildTextbox(frame: tkt.Tk, edit: bool):
   obj = tkt.Text(
     frame,
     state= ("normal" if edit else "disabled"),
-    height=20
+    height=20,
+    relief="groove"
   )
   return obj
 
-def buildTreeView(frame: tkt.Tk):
+def buildTreeView(frame: tkt.Tk, widthcol: int):
   tree = ttk.Treeview(frame, columns=("chu", "tanSo", "thay"), show="headings")
 
   tree.heading("chu", text="Chữ")
   tree.heading("tanSo", text="Tần số")
   tree.heading("thay", text="Thay")
 
-  minWidth = 5
-  tree.column("chu", anchor="center", width=minWidth)
-  tree.column("tanSo", anchor="center", width=minWidth)
-  tree.column("thay", anchor="center", width=minWidth)
+  tree.column("chu", anchor="center", width=widthcol)
+  tree.column("tanSo", anchor="center", width=widthcol)
+  tree.column("thay", anchor="center", width=widthcol)
 
   return tree

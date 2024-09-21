@@ -19,23 +19,22 @@ root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 root.title("This Is Title")
 
 # build
-labelMain = Label(root, text="This is Label Main", bg="gray20", fg="white")
-labelMain .pack(fill="x")
+frame1 = Frame(root, width=300, height=300, bg="red")
+frame1.pack(side="left", anchor="nw")
 
-frameInfo = Frame(root, bg="red", height=30)
-frameInfo.pack(fill="x")
+frame2 = Frame(root, width=300, height=300, bd=1, relief="solid")
+frame2.pack_propagate(False)
+frame2.pack(side="left", anchor="n")
 
-frameInputMain = Frame(root, bg="pink")
-frameInputMain.pack(fill="x")
+col1 = Label(frame2, text="col1")
+col1.pack(side="left", anchor="nw")
 
-frameInput = Frame(frameInputMain, bg="yellow", width=20, height=30)
-frameInput.grid(row=0, column=0, sticky="n")
+col2 = Label(frame2, text="col2")
+col2.pack(anchor="w")
 
-frameInput1 = Frame(frameInputMain, bg="green", width=60, height=90)
-frameInput1.grid(row=0, column=1)
+# textbox = Text(frame2, width=290//8)
+# textbox.pack(side="left")
 
-frameInput2 = Frame(frameInputMain, bg="gray")
-frameInput2.pack()
 
 # Chạy
 print("Run build")
