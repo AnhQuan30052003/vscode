@@ -16,6 +16,9 @@ tree.insert("", "end", values=(1, "John Doe", 25))
 tree.insert("", "end", values=(2, "Jane Smith", 30))
 
 tree.pack()
-root.mainloop()
 
-a = 0
+for row in tree.get_children():
+  a = list(tree.item(row, "values"))
+  print(a)
+
+root.mainloop()

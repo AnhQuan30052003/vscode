@@ -7,13 +7,11 @@ def main():
   dictTwoText = {}
   text = "toi dang hoc tai truong dai hoc nha trang"
 
+  print(text)
   quetMotKyTu(text=text, dictSave=dictOneText)
 
-  text = text.replace('a', 'w')
   print()
-  print(text)
-  # print()
-  # quetHaiKyTu(text=text, dictSave=dictTwoText)
+  print(list(dictOneText))
 
 def quetHaiKyTu(text: str, dictSave: dict):
   text = text.replace(' ', '')
@@ -41,7 +39,6 @@ def printResult(dictSave: dict):
   number = list(dictSave.values())
 
   for i in range(len(number)):
-    # if number[i] > 1:
     print(f"{number[i]}: {char[i]}", end="; ")
 
 main()
