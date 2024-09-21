@@ -1,3 +1,9 @@
+# HƯỚNG DẪN DÙNG:
+# "double-click" vào ô trong cột "thay" cho việc nhập ký tự cần thay
+# Enter (để xác nhận) và Esc (để huỷ nhập)
+# Để dể phá mã hơn thì có thể bỏ comment dòng 227 và comment lại dòng 226
+
+
 import os, tkinter as tkt
 from tkinter import ttk, messagebox
 
@@ -39,9 +45,9 @@ def buildButton(frBtn: tkt.Frame, text: str, cmd):
 def buildTextbox(frame: tkt.Tk):
   obj = tkt.Text(
     frame,
-    height=20,
+    height=14,
     relief="groove",
-    font=100
+    font=('times new romain', 15, 'normal')
   )
   return obj
 
@@ -82,6 +88,7 @@ def boiMau(event=None):
 # Quét 1 ký tự
 def quetMotKyTu(text: str):
   dictSave = {}
+  text = text.replace(' ', '')
   setText = set(text)
   setText.remove('\n') if '\n' in setText else None
 
@@ -130,14 +137,35 @@ def thongKe():
 
 # Sửa dữ liệu của ô trong bảng treeview
 def edit_cell(event, treeData: ttk.Treeview):
-  global entryEdit
+  # Xử lý khi nhấn Enter để lưu giá trị mới
+  def on_esc(event):
+    entryEdit.destroy()
+
+  # Xử lý huỷ nhập khi nhân Esc
+  def on_enter(event):
+    newValue = entryEdit.get()
+    chu = treeData.item(itemID, 'values')[0]
+    tanSo = treeData.item(itemID, 'values')[1]
+    thayThe = newValue
+    
+    sizeChu = len(chu)
+    sizeThayThe = len(thayThe)
+
+    if sizeThayThe != sizeChu and sizeThayThe > 0:
+      messagebox.showerror(title="Lỗi !", message=f"Chiều dài chuỗi nhập phải là {sizeChu} ký tự")
+      entryEdit.focus()
+      return
+
+    treeData.item(itemID, values=(chu, tanSo, thayThe))
+    entryEdit.destroy()
+
 
   itemID = treeData.selection()[0]
   column = treeData.identify_column(event.x)
 
   if column == '#3':
     current_value = treeData.item(itemID, 'values')[2]
-    
+
     # Lấy vị trí của ô cần chỉnh sửa
     x, y, width, height = treeData.bbox(itemID, column)
     
@@ -146,27 +174,6 @@ def edit_cell(event, treeData: ttk.Treeview):
     entryEdit.place(x=x, y=y, width=width, height=height)
     entryEdit.insert(0, current_value)
     entryEdit.focus()
-
-    # Xử lý khi nhấn Enter để lưu giá trị mới
-    def on_esc(event):
-      entryEdit.destroy()
-
-    def on_enter(event):
-      newValue = entryEdit.get()
-      chu = treeData.item(itemID, 'values')[0]
-      tanSo = treeData.item(itemID, 'values')[1]
-      thayThe = newValue
-      
-      sizeChu = len(chu)
-      sizeThayThe = len(thayThe)
-
-      if sizeThayThe != sizeChu and sizeThayThe > 0:
-        messagebox.showerror(title="Lỗi !", message=f"Chiều dài chuỗi nhập phải là {sizeChu} ký tự")
-        entryEdit.focus()
-        return
-
-      treeData.item(itemID, values=(chu, tanSo, thayThe))
-      entryEdit.destroy()
 
     # Gán sự kiện Enter cho ô nhập
     entryEdit.bind('<Escape>', on_esc)
@@ -216,7 +223,8 @@ def phaMa():
     elif t == ' ':
       text += t
     else:
-      text += '_'
+      text += ' ' 
+      # text += '_' # thay bằng ký tự '_' cho dễ đọc :v
 
 
   # Xử lý thay thế 3 ký tự
