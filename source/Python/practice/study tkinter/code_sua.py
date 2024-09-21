@@ -10,7 +10,6 @@ data = [
 
 def edit_cell(text: str, event):
     print(text)
-    """Xử lý sự kiện khi nhấp đúp chuột vào ô cột c để chỉnh sửa."""
     item_id = tree.selection()[0]  # Lấy ID của item được chọn
     column = tree.identify_column(event.x)  # Xác định cột
 
