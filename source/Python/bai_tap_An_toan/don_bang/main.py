@@ -1,7 +1,9 @@
+# 4. Viết chương trình hỗ trợ phá mã thay thế đơn bảng (bài tập 7 và 8), chương trình sẽ làm một số thao tác như thống kê tần suất các chữ cái, các digram, thực hiện phép thay thế…
+
 # HƯỚNG DẪN DÙNG:
 # "double-click" vào ô trong cột "thay" cho việc nhập ký tự cần thay
 # Enter (để xác nhận) và Esc (để huỷ nhập)
-# Để dể phá mã hơn thì có thể bỏ comment dòng 227 và comment lại dòng 226
+# Để dể phá mã hơn thì có thể bỏ comment dòng 229 và comment lại dòng 228
 
 
 import os, tkinter as tkt
@@ -136,7 +138,7 @@ def thongKe():
   showData(dictSave=dictTemp, treeData=table3KyTu)
 
 # Sửa dữ liệu của ô trong bảng treeview
-def edit_cell(event, treeData: ttk.Treeview):
+def editCell(event, treeData: ttk.Treeview):
   # Xử lý khi nhấn Enter để lưu giá trị mới
   def on_esc(event):
     entryEdit.destroy()
@@ -181,15 +183,15 @@ def edit_cell(event, treeData: ttk.Treeview):
 
 # Gọi sự kiện thay đổi table1kytu
 def editTable1(event):
-  edit_cell(event, treeData=table1KyTu)
+  editCell(event, treeData=table1KyTu)
 
 # Gọi sự kiện thay đổi table2kytu
 def editTable2(event):
-  edit_cell(event, treeData=table2KyTu)
+  editCell(event, treeData=table2KyTu)
 
 # Gọi sự kiện thay đổi table3kytu
 def editTable3(event):
-  edit_cell(event, treeData=table3KyTu)
+  editCell(event, treeData=table3KyTu)
 
 # Xử lý thay đổi/chỉnh sửa
 def xuLyThayDoi(textInput: str, textOutput: str, treeData: ttk.Treeview):

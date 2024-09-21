@@ -1,15 +1,16 @@
-# Đếm xem những ký tự trong text xuất hiện bao nhiêu lần ?
-import os
+import os, sys
 
-os.system("cls" if os.name == "nt" else "clear")
+os.system("cls")
 
-text = """UZQSOVUOHXMOPVGPOZPEVSGZWSZOPFPESXUDBMETSXAIZ VUEPHZHMDZSHZOWSFPAPPDTSVPQUZWYMXUZUHSX EPYEPOPDZSZUFPOMBZWPPDPTGUDTMOHMQ """
+text = "abz"
+k = 3
 
-for t in text:
-  if t < 'A' or t > 'Z':
-    if t == '\n':
-      print('_')
-    else:
-      print(f"-", end="")
-  else:
-    print(t, end="")
+def ceasar(text, key):
+  resutlt = ""
+  for t in text:
+    t = ord(t) + k
+    resutlt += chr(t)
+
+  return resutlt
+
+print(ceasar(text, k))
