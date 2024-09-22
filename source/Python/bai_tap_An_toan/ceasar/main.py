@@ -11,10 +11,9 @@ def main():
 
     type = sys.argv[1]
     key = sys.argv[2]
-    key =  -int(key) if type == "d" else int(key)
+    key = -int(key) if type == "d" else int(key)
     source = sys.argv[3]
     destination = sys.argv[4]
-
 
     # Đọc dữ liệu
     path = os.path.join(currentdir, source)
@@ -22,8 +21,8 @@ def main():
       print(f"Error: Can't find the file '{source}' needed to read !")
       return
     
-    listData = []
-    getDataFromFile(pathRead=path, listSave=listData)
+    # Xử lý
+    listData = getDataFromFile(pathRead=path)
 
     path = os.path.join(currentdir, destination)
     writeDataTofile(pathWirte=path, listSave=listData, key=key)
@@ -32,6 +31,7 @@ def main():
     typeText = "Encryption" if type == "e" else "Decryption"
     keyText = key if key > 0 else -key
 
+    # Hiển thị kết quả
     print(f"Type: {typeText}")
     print(f"Key: {keyText}")
     print(f"Source: {source}")
@@ -42,30 +42,32 @@ def main():
     print("Error: Parameter !")
 
 def ceasar(text: str, key: int):
+  text = text.lower()
   resutlt = ""
+
   for t in text:
-    typeChar = None
-    if t >= 'A' and t <= 'Z':
-      typeChar = 65
-    elif t >= 'a' and t <= 'z':
+    typeChar = 0
+    if t >= 'a' and t <= 'z':
       typeChar = 97
-    else:
-      typeChar = 0
 
     if typeChar == 0:
       resutlt += t
       continue
 
     t = (ord(t) - typeChar + key) % 26 + typeChar
-    resutlt += chr(t)
+    t = chr(t).upper() if key > 0 else chr(t)
+    resutlt += t
 
   return resutlt
 
-def getDataFromFile(pathRead: str, listSave: list):
+def getDataFromFile(pathRead: str):
+  listSave = []
   with open(pathRead, "r") as file:
     for line in file:
       text = line.strip()
       listSave.append(text)
+
+  return listSave
 
 def writeDataTofile(pathWirte: str, listSave: list, key: int):
   with open(pathWirte, "w") as file:

@@ -210,7 +210,7 @@ def xuLyThayDoi(textInput: str, textOutput: str, treeData: ttk.Treeview):
       
       if len(listViTri) > 0:
         for vt in listViTri:
-            textOutput = textOutput[:vt] + text + textOutput[vt + size:]
+          textOutput = textOutput[:vt] + text + textOutput[vt + size:]
 
   return textOutput
 
