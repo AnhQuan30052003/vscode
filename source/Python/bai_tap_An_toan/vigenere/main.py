@@ -68,7 +68,7 @@ def vigenere(table: list, text: str, key:str, type: chr):
     i_key = 0 if i_key >= len(key) else i_key
     
     typeChar = 0
-    if t >= 'A' and t < 'Z':
+    if t >= 'A' and t <= 'Z':
       typeChar = 65
 
     if typeChar == 0:
