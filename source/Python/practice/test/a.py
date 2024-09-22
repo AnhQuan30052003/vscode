@@ -1,14 +1,26 @@
-import os, sys
+import os
 
 os.system("cls")
 
-text = "abz"
-k = 3
+text = "aBz"
+k = -3
 
-def ceasar(text, key):
+def ceasar(text: str, key: int):
   resutlt = ""
   for t in text:
-    t = ord(t) + k
+    typeChar = None
+    if t >= 'A' and t <= 'Z':
+      typeChar = 65
+    elif t >= 'a' and t <= 'z':
+      typeChar = 97
+    else:
+      typeChar = 0
+
+    if typeChar == 0:
+      resutlt += t
+      continue
+
+    t = (ord(t) - typeChar + key) % 26 + typeChar
     resutlt += chr(t)
 
   return resutlt

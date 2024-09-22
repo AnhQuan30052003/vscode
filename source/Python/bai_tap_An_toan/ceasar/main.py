@@ -2,30 +2,76 @@
 
 import os, sys
 
-# Các biến chính
-type = key = source = destination = None
-
 # Hàm main
 def main():
   if len(sys.argv) > 4:
-    os.system("cls")
-    global type, key, source, destination
+    # Lấy đường dẫn file và thư mục của file đang chạy
+    pathFileRun = os.path.abspath(__file__)
+    currentdir = os.path.dirname(pathFileRun)
 
     type = sys.argv[1]
     key = sys.argv[2]
-    key =  -int(key) if type == "d" else key
+    key =  -int(key) if type == "d" else int(key)
     source = sys.argv[3]
     destination = sys.argv[4]
 
-    print(f"Nhận được: {type}, {key}, {source}, {destination}")
+
+    # Đọc dữ liệu
+    path = os.path.join(currentdir, source)
+    if not os.path.exists(path):
+      print(f"Error: Can't find the file '{source}' needed to read !")
+      return
+    
+    listData = []
+    getDataFromFile(pathRead=path, listSave=listData)
+
+    path = os.path.join(currentdir, destination)
+    writeDataTofile(pathWirte=path, listSave=listData, key=key)
+
+    os.system("cls")
+    typeText = "Encryption" if type == "e" else "Decryption"
+    keyText = key if key > 0 else -key
+
+    print(f"Type: {typeText}")
+    print(f"Key: {keyText}")
+    print(f"Source: {source}")
+    print(f"Destination: {destination}")
+    print(f"\nStatus: {typeText} successfully")
 
   else:
-    print("Có lỗi !")
+    print("Error: Parameter !")
 
 def ceasar(text: str, key: int):
-  
+  resutlt = ""
+  for t in text:
+    typeChar = None
+    if t >= 'A' and t <= 'Z':
+      typeChar = 65
+    elif t >= 'a' and t <= 'z':
+      typeChar = 97
+    else:
+      typeChar = 0
 
+    if typeChar == 0:
+      resutlt += t
+      continue
 
-  return text
+    t = (ord(t) - typeChar + key) % 26 + typeChar
+    resutlt += chr(t)
+
+  return resutlt
+
+def getDataFromFile(pathRead: str, listSave: list):
+  with open(pathRead, "r") as file:
+    for line in file:
+      text = line.strip()
+      listSave.append(text)
+
+def writeDataTofile(pathWirte: str, listSave: list, key: int):
+  with open(pathWirte, "w") as file:
+    for text in listSave:
+      content = ceasar(text=text, key=key)
+      file.write(content)
+      file.write('\n')
 
 main()

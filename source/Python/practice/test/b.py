@@ -1,9 +1,11 @@
-import os, sys
+import os
 
 os.system("cls")
 
-if len(sys.argv) > 1:
-    parameter = sys.argv[1]
-    print(f"Đã nhận tham số từ bên ngoài: {parameter}")
-else:
-    print("Không có tham số được truyền vào.")
+char = 'Y'
+k = 3
+
+maChar = (ord(char) - 65 + k) % 26 + 65
+char = chr(maChar)
+
+print(char)

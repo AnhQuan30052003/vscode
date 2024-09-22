@@ -2,19 +2,26 @@ import os
 
 os.system("cls")
 
-dictText = {
-  'a': 1,
-  'b': 2,
-  'c': 1,
-  'd': 4,
-}
+text = ""
+result = ""
+k = 3
 
-for k, v in dictText.items():
-  if v == 1:
-    del dictText[k]
+pathFileRun = os.path.abspath(__file__)
+currentdir = os.path.dirname(pathFileRun)
+fileRead = "a.txt"
+fileWrite = "b.txt"
 
-key = list(dictText.values())
-value = list(dictText.keys())
+path = os.path.join(currentdir, fileRead)
+with open(path, "r") as file:
+  for line in file:
+    text = line.strip()
 
-for i in range(len(key)):
-  print(f"{key[i]}: {value[i]}")
+path = os.path.join(currentdir, fileWrite)
+with open(path, "w") as file:
+  typeChar = 97
+  for t in text:
+    maChar = (ord(t) - typeChar + k) % 26 + typeChar
+    char = chr(maChar)
+    result += char
+
+  file.write(result)

@@ -15,15 +15,16 @@ matrix = []
 def setUpMatrix():
   global matrix
 
-  localPath = "\source\Python\AI\BFS_DFS"
-  path = os.getcwd() + localPath
-  nameFile = "\matrix.txt"
+  pathFileRun = os.path.abspath(__file__)
+  currentDir = os.path.dirname(pathFileRun)
+  nameFile = "matrix.txt"
+  path = os.path.join(currentDir, nameFile)
 
-  if not os.path.exists(path + nameFile):
+  if not os.path.exists(path):
     print("Lỗi: Không tìm thấy file đọc ma trận !")
     return
 
-  with open(path + nameFile, "r") as file:
+  with open(path, "r") as file:
     for line in file:
       listTemp = []
       for t in line.strip():
