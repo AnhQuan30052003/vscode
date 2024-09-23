@@ -59,7 +59,6 @@ def createTableVigenere():
   return table
 
 def vigenere(table: list, text: str, key:str, type: chr):
-  # text = text.upper()
   key = key.upper()
   result = ""
 

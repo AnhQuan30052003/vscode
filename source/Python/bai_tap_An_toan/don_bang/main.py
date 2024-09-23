@@ -3,8 +3,6 @@
 # HƯỚNG DẪN DÙNG:
 # "double-click" vào ô trong cột "thay" cho việc nhập ký tự cần thay
 # Enter (để xác nhận) và Esc (để huỷ nhập)
-# Để dể phá mã hơn thì có thể bỏ comment dòng 229 và comment lại dòng 228
-
 
 import os, tkinter as tkt
 from tkinter import ttk, messagebox
@@ -73,7 +71,7 @@ def buildTreeView(frame: tkt.Tk, widthcol: int):
 #-------------------------------------
 # Hàm xử lý chương trình khi tương tác
 # Bôi màu cùng nhau
-def boiMau(event=None):
+def colorParagraph(event=None):
   textboxInput.tag_remove("highlight", "1.0", "end")
 
   try:
@@ -88,7 +86,7 @@ def boiMau(event=None):
     pass
 
 # Quét 1 ký tự
-def quetMotKyTu(text: str):
+def scanOneCharacter(text: str):
   dictSave = {}
   text = text.replace(' ', '')
   setText = set(text)
@@ -101,8 +99,9 @@ def quetMotKyTu(text: str):
   return dictSave
 
 # Quét 2-3 ký tự
-def quetHaiDenBaKyTu(text: str, soKytu: int):
+def scanTwoOrThreeCharacter(text: str, soKytu: int):
   text = text.replace(' ', '')
+  text = text.replace('\n', '')
   dictSave = {}
 
   for i in range(len(text)-(soKytu-1)):
@@ -124,17 +123,17 @@ def showData(dictSave: dict, treeData: ttk.Treeview):
     treeData.insert("", "end", values=(char[i], number[i], ""))
 
 # Thống kê ký tự trong input
-def thongKe():
+def statistical():
   # Lấy và hiện nội dung giải mã ra output
   content = textboxInput.get("1.0", "end-1c")
 
-  dictTemp = quetMotKyTu(text=content)
+  dictTemp = scanOneCharacter(text=content)
   showData(dictSave=dictTemp, treeData=table1KyTu)
 
-  dictTemp = quetHaiDenBaKyTu(text=content, soKytu=2)
+  dictTemp = scanTwoOrThreeCharacter(text=content, soKytu=2)
   showData(dictSave=dictTemp, treeData=table2KyTu)
 
-  dictTemp = quetHaiDenBaKyTu(text=content, soKytu=3)
+  dictTemp = scanTwoOrThreeCharacter(text=content, soKytu=3)
   showData(dictSave=dictTemp, treeData=table3KyTu)
 
 # Sửa dữ liệu của ô trong bảng treeview
@@ -194,7 +193,7 @@ def editTable3(event):
   editCell(event, treeData=table3KyTu)
 
 # Xử lý thay đổi/chỉnh sửa
-def xuLyThayDoi(textInput: str, textOutput: str, treeData: ttk.Treeview):
+def replaceCharacter(textInput: str, textOutput: str, treeData: ttk.Treeview):
   for row in treeData.get_children():
     a = list(treeData.item(row, "values"))
     text = a[2]
@@ -230,13 +229,13 @@ def phaMa():
 
 
   # Xử lý thay thế 3 ký tự
-  text = xuLyThayDoi(textInput=content, textOutput=text, treeData=table3KyTu)
+  text = replaceCharacter(textInput=content, textOutput=text, treeData=table3KyTu)
 
   # Xử lý thay thế 2 ký tự
-  text = xuLyThayDoi(textInput=content, textOutput=text, treeData=table2KyTu)
+  text = replaceCharacter(textInput=content, textOutput=text, treeData=table2KyTu)
 
   # Xử lý thay thế 1 ký tự
-  text = xuLyThayDoi(textInput=content, textOutput=text, treeData=table1KyTu)
+  text = replaceCharacter(textInput=content, textOutput=text, treeData=table1KyTu)
 
   # Hiển thị ra chỗ output
   textboxOutput.delete("1.0", "end")
@@ -277,7 +276,7 @@ frameButton = tkt.Frame(
 )
 frameButton.pack(padx=(10, 10), anchor="w", fill="x")
 
-btn_thongKe = buildButton(frBtn=frameButton, text="Thống kê", cmd=thongKe)
+btn_thongKe = buildButton(frBtn=frameButton, text="Thống kê", cmd=statistical)
 btn_thongKe.pack(side="left", padx=(100, 0))
 
 btn_phaMa = buildButton(frBtn=frameButton, text="Phá mã", cmd=phaMa)
@@ -312,7 +311,7 @@ table3KyTu.pack(side="left", anchor="nw", pady=10, padx=(5, 10), fill="y")
 
 #-----------------
 textboxInput.tag_configure("highlight", background="cornflowerblue")
-textboxOutput.bind("<<Selection>>", boiMau)
+textboxOutput.bind("<<Selection>>", colorParagraph)
 
 table1KyTu.bind("<Double-1>", editTable1)
 table2KyTu.bind("<Double-1>", editTable2)
