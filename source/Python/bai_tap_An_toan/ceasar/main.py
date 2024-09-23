@@ -25,7 +25,7 @@ def main():
     listData = getDataFromFile(pathRead=path)
 
     path = os.path.join(currentdir, destination)
-    writeDataTofile(pathWirte=path, listSave=listData, key=key)
+    writeDataToFile(pathWirte=path, listSave=listData, key=key)
 
     os.system("cls")
     typeText = "Encryption" if type == "e" else "Decryption"
@@ -70,7 +70,7 @@ def getDataFromFile(pathRead: str):
 
   return listSave
 
-def writeDataTofile(pathWirte: str, listSave: list, key: int):
+def writeDataToFile(pathWirte: str, listSave: list, key: int):
   with open(pathWirte, "w") as file:
     for text in listSave:
       content = ceasar(text=text, key=key)

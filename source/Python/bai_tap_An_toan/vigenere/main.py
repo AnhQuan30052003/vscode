@@ -27,7 +27,7 @@ def main():
     listData = getDataFromFile(pathRead=path)
 
     path = os.path.join(currentdir, destination)
-    writeDataTofile(pathWirte=path, table=table, listSave=listData, key=key, type=type)
+    writeDataToFile(pathWirte=path, table=table, listSave=listData, key=key, type=type)
 
     os.system("cls")
     typeText = "Encryption" if type == "e" else "Decryption"
@@ -59,7 +59,7 @@ def createTableVigenere():
   return table
 
 def vigenere(table: list, text: str, key:str, type: chr):
-  text = text.upper()
+  # text = text.upper()
   key = key.upper()
   result = ""
 
@@ -71,21 +71,26 @@ def vigenere(table: list, text: str, key:str, type: chr):
     if t >= 'A' and t <= 'Z':
       typeChar = 65
 
+    if t >= 'a' and t <= 'z':
+      typeChar = 97
+
     if typeChar == 0:
       result += t
       i_key += 1
       continue
 
-    col = ord(key[i_key]) - typeChar
+    col = ord(key[i_key]) - 65
     if type == 'e':
       row = ord(t) - typeChar
       char = table[row][col]
+      char = char.lower() if typeChar == 97 else char
       result += char
 
     else:
       for row in table:
-        if row[col] == t:
-          char = row[0].lower()
+        if row[col] == t.upper():
+          char = row[0]
+          char = char.lower() if typeChar == 97 else char
           result += char
           break
         
@@ -102,7 +107,7 @@ def getDataFromFile(pathRead: str):
 
   return listSave
 
-def writeDataTofile(pathWirte: str, table: list, listSave: list, key: str, type: chr):
+def writeDataToFile(pathWirte: str, table: list, listSave: list, key: str, type: chr):
   with open(pathWirte, "w") as file:
     for text in listSave:
       content = vigenere(table=table, text=text, key=key, type=type)
