@@ -42,12 +42,14 @@ def main():
     print("Error: Parameter !")
 
 def ceasar(text: str, key: int):
-  text = text.lower()
   resutlt = ""
 
   for t in text:
     typeChar = 0
-    if t >= 'a' and t <= 'z':
+    if t >= 'A' and t <= 'Z':
+      typeChar = 65
+
+    elif t >= 'a' and t <= 'z':
       typeChar = 97
 
     if typeChar == 0:
@@ -55,8 +57,7 @@ def ceasar(text: str, key: int):
       continue
 
     t = (ord(t) - typeChar + key) % 26 + typeChar
-    t = chr(t).upper() if key > 0 else chr(t)
-    resutlt += t
+    resutlt += chr(t)
 
   return resutlt
 

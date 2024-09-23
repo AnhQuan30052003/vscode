@@ -1,7 +1,7 @@
-import os, time
+import os
 
+os.system("cls")
 
-for i in range(80, 100+1):
-  os.system("cls")
-  print(f"Tiến độ: {i}%")
-  time.sleep(1)
+char = 'a'
+
+print(char.isalpha())
