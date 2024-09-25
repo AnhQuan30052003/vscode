@@ -1,6 +1,7 @@
 import os
 from utils.read_file import *
 from algorithms.bfs import *
+from utils.draw_graph import *
 
 def main():
   os.system("cls")
@@ -15,4 +16,8 @@ def main():
   # Chạy với thuật toán
   BFS_DFS(matrix, 'A', 'J', DFS=True)
 
-main()
+  # Vẽ đồ hoạ các đỉnh
+  drawGraph(matrix)
+
+if __name__ == "__main__":
+  main()
