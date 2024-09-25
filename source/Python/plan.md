@@ -23,4 +23,4 @@
   * tuple ✔️ 
   * set ✔️
   * dict ✔️
-* [❌] Đọc/ghi file
+* [✔️] Đọc/ghi file

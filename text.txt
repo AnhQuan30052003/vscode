@@ -1,0 +1,64 @@
+start: A, goad = H
+
+Buoc 0:
+g(A) = 0; f(A) = 20
+Open = {A_20}
+
+Buoc 1:
+n = A
+f(A) < min:
+  g(B) = 6; f(B) = 11
+  g(C) = 13; f(C) = 20
+  g(D) = 25; f(D) = 31
+
+  father(B, C, D) = A
+  T(n) = {B_11, C_20, D_31}
+Open = {B_11, C_20, D_31}
+
+Buoc 2:
+n = B
+f(B) < min:
+  g(C) = 9; f(C) = 16
+  g(E) = 11; f(E) = 20
+
+  father(C, E) = B
+  T(n) = {C_16, E_20}
+Open = {C_16, E_20, C_20, D_31}
+
+Buoc 3:
+n = C
+f(C) < min:
+  g(F) = 12; f(F) = 13
+  g(G) = 11; f(G) = 14
+
+  father(F, G) = C
+  T(n) = {F_13, G_14}
+Open = {F_13, G_14, E_20, C_20, D_31}
+
+Buoc 4:
+n = F
+f(F) < min:
+  g(G) = 20; f(G) = 23
+  g(H) = 17; f(H) = 17
+
+  father(H) = F
+  T(n) = {H_17, G_23}
+Open = {H_17, G_23, G_14, E_20, C_20, D_31}
+
+Buoc 5:
+n = H
+f(H) < min:
+  min = f(H) = 17
+Open = {G_23, G_14, E_20, C_20, D_31}
+
+Buoc 6:
+n = G
+f(G) < min: false
+Open = {G_14, E_20, C_20, D_31}
+
+Buoc 7:
+n = G
+f(G) < min:
+  g(H) = 15; f(H) = 15
+
+  father(H) = G
