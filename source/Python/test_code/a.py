@@ -2,7 +2,6 @@ import os
 
 os.system("cls")
 
-n = 5
-values = [i for i in range(n)]
+key = os.urandom(32)
 
-print(values)
+print(f"Key: {key}")
