@@ -12,7 +12,7 @@ def main():
   print(text)
 
 def tinyA5_1(data: str, key: int):
-  print(f"key: {key}, bin: {decToBin(key)}")
+  print(f"key: {key}, bin: {decToBin(key, 5)}")
   result = ""
   for char in data:
     typeChar = 0
@@ -22,6 +22,7 @@ def tinyA5_1(data: str, key: int):
     if char >= 'a' and char <= 'z':
       typeChar = 97
 
+    print(f"G bin: {decToBin(ord('G')-65, 5)}")
     assci = ord(char) - typeChar
     assci = (assci ^ key) % 26 + typeChar
     result += chr(assci)
@@ -48,7 +49,7 @@ def generateRandomKey(X, Y, Z):
     s = int(X[len(X)-1]) ^ int(Y[len(Y)-1]) ^ int(Z[len(Z)-1])
     key = key + str(s)
 
-  return binToDec(key)
+  return binToDec(key) % 26
 
 def maj(x: str, y: str, z: str):
   sum = int(x) + int(y) + int(z)
