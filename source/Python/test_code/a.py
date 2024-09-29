@@ -6,13 +6,15 @@ def main():
   X = 11
   Y = 33
   Z = 47
-  text = "G"
+  text = "c"
   key = generateRandomKey(X, Y, Z)
+  print(key)
   text = tinyA5_1(text, key)
   print(text)
 
-def tinyA5_1(data: str, key: int):
-  print(f"key: {key}, bin: {decToBin(key, 5)}")
+def tinyA5_1(data: str, key: str):
+  key = binToDec(key) % 26
+
   result = ""
   for char in data:
     typeChar = 0
@@ -22,9 +24,8 @@ def tinyA5_1(data: str, key: int):
     if char >= 'a' and char <= 'z':
       typeChar = 97
 
-    print(f"G bin: {decToBin(ord('G')-65, 5)}")
     assci = ord(char) - typeChar
-    assci = (assci ^ key) % 26 + typeChar
+    assci = ((assci ^ key) % 26) + typeChar
     result += chr(assci)
 
   return result
@@ -35,7 +36,7 @@ def generateRandomKey(X, Y, Z):
   Y = decToBin(Y, 8)
   Z = decToBin(Z, 9)
 
-  for round in range(5):
+  for round in range(8):
     type = maj(X[1], Y[3], Z[3])
     if X[1] == type:
       X = rotate(X, 3)
@@ -49,7 +50,7 @@ def generateRandomKey(X, Y, Z):
     s = int(X[len(X)-1]) ^ int(Y[len(Y)-1]) ^ int(Z[len(Z)-1])
     key = key + str(s)
 
-  return binToDec(key) % 26
+  return key
 
 def maj(x: str, y: str, z: str):
   sum = int(x) + int(y) + int(z)
