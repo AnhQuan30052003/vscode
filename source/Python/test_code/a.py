@@ -6,13 +6,13 @@ def main():
   X = 11
   Y = 33
   Z = 47
-  text = "ifp ycif"
+  text = "]RT MI]R"
   key = generateRandomKey(X, Y, Z)
   text = tinyA5_1(text, key)
   print(text)
 
 def tinyA5_1(data: str, key: str):
-  key = binToDec(key) % 26
+  key = binToDec(key)
 
   result = ""
   for char in data:
@@ -27,11 +27,9 @@ def tinyA5_1(data: str, key: str):
       result += char
       continue
 
-    assci = ord(char) - typeChar
-    xor = (assci ^ key) % 26
-
-    print(f"char({assci}) XOR key({key}) = {xor}")
-    result += chr(xor + typeChar)
+    assci = ord(char)
+    xor = (assci ^ key)
+    result += chr(xor)
 
   return result
 
