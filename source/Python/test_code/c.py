@@ -2,8 +2,23 @@ import os
 
 os.system("cls")
 
-typeChar = 65
+def decToBin(dec: int, length=8):
+  id_bin = bin(dec)[2:]
+  distance = length - len(id_bin)
 
-for i in range(26):
-  for j in range(26):
-    print(f"{chr(i + typeChar)} XOR {chr(j + typeChar)} = {chr(((i ^ j) % 26) + typeChar)}")
+  text = ""
+  if distance > 0:
+    for i in range(distance):
+      text += "0"
+    text += id_bin
+
+  else:
+    text = id_bin
+
+  return text
+
+def binToDec(id_bin: str):
+  return int(id_bin, 2)
+
+print(decToBin(ord('P') - 65))
+print(binToDec("01000110") % 26)

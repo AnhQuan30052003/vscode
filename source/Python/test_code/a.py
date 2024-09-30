@@ -6,9 +6,8 @@ def main():
   X = 11
   Y = 33
   Z = 47
-  text = "c"
+  text = "ifp ycif"
   key = generateRandomKey(X, Y, Z)
-  print(key)
   text = tinyA5_1(text, key)
   print(text)
 
@@ -24,9 +23,15 @@ def tinyA5_1(data: str, key: str):
     if char >= 'a' and char <= 'z':
       typeChar = 97
 
+    if typeChar == 0:
+      result += char
+      continue
+
     assci = ord(char) - typeChar
-    assci = ((assci ^ key) % 26) + typeChar
-    result += chr(assci)
+    xor = (assci ^ key) % 26
+
+    print(f"char({assci}) XOR key({key}) = {xor}")
+    result += chr(xor + typeChar)
 
   return result
 
