@@ -1,18 +1,17 @@
 from utils.check_exists import *
 from utils.setup_character_peak import *
 
-def BFS(matrix: list, weight: list, peaks: list, start: int, goal: int):
-  W = []
+def HCS(matrix: list, weight: list, peaks: list, start: int, goal: int):
   open = []
   close = []
 
   open.append(start)
-  W.append(weight[start])
 
   while len(open) > 0:
     cur = open.pop(0)
 
     if cur == goal:
+      print("Đã tìm thấy")
       result = [goal]
       index = 0
 
@@ -31,7 +30,7 @@ def BFS(matrix: list, weight: list, peaks: list, start: int, goal: int):
           index += 1
 
       result.reverse()
-      print(f"Kết quả giải thuật: BFS")
+      print(f"Kết quả giải thuật: HCS")
       print(f"Tìm thấy đường đi: ", end="")
       for i in range(len(result)):
         print(f"{peaks[result[i]]} {'-> ' if i < len(result)-1 else ''}", end="")
@@ -39,17 +38,20 @@ def BFS(matrix: list, weight: list, peaks: list, start: int, goal: int):
     
     close.append(cur)
 
+    Tn = []
+    W = []
     listCur = matrix[cur]
+
     for i in range(len(listCur)):
       peak = listCur[i]
       if peak == 1 and not checkExists(open, i) and not checkExists(close, i):
-        open.append(i)
+        Tn.append(i)
         W.append(weight[i])
 
-    listS = list(zip(open, W))
+    listS = list(zip(Tn, W))
     listS.sort(key=lambda x : x[1])
 
-    Open = [x[0] for x in listS]
-    W = [x[1] for x in listS]
+    Tn = [x[0] for x in listS] 
+    open = Tn + open
 
   print("Không tìm thấy đường đi !")

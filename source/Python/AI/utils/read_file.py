@@ -9,8 +9,19 @@ def readMatrix(fileName: str):
   
   with open(path, "r") as file:
     matrix = []
-    for i in range(10):
-      line = list(map(int, file.readline().strip().split()))
+    for line in file:
+      line = list(map(int, line.strip().split()))
       matrix.append(line)
 
     return matrix
+  
+def readWeight(fileName: str):
+  path = getPath(fileName)
+  if not os.path.exists(path):
+    print("Không tìm thấy file đọc ma trận. Hãy kiểm tra lại tên file !")
+    return
+  
+  with open(path, "r") as file:
+    for line in file:
+      line = list(map(int, line.strip().split()))
+      return line
