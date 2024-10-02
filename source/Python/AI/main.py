@@ -9,21 +9,18 @@ def main():
   os.system("cls")
   
   # File cần đọc
-  matrix = readMatrix(getPath("hcs.adj"))
-  listWeight = readWeight("hcs_weight.adj")
+  matrix, namePeaks, weight = readMatrix(getPath("bfs_dfs.adj"), weight=False)
 
   if matrix == None:
     return
-
+  
   # Chạy với thuật toán
-  # BFS_DFS(matrix, 'A', 'J', DFS=True)
+  BFS_DFS(matrix, namePeaks, 0, 9, DFS=True)
+  # HCS(matrix, namePeaks, weight, 0, 13)
+  # BFS(matrix, namePeaks, weight, 0, 13)
 
   # Vẽ đồ hoạ các đỉnh
   # drawGraph(matrix)
-
-  # HCS(matrix, listWeight, 0, 9)
-  namePeaks = ['A', 'B', 'C', 'D', 'E', 'G', 'I', 'K', 'Y', 'M']
-  BFS(matrix, listWeight, namePeaks, 0, 9)
 
 if __name__ == "__main__":
   main()

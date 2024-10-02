@@ -1,7 +1,8 @@
+from utils.print_road import *
 from utils.check_exists import *
-from utils.setup_character_peak import *
 
-def BFS(matrix: list, weight: list, peaks: list, start: int, goal: int):
+def BFS(matrix: list, namePeaks: list, weight: list, start: int, goal: int):
+  father = [-1] * len(namePeaks)
   W = []
   open = []
   close = []
@@ -9,32 +10,14 @@ def BFS(matrix: list, weight: list, peaks: list, start: int, goal: int):
   open.append(start)
   W.append(weight[start])
 
+
   while len(open) > 0:
     cur = open.pop(0)
+    W.pop(0)
 
     if cur == goal:
       result = [goal]
-      index = 0
-
-      while index < len(matrix):
-        peak = matrix[index][goal]
-
-        if peak == 1:
-          result.append(index)
-
-          goal = index
-          index = 0
-          if goal == 0:
-            break
-
-        else:
-          index += 1
-
-      result.reverse()
-      print(f"Kết quả giải thuật: BFS")
-      print(f"Tìm thấy đường đi: ", end="")
-      for i in range(len(result)):
-        print(f"{peaks[result[i]]} {'-> ' if i < len(result)-1 else ''}", end="")
+      printRoad(father, namePeaks, result, "Best First Search")
       return
     
     close.append(cur)
@@ -45,11 +28,12 @@ def BFS(matrix: list, weight: list, peaks: list, start: int, goal: int):
       if peak == 1 and not checkExists(open, i) and not checkExists(close, i):
         open.append(i)
         W.append(weight[i])
+        father[i] = cur
 
     listS = list(zip(open, W))
     listS.sort(key=lambda x : x[1])
 
-    Open = [x[0] for x in listS]
+    open = [x[0] for x in listS]
     W = [x[1] for x in listS]
 
   print("Không tìm thấy đường đi !")

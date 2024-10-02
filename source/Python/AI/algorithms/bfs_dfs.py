@@ -1,12 +1,12 @@
 from utils.check_exists import *
-from utils.setup_character_peak import *
+from utils.print_road import *
 
-def BFS_DFS(matrix: list, start: chr, goal: chr, DFS=False):
+def BFS_DFS(matrix: list, namePeaks: list, start: int, goal: int, DFS: bool=False):
+  father = [-1] * len(namePeaks)
   open = []
   close = []
 
-  open.append(0)
-  goal = ord(goal.upper()) - 65
+  open.append(start)
 
   while len(open) > 0:
     cur = open.pop(0)
@@ -14,27 +14,8 @@ def BFS_DFS(matrix: list, start: chr, goal: chr, DFS=False):
     # Tìm thấy đỉnh cần đến
     if cur == goal:
       result = [goal]
-      index = 0
-
-      while index < len(matrix):
-        peak = matrix[index][goal]
-        if peak == 1:
-          result.append(index)
-          goal = index
-          index = 0
-
-        else:
-          index += 1
-
-      result.reverse()
-      print(f"Kết quả giải thuật: {'DFS' if DFS else 'BFS'}")
-      print("Tìm thấy đường đi: ", end="")
-
-      listChar = setUpCharacterPeak(start)
-      size = len(result)
-      for i in range(size):
-        char = listChar[result[i]]
-        print(f"{char} {'->' if i < size-1 else ''}", end=" ")
+      name = "Depth First Search" if DFS else "Breath First Search"
+      printRoad(father, namePeaks, result, name)
       return
     
     # Đưa đỉnh đang xét vào close
@@ -48,6 +29,7 @@ def BFS_DFS(matrix: list, start: chr, goal: chr, DFS=False):
       peak = listCur[i]
       if peak == 1 and not checkExists(open, i) and not checkExists(close, i):
         Tn.append(i)
+        father[i] = cur
 
 
     if not DFS:
