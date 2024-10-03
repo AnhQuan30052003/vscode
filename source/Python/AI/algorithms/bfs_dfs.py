@@ -2,6 +2,9 @@ from utils.check_exists import *
 from utils.print_road import *
 
 def BFS_DFS(matrix: list, namePeaks: list, start: int, goal: int, DFS: bool=False):
+  name = "Depth First Search" if DFS else "Breath First Search"
+  print(f"Giải thuật: {name}")
+
   father = [-1] * len(namePeaks)
   open = []
   close = []
@@ -14,8 +17,7 @@ def BFS_DFS(matrix: list, namePeaks: list, start: int, goal: int, DFS: bool=Fals
     # Tìm thấy đỉnh cần đến
     if cur == goal:
       result = [goal]
-      name = "Depth First Search" if DFS else "Breath First Search"
-      printRoad(father, namePeaks, result, name)
+      printRoad(father, namePeaks, result)
       return
     
     # Đưa đỉnh đang xét vào close

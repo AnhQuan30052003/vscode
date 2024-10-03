@@ -2,6 +2,8 @@ from utils.print_road import *
 from utils.check_exists import *
 
 def BFS(matrix: list, namePeaks: list, weight: list, start: int, goal: int):
+  print("Giải thuật: Best First Search")  
+
   father = [-1] * len(namePeaks)
   W = []
   open = []
@@ -17,7 +19,7 @@ def BFS(matrix: list, namePeaks: list, weight: list, start: int, goal: int):
 
     if cur == goal:
       result = [goal]
-      printRoad(father, namePeaks, result, "Best First Search")
+      printRoad(father, namePeaks, result)
       return
     
     close.append(cur)

@@ -2,6 +2,8 @@ from utils.print_road import *
 from utils.check_exists import *
 
 def HCS(matrix: list, namePeaks: list, weight: list, start: int, goal: int):
+  print("Giải thuật: Hill Climbing Search")
+
   father = [-1] * len(namePeaks)
   open = []
   close = []
@@ -13,7 +15,7 @@ def HCS(matrix: list, namePeaks: list, weight: list, start: int, goal: int):
 
     if cur == goal:
       result = [goal]
-      printRoad(father, namePeaks, result, "Hill Climbing Search")
+      printRoad(father, namePeaks, result)
       return
     
     close.append(cur)
