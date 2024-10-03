@@ -129,5 +129,4 @@ def decToBin(dec: int, length=8):
 def binToDec(id_bin: str):
   return int(id_bin, 2)
 
-
 main()
