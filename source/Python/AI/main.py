@@ -10,17 +10,16 @@ def main():
   fileName = "bfs_hcs.adj"
   matrix, namePeaks, weight = readMatrix(getPath(fileName), weight=True)
 
-  if matrix == None:
+  if len(matrix) == 0:
     print("Dữ liệu trong ma trận rỗng !")
     return
   
-  # Chạy với thuật toán
-  # BFS_DFS(matrix, namePeaks, 0, 9, DFS=True)
-  # HCS(matrix, namePeaks, weight, 0, 13)
-  BFS(matrix, namePeaks, weight, 0, 13)
-
-  # Vẽ đồ hoạ các đỉnh
-  # drawGraph(matrix)
+  # Chạy với thuật toán #
+  # BFS_DFS(matrix, namePeaks, 0, 9, DFS=True) # Breath First Search | Depth First Search
+  # HCS(matrix, namePeaks, weight, 0, 13) # Hill Climbing Search
+  BFS(matrix, namePeaks, weight, 0, 13) # Best First Search
+  
+  # drawGraph(matrix) # Vẽ đồ hoạ các đỉnh
 
 if __name__ == "__main__":
   os.system("cls")
