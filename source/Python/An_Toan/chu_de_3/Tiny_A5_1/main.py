@@ -56,8 +56,7 @@ def main():
     print("Error: Parameter !")
 
 def tinyA5_1(data: str, key: str):
-  key = binToDec(key) % 26
-
+  getKey = ""
   result = ""
   for char in data:
     typeChar = 0
@@ -72,12 +71,19 @@ def tinyA5_1(data: str, key: str):
       continue
 
     assci = ord(char) - typeChar
-    assci = ((assci ^ key) % 26) + typeChar
-    result += chr(assci)
+    if assci < 16:
+      getKey = key[len(key)-4 :]
+    elif assci < 24:
+      getKey = key[len(key)-3 :]
+    else:
+      getKey = key[len(key)-1 :]
+
+    xor = assci ^ int(getKey, 2)
+    result += chr(xor + typeChar)
 
   return result
 
-def generateRandomKey(X, Y, Z):
+def generateRandomKey(X: int, Y: int, Z: int):
   key = ""
   X = decToBin(X, 6)
   Y = decToBin(Y, 8)
@@ -125,8 +131,5 @@ def decToBin(dec: int, length=8):
     text = id_bin
 
   return text
-
-def binToDec(id_bin: str):
-  return int(id_bin, 2)
 
 main()

@@ -6,14 +6,14 @@ def main():
   X = 11
   Y = 33
   Z = 47
-  text = "]RT MI]R"
+  text = "Xvqcbk Pme Lco Blm Xvmbk #2024"
   key = generateRandomKey(X, Y, Z)
+  print(f"key: {key}")
   text = tinyA5_1(text, key)
   print(text)
 
 def tinyA5_1(data: str, key: str):
-  key = binToDec(key)
-
+  getKey = ""
   result = ""
   for char in data:
     typeChar = 0
@@ -27,13 +27,20 @@ def tinyA5_1(data: str, key: str):
       result += char
       continue
 
-    assci = ord(char)
-    xor = (assci ^ key)
-    result += chr(xor)
+    assci = ord(char) - typeChar
+    if assci < 16:
+      getKey = key[len(key)-4 :]
+    elif assci < 24:
+      getKey = key[len(key)-3 :]
+    else:
+      getKey = key[len(key)-1 :]
+
+    xor = assci ^ int(getKey, 2)
+    result += chr(xor + typeChar)
 
   return result
 
-def generateRandomKey(X, Y, Z):
+def generateRandomKey(X: int, Y: int, Z: int):
   key = ""
   X = decToBin(X, 6)
   Y = decToBin(Y, 8)
@@ -81,8 +88,5 @@ def decToBin(dec: int, length=8):
     text = id_bin
 
   return text
-
-def binToDec(id_bin: str):
-  return int(id_bin, 2)
 
 main()
