@@ -4,10 +4,11 @@ from utils.draw_graph import *
 from algorithms.bfs_dfs import *
 from algorithms.hcs import *
 from algorithms.bfs import *
+from algorithms.at import *
 
 def main():
   # Đọc file lấy dữ liệu
-  fileName = "bfs_hcs.adj"
+  fileName = "at.adj"
   matrix, namePeaks, weight = readMatrix(getPath(fileName), weight=True)
 
   if len(matrix) == 0:
@@ -17,7 +18,8 @@ def main():
   # Chạy với thuật toán #
   # BFS_DFS(matrix, namePeaks, 0, 9, DFS=True) # Breath First Search | Depth First Search
   # HCS(matrix, namePeaks, weight, 0, 13) # Hill Climbing Search
-  BFS(matrix, namePeaks, weight, 0, 13) # Best First Search
+  # BFS(matrix, namePeaks, weight, 0, 13) # Best First Search
+  # AT(matrix, namePeaks, weight, 0, 19) # Algorithm for Tree
   
   # drawGraph(matrix) # Vẽ đồ hoạ các đỉnh
 
