@@ -5,11 +5,12 @@ from algorithms.bfs_dfs import *
 from algorithms.hcs import *
 from algorithms.bfs import *
 from algorithms.at import *
+from algorithms.cms import *
 
 def main():
   # Đọc file lấy dữ liệu
-  fileName = "at.adj"
-  matrix, namePeaks, weight = readMatrix(getPath(fileName), weight=True)
+  fileName = "cms.adj"
+  matrix, namePeaks, weight = readMatrix(getPath(fileName), weight=True, weightIsMatrix=True)
 
   if len(matrix) == 0:
     print("Dữ liệu trong ma trận rỗng !")
@@ -20,7 +21,8 @@ def main():
   # HCS(matrix, namePeaks, weight, 0, 13) # Hill Climbing Search
   # BFS(matrix, namePeaks, weight, 0, 13) # Best First Search
   # AT(matrix, namePeaks, weight, 0, 19) # Algorithm for Tree
-  
+  CMS(matrix, namePeaks, weight, 0, 5) # Cost Minimazation Search
+
   # drawGraph(matrix) # Vẽ đồ hoạ các đỉnh
 
 if __name__ == "__main__":
