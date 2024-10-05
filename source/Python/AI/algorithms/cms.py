@@ -1,55 +1,48 @@
 from utils.print_road import *
 from utils.check_exists import *
+from utils.setup_start_and_goal import *
 
-def CMS(matrix: list, namePeaks: list, weight: list, start: int, goal: int):
+def CMS(matrix: list, namePeaks: list, weight: list, start: chr, goal: chr):
   print("Giải thuật: Cost Minimazation Search")
+  start, goal = setupStartAndGoal(namePeaks, start, goal)
 
   father = [-1] * len(namePeaks)
-  G = []
+  G = [0] * len(namePeaks)
   open = []
   close = []
 
   open.append(start)
-  G.append(weight[start][0])
 
   while len(open) > 0:
     cur = open.pop(0)
-    print(f"Xét đỉnh: {namePeaks[cur]}")    
 
     if cur == goal:
       result = [goal]
       printRoad(father, namePeaks, result)
       return
     
-    
+    close.append(cur)
 
     listCur = matrix[cur]
     for i in range(len(listCur)):
       peak = listCur[i]
+
       if peak == 1 and not checkExists(close, i):
         if not checkExists(open, i):
           open.append(i)
-          G.append(G[cur] + weight[cur][i])
+          G[i] = G[cur] + weight[cur][i]
 
         else:
-          weightNew = weight[cur] + weight[i]
-          if weightNew < weight[i]:
-            weight[i] = weightNew
-            
+          G_new = G[cur] + weight[cur][i]
+          if G_new <= G[i]:
+            G[i] = G_new
+
         father[i] = cur
 
-    close.append(cur)
-    G.pop(0)
-    
-    listS = list(zip(open, G))
+    G_temp = [G[i] for i in open]
+    listS = list(zip(open, G_temp))
     listS.sort(key=lambda x : x[1])
 
     open = [x[0] for x in listS]
-    G = [x[1] for x in listS]
-
-    print(f"Open: ", end="")
-    for i in range(len(open)):
-      print(f"{namePeaks[open[i]]}({G[i]})", end=" ")
-    print()    
 
   print("Không tìm thấy đường đi !")

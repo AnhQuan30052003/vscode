@@ -1,8 +1,10 @@
 from utils.print_road import *
 from utils.check_exists import *
+from utils.setup_start_and_goal import *
 
-def HCS(matrix: list, namePeaks: list, weight: list, start: int, goal: int):
+def HCS(matrix: list, namePeaks: list, weight: list, start: chr, goal: chr):
   print("Giải thuật: Hill Climbing Search")
+  start, goal = setupStartAndGoal(namePeaks, start, goal)
 
   father = [-1] * len(namePeaks)
   open = []

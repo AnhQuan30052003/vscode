@@ -1,20 +1,20 @@
 from utils.print_road import *
 from utils.check_exists import *
+from utils.setup_start_and_goal import *
 
-def AT(matrix: list, namePeaks: list, weight: list, start: int, goal: int):
+def AT(matrix: list, namePeaks: list, weight: list, start: chr, goal: chr):
   print("Giải thuật: Algorithm for Tree")
+  start, goal = setupStartAndGoal(namePeaks, start, goal)
 
   father = [-1] * len(namePeaks)
-  G = []
+  G = [0] * len(namePeaks)
   open = []
   close = []
 
   open.append(start)
-  G.append(weight[start])
 
   while len(open) > 0:
     cur = open.pop(0)
-    G.pop(0)
 
     if cur == goal:
       result = [goal]
@@ -28,14 +28,13 @@ def AT(matrix: list, namePeaks: list, weight: list, start: int, goal: int):
       peak = listCur[i]
       if peak == 1 and not checkExists(open, i) and not checkExists(close, i):
         open.append(i)
-        weight[i] = weight[cur] + weight[i]
-        G.append(weight[i])
+        G[i] = weight[cur] + weight[i]
         father[i] = cur
 
-    listS = list(zip(open, G))
+    G_temp = [G[i] for i in open]
+    listS = list(zip(open, G_temp))
     listS.sort(key=lambda x : x[1])
 
     open = [x[0] for x in listS]
-    G = [x[1] for x in listS]
 
   print("Không tìm thấy đường đi !")

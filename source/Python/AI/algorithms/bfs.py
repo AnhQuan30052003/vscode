@@ -1,8 +1,10 @@
 from utils.print_road import *
 from utils.check_exists import *
+from utils.setup_start_and_goal import *
 
-def BFS(matrix: list, namePeaks: list, weight: list, start: int, goal: int):
-  print("Giải thuật: Best First Search")  
+def BFS(matrix: list, namePeaks: list, weight: list, start: chr, goal: chr):
+  print("Giải thuật: Best First Search")
+  start, goal = setupStartAndGoal(namePeaks, start, goal)
 
   father = [-1] * len(namePeaks)
   W = []

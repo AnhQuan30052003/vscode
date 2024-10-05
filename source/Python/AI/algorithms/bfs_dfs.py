@@ -1,9 +1,11 @@
 from utils.check_exists import *
 from utils.print_road import *
+from utils.setup_start_and_goal import *
 
-def BFS_DFS(matrix: list, namePeaks: list, start: int, goal: int, DFS: bool=False):
+def BFS_DFS(matrix: list, namePeaks: list, start: chr, goal: chr, DFS: bool=False):
   name = "Depth First Search" if DFS else "Breath First Search"
   print(f"Giải thuật: {name}")
+  start, goal = setupStartAndGoal(namePeaks, start, goal)
 
   father = [-1] * len(namePeaks)
   open = []
