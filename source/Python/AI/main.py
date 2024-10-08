@@ -9,7 +9,10 @@ from algorithms.cms import *
 
 def main():
   # Đọc file lấy dữ liệu
+  # fileName = "bt_dfs"
   fileName = "bfs_hcs.adj"
+  # fileName = "at"
+  # fileName = "cms"
   matrix, namePeaks, weight = readMatrix(getPath(fileName), weight=True, weightIsMatrix=False)
 
   if len(matrix) == 0:
