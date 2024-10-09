@@ -1,5 +1,6 @@
 import os
 import tkinter as tkt
+from tkinter import filedialog as fd
 
 os.system("cls")
 
@@ -19,7 +20,13 @@ root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
 # UI
 
+def select_file():
+  file_path = fd.askopenfilename()
+  if file_path:
+    print("Đường dẫn file đã chọn:", file_path)
 
+button = tkt.Button(root, text="Chọn file", command=select_file)
+button.pack(pady=20)
 
 # run
 root.mainloop()
