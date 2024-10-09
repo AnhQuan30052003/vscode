@@ -10,9 +10,9 @@ from algorithms.cms import *
 def main():
   # Đọc file lấy dữ liệu
   # fileName = "bt_dfs"
-  fileName = "bfs_hcs.adj"
-  # fileName = "at"
-  # fileName = "cms"
+  # fileName = "bfs_hcs.adj"
+  fileName = "at.adj"
+  # fileName = "cms.adj"
   matrix, namePeaks, weight = readMatrix(getPath(fileName), weight=True, weightIsMatrix=False)
 
   if len(matrix) == 0:
@@ -23,9 +23,9 @@ def main():
   # BFS_DFS(matrix, namePeaks, 'A', 'J', DFS=True) # Breath First Search | Depth First Search
 
   # HCS(matrix, namePeaks, weight, 'A', 'L') # Hill Climbing Search
-  BFS(matrix, namePeaks, weight, 'A', 'N') # Best First Search
+  # BFS(matrix, namePeaks, weight, 'A', 'N') # Best First Search
 
-  # AT(matrix, namePeaks, weight, 'S', 'R') # Algorithm for Tree
+  AT(matrix, namePeaks, weight, 'S', 'R') # Algorithm for Tree
   # CMS(matrix, namePeaks, weight, 'A', 'J') # Cost Minimazation Search
 
   # drawGraph(matrix) # Vẽ đồ hoạ các đỉnh
