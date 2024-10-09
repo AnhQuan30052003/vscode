@@ -6,14 +6,16 @@ from algorithms.hcs import *
 from algorithms.bfs import *
 from algorithms.at import *
 from algorithms.cms import *
+from algorithms.a_star import *
 
 def main():
   # Đọc file lấy dữ liệu
   # fileName = "bt_dfs"
   # fileName = "bfs_hcs.adj"
-  fileName = "at.adj"
+  # fileName = "at.adj"
   # fileName = "cms.adj"
-  matrix, namePeaks, weight = readMatrix(getPath(fileName), weight=True, weightIsMatrix=False)
+  fileName = "a_star.adj"
+  matrix, namePeaks, weight, listH = readMatrix(getPath(fileName), weight=True, weightIsMatrix=True, calculatorH=True)
 
   if len(matrix) == 0:
     print("Dữ liệu trong ma trận rỗng !")
@@ -25,8 +27,10 @@ def main():
   # HCS(matrix, namePeaks, weight, 'A', 'L') # Hill Climbing Search
   # BFS(matrix, namePeaks, weight, 'A', 'N') # Best First Search
 
-  AT(matrix, namePeaks, weight, 'S', 'R') # Algorithm for Tree
+  # AT(matrix, namePeaks, weight, 'S', 'R') # Algorithm for Tree
   # CMS(matrix, namePeaks, weight, 'A', 'J') # Cost Minimazation Search
+
+  A_Star(matrix, namePeaks, weight, listH, 'A', 'K') # Cost Minimazation Search
 
   # drawGraph(matrix) # Vẽ đồ hoạ các đỉnh
 

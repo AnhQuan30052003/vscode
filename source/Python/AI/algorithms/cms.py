@@ -15,6 +15,7 @@ def CMS(matrix: list, namePeaks: list, weight: list, start: chr, goal: chr):
 
   while len(open) > 0:
     cur = open.pop(0)
+    print(f"Xét đinh: {namePeaks[cur]}_({G[cur]}), ", end="")
 
     if cur == goal:
       result = [goal]
@@ -44,5 +45,9 @@ def CMS(matrix: list, namePeaks: list, weight: list, start: chr, goal: chr):
     listS.sort(key=lambda x : x[1])
 
     open = [x[0] for x in listS]
+    print(f"Open: ", end="")
+    for o in open:
+      print(f"{namePeaks[o]}_({G[o]}) ", end="")
+    print()
 
   print("Không tìm thấy đường đi !")
