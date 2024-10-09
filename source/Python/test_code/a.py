@@ -2,6 +2,8 @@ import os, msvcrt
 
 os.system("cls")
 
-for i in range(10):
-  print(i)
-  msvcrt.getch()
+s = "1 2 3 4"
+
+s = list(map(int, s.split()))
+
+print(s)

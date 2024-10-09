@@ -1,6 +1,7 @@
 import os
 import tkinter as tkt
 from tkinter import filedialog as fd
+from tkinter import messagebox
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 
@@ -29,6 +30,25 @@ publicKey = ""
 
 
 # Funcions
+# Thông báo
+def messageBox(title: str, message: str):
+  messagebox.showinfo(title=title, message=message)
+
+# Lưu khoá
+def saveKey():
+  path = selectFile()
+  if len(path) > 0:
+    writeKey(path)
+    messageBox("Thông báo", "Lưu khoá thành công")
+
+# Mở hộp thoại chọn file
+def selectFile():
+  filePath = fd.askopenfilename()
+  if filePath:
+    return filePath
+  
+  return ""
+
 # Thêm nôi dung text vào input
 def loadText(input: tkt.Text, text: str):
   input.delete(1.0, tkt.END)
@@ -38,7 +58,7 @@ def loadText(input: tkt.Text, text: str):
 def generateKey():
   global key, privateKey, publicKey
   privateKey = key.export_key()
-  publicKey = key.export_key()
+  publicKey = key.publickey().export_key()
   loadText(inputPrivateKey, privateKey.hex())
   loadText(inputPublicKey, publicKey.hex())
 
@@ -74,10 +94,7 @@ def RSA_crypto(message: bytes, decrytion: bool=False):
 
   return text
 
-def writeKey(fileName: str):
-  getPathCur = os.path.abspath(os.path.dirname(__file__))
-  path = os.path.join(getPathCur, fileName)
-  
+def writeKey(path: str):
   with open(path, "w") as file:
     file.write(privateKey.decode())
     file.write("\n\n")
@@ -152,10 +169,10 @@ frameButton = tkt.Frame(root, width=window_width, height=40)
 frameButton.pack_propagate(False)
 frameButton.pack(padx=10, pady=10, **styleFrame)
 
-btnSinh = tkt.Button(frameButton, text="Sinh", ** styleButton)
+btnSinh = tkt.Button(frameButton, text="Sinh", ** styleButton, command=generateKey)
 btnSinh.pack(side="right", **styleButtonDistance)
 
-btnLuu = tkt.Button(frameButton, text="Lưu", ** styleButton)
+btnLuu = tkt.Button(frameButton, text="Lưu", ** styleButton, command=saveKey)
 btnLuu.pack(side="right", **styleButtonDistance)
 
 btnNap = tkt.Button(frameButton, text="Nạp", ** styleButton)
@@ -219,13 +236,7 @@ btnOptionGiaiMa = tkt.Button(frameRight, text="Giải mã", **styleButton)
 btnOptionGiaiMa.config(width=20)
 btnOptionGiaiMa.pack(side="left", padx=(10, 0))
 
-# def select_file():
-#   file_path = fd.askopenfilename()
-#   if file_path:
-#     print("Đường dẫn file đã chọn:", file_path)
 
-# button = tkt.Button(root, text="Chọn file", command=select_file)
-# button.pack(pady=20)
 
 # run
 os.system("cls")
