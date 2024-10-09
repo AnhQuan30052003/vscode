@@ -3,6 +3,7 @@ import tkinter as tkt
 
 os.system("cls")
 
+# setup
 root = tkt.Tk()
 root.title("RSA")
 
@@ -16,4 +17,9 @@ y = (screen_height // 2) - (window_height // 2)
 
 root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
+# UI
+
+
+
+# run
 root.mainloop()
