@@ -18,6 +18,9 @@ def readMatrix(fileName: str, weight: bool=False, weightIsMatrix: bool=False, ca
     getH = False
 
     for line in file:
+      if len(line.strip()) == 0:
+        continue
+
       if not getNamePeaks:
         namePeaks = list(line.strip().split())
         getNamePeaks = True

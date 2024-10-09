@@ -10,27 +10,27 @@ from algorithms.a_star import *
 
 def main():
   # Đọc file lấy dữ liệu
-  # fileName = "bt_dfs"
+  # fileName = "bfs_dfs.adj"
   # fileName = "bfs_hcs.adj"
   # fileName = "at.adj"
-  # fileName = "cms.adj"
-  fileName = "a_star.adj"
-  matrix, namePeaks, weight, listH = readMatrix(getPath(fileName), weight=True, weightIsMatrix=True, calculatorH=True)
+  fileName = "cms.adj"
+  # fileName = "a_star.adj"
+  matrix, namePeaks, weight, listH = readMatrix(getPath(fileName), weight=True, weightIsMatrix=True, calculatorH=False)
 
   if len(matrix) == 0:
     print("Dữ liệu trong ma trận rỗng !")
     return
-
+  
   # Chạy với thuật toán #
   # BFS_DFS(matrix, namePeaks, 'A', 'J', DFS=True) # Breath First Search | Depth First Search
 
-  # HCS(matrix, namePeaks, weight, 'A', 'L') # Hill Climbing Search
+  # HCS(matrix, namePeaks, weight, 'A', 'N') # Hill Climbing Search
   # BFS(matrix, namePeaks, weight, 'A', 'N') # Best First Search
 
   # AT(matrix, namePeaks, weight, 'S', 'R') # Algorithm for Tree
-  # CMS(matrix, namePeaks, weight, 'A', 'J') # Cost Minimazation Search
+  CMS(matrix, namePeaks, weight, 'A', 'J') # Cost Minimazation Search
 
-  A_Star(matrix, namePeaks, weight, listH, 'A', 'K') # Cost Minimazation Search
+  # A_Star(matrix, namePeaks, weight, listH, 'A', 'K') # A Star
 
   # drawGraph(matrix) # Vẽ đồ hoạ các đỉnh
 
