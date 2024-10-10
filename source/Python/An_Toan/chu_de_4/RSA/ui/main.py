@@ -30,16 +30,79 @@ publicKey = ""
 
 
 # Funcions
+# Mã hoá
+def encryto():
+  pathRead = inputFileBanDau.get("1.0", "end-1c")
+  pathWrite = inputFileMaHoa.get("1.0", "end-1c")
+
+  if not checkFile(pathRead) or checkFile(pathWrite):
+    messageBox(title="Thông báo", message="Lỗi, kiểm tra đường dẫn file", warning=True)
+    return
+
+  root.title("RSA - Đang mã hoá...")
+  crypto(pathRead, pathWrite)
+  root.title("RSA - Mã hoá thành công")
+  messageBox(title="Thông báo", message="Mã hoá thành công", info=True)
+  root.title("RSA")
+
+# Giải mã
+def decryto():
+  pathRead = inputFileMaHoa.get("1.0", "end-1c")
+  pathWrite = inputFileGiaiMa.get("1.0", "end-1c")
+
+  if not checkFile(pathRead) or checkFile(pathWrite):
+    messageBox(title="Thông báo", message="Lỗi, kiểm tra đường dẫn file", warning=True)
+    return
+
+  root.title("RSA - Đang giải mã...")
+  crypto(pathRead, pathWrite, decryto=True)
+  root.title("RSA - Giải mã thành công")
+  messageBox(title="Thông báo", message="Giải mã thành công", info=True)
+  root.title("RSA")
+
+# Chọn loại file: ban đầu | mã hoá | giải mã
+def chooseFile(input: tkt.Text):
+  path = selectFile()
+  loadText(input, path)
+
+def fileBanDau():
+  chooseFile(inputFileBanDau)
+
+def fileMaHoa():
+  chooseFile(inputFileMaHoa)
+
+def fileGiaiMa():
+  chooseFile(inputFileGiaiMa)
+
 # Thông báo
-def messageBox(title: str, message: str):
-  messagebox.showinfo(title=title, message=message)
+def messageBox(title: str, message: str, info: bool=False, warning: bool=False):
+  if info:
+    messagebox.showinfo(title=title, message=message)
+
+  if warning:
+    messagebox.showwarning(title=title, message=message)
+
+# Nạp khoá
+def includeKey():
+  path = selectFile()
+  if len(path) > 0:
+    getKey(path)
+    messageBox("Thông báo", "Nạp khoá thành công", info=True)
 
 # Lưu khoá
 def saveKey():
   path = selectFile()
   if len(path) > 0:
     writeKey(path)
-    messageBox("Thông báo", "Lưu khoá thành công")
+    messageBox(title="Thông báo", message="Lưu khoá thành công", info=True)
+
+# Tạo khoá ngẫu nhiên - sinh khoá
+def generateKey():
+  global key, privateKey, publicKey
+  privateKey = key.export_key()
+  publicKey = key.publickey().export_key()
+  loadText(inputPrivateKey, privateKey.hex())
+  loadText(inputPublicKey, publicKey.hex())
 
 # Mở hộp thoại chọn file
 def selectFile():
@@ -54,31 +117,23 @@ def loadText(input: tkt.Text, text: str):
   input.delete(1.0, tkt.END)
   input.insert(tkt.END, text)
 
-# Tạo khoá ngẫu nhiên
-def generateKey():
-  global key, privateKey, publicKey
-  privateKey = key.export_key()
-  publicKey = key.publickey().export_key()
-  loadText(inputPrivateKey, privateKey.hex())
-  loadText(inputPublicKey, publicKey.hex())
-
 # Hàm mã hoá - giả mã
-def crypto(path: str, decryto: bool=False):
+def crypto(pathRead: str, pathWrite: str, decryto: bool=False):
   content = []
-  with open(path, "r") as file:
+  with open(pathRead, "r") as file:
     for line in file:
       content.append(line)
 
-  with open(path, "w") as file:
+  with open(pathWrite, "w") as file:
     for text in content:
       if decryto:
         text = bytes.fromhex(text)
-        data = RSA_crypto(privateKey, publicKey, text, decrytion=True).decode()
+        data = RSA_crypto(text, decrytion=True).decode()
         file.write(data)
       
       else:
         text = text.encode()
-        data = RSA_crypto(privateKey, publicKey, text).hex()
+        data = RSA_crypto(text).hex()
         file.write(data)
         file.write("\n")
 
@@ -111,6 +166,12 @@ def getKey(path: str):
   loadText(inputPrivateKey, privateKey.hex())
   loadText(inputPublicKey, publicKey.hex())
 
+# Kiểm tra file có tồn tại hay không
+def checkFile(path):
+  if os.path.exists(path):
+    return True
+
+  return False
 
 
 # UI
@@ -175,7 +236,7 @@ btnSinh.pack(side="right", **styleButtonDistance)
 btnLuu = tkt.Button(frameButton, text="Lưu", ** styleButton, command=saveKey)
 btnLuu.pack(side="right", **styleButtonDistance)
 
-btnNap = tkt.Button(frameButton, text="Nạp", ** styleButton)
+btnNap = tkt.Button(frameButton, text="Nạp", ** styleButton, command=includeKey)
 btnNap.pack(side="right", **styleButtonDistance)
 
 # frame file
@@ -185,10 +246,10 @@ frameFile1.pack(padx=10, pady=5, **styleFrame)
 
 tkt.Label(frameFile1, text="File ban đầu", **styleLabel).pack(side="left")
 
-inputFleBanDau = tkt.Text(frameFile1, wrap="none", width=0)
-inputFleBanDau.pack(side="left", padx=(10, 0), fill="x", expand=True)
+inputFileBanDau = tkt.Text(frameFile1, wrap="none", width=0)
+inputFileBanDau.pack(side="left", padx=(10, 0), fill="x", expand=True)
 
-btnBanDau = tkt.Button(frameFile1, text="Chọn", **styleButton)
+btnBanDau = tkt.Button(frameFile1, text="Chọn", **styleButton, command=fileBanDau)
 btnBanDau.pack(side="right", **styleButtonDistance)
 
 frameFile2 = tkt.Frame(root, width=window_width, height=30)
@@ -197,10 +258,10 @@ frameFile2.pack(padx=10, pady=5, **styleFrame)
 
 tkt.Label(frameFile2, text="File mã hoá", **styleLabel).pack(side="left")
 
-inputFleMaHoa = tkt.Text(frameFile2, wrap="none", width=0)
-inputFleMaHoa.pack(side="left", padx=(10, 0), fill="x", expand=True)
+inputFileMaHoa = tkt.Text(frameFile2, wrap="none", width=0)
+inputFileMaHoa.pack(side="left", padx=(10, 0), fill="x", expand=True)
 
-btnMaHoa = tkt.Button(frameFile2, text="Chọn", **styleButton)
+btnMaHoa = tkt.Button(frameFile2, text="Chọn", **styleButton, command=fileMaHoa)
 btnMaHoa.pack(side="right", **styleButtonDistance)
 
 frameFile3 = tkt.Frame(root, width=window_width, height=30)
@@ -212,7 +273,7 @@ tkt.Label(frameFile3, text="File giải mã", **styleLabel).pack(side="left")
 inputFileGiaiMa = tkt.Text(frameFile3, wrap="none", width=0)
 inputFileGiaiMa.pack(side="left", padx=(10, 0), fill="x", expand=True)
 
-btnGiaiMa = tkt.Button(frameFile3, text="Chọn", **styleButton)
+btnGiaiMa = tkt.Button(frameFile3, text="Chọn", **styleButton, command=fileGiaiMa)
 btnGiaiMa.pack(side="right", **styleButtonDistance)
 
 # button option
@@ -224,7 +285,7 @@ frameLeft = tkt.Frame(frameButtonOption, width=window_width//2, height=50)
 frameLeft.pack_propagate(False)
 frameLeft.pack(side="left", **styleFrame, expand=True)
 
-btnOptionMaHoa = tkt.Button(frameLeft, text="Mã hoá", **styleButton)
+btnOptionMaHoa = tkt.Button(frameLeft, text="Mã hoá", **styleButton, command=encryto)
 btnOptionMaHoa.config(width=20)
 btnOptionMaHoa.pack(side="right", padx=(0, 10))
 
@@ -232,7 +293,7 @@ frameRight = tkt.Frame(frameButtonOption, width=window_width//2, height=50)
 frameRight.pack_propagate(False)
 frameRight.pack(side="left", **styleFrame, expand=True)
 
-btnOptionGiaiMa = tkt.Button(frameRight, text="Giải mã", **styleButton)
+btnOptionGiaiMa = tkt.Button(frameRight, text="Giải mã", **styleButton, command=decryto)
 btnOptionGiaiMa.config(width=20)
 btnOptionGiaiMa.pack(side="left", padx=(10, 0))
 
