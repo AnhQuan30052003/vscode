@@ -22,7 +22,7 @@ y = (screen_height // 2) - (window_height // 2)
 root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
 # setup RSA
-key = RSA.generate(2048)
+key = RSA.generate(4096)
 privateKey = ""
 publicKey = ""
 
@@ -35,7 +35,7 @@ def encryto():
   pathRead = inputFileBanDau.get("1.0", "end-1c")
   pathWrite = inputFileMaHoa.get("1.0", "end-1c")
 
-  if not checkFile(pathRead) or not checkFile(pathWrite):
+  if not checkFile(pathRead):
     messageBox(title="Thông báo", message="Lỗi, kiểm tra đường dẫn file", warning=True)
     return
 
@@ -50,7 +50,7 @@ def decryto():
   pathRead = inputFileMaHoa.get("1.0", "end-1c")
   pathWrite = inputFileGiaiMa.get("1.0", "end-1c")
 
-  if not checkFile(pathRead) or checkFile(pathWrite):
+  if not checkFile(pathRead):
     messageBox(title="Thông báo", message="Lỗi, kiểm tra đường dẫn file", warning=True)
     return
 
@@ -121,34 +121,33 @@ def loadText(input: tkt.Text, text: str):
 def crypto(pathRead: str, pathWrite: str, decryto: bool=False):
   content = []
   with open(pathRead, "r") as file:
-    char = file.read(1)
-    while char:
-      content.append(char)
-      char = file.read(1)
+    for line in file:
+      content.append(line)
 
   with open(pathWrite, "w") as file:
-    for char in content:
+    for text in content:
       if decryto:
-        char = bytes.fromhex(char)
-        data = RSA_crypto(char, decrytion=True).decode()
+        text = bytes.fromhex(text)
+        data = RSA_crypto(text, decrytion=True).decode()
         file.write(data)
       
       else:
-        char = char.encode()
-        data = RSA_crypto(char).hex()
+        text = text.encode()
+        data = RSA_crypto(text).hex()
         file.write(data)
+        file.write("\n")
 
 # Chọn mã hoá hay giải mã
 def RSA_crypto(message: bytes, decrytion: bool=False):
   if decrytion:
     cipher_rsa = PKCS1_OAEP.new(RSA.import_key(privateKey))
-    char = cipher_rsa.decrypt(message)
+    text = cipher_rsa.decrypt(message)
 
   else:
     cipher_rsa = PKCS1_OAEP.new(RSA.import_key(publicKey))
-    char = cipher_rsa.encrypt(message)
+    text = cipher_rsa.encrypt(message)
 
-  return char
+  return text
 
 def writeKey(path: str):
   with open(path, "w") as file:
