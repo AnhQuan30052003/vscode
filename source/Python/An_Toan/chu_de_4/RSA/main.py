@@ -1,7 +1,6 @@
 import os
 import tkinter as tkt
-from tkinter import filedialog as fd
-from tkinter import messagebox
+from tkinter import filedialog as fd, messagebox
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 
@@ -23,6 +22,8 @@ root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
 # setup RSA
 key = RSA.generate(4096)
+de = ""
+en = ""
 privateKey = ""
 publicKey = ""
 
@@ -62,7 +63,7 @@ def decryto():
 
 # Chọn loại file: ban đầu | mã hoá | giải mã
 def chooseFile(input: tkt.Text):
-  path = selectFile()
+  path = openFile()
   loadText(input, path)
 
 def fileBanDau():
@@ -84,28 +85,31 @@ def messageBox(title: str, message: str, info: bool=False, warning: bool=False):
 
 # Nạp khoá
 def includeKey():
-  path = selectFile()
+  path = openFile()
   if len(path) > 0:
     getKey(path)
     messageBox("Thông báo", "Nạp khoá thành công", info=True)
 
 # Lưu khoá
 def saveKey():
-  path = selectFile()
+  path = fd.asksaveasfilename(defaultextension=".txt", filetypes=[("All files", "*.*")])
   if len(path) > 0:
     writeKey(path)
     messageBox(title="Thông báo", message="Lưu khoá thành công", info=True)
 
 # Tạo khoá ngẫu nhiên - sinh khoá
 def generateKey():
-  global key, privateKey, publicKey
+  global key, privateKey, publicKey, de, en
   privateKey = key.export_key()
   publicKey = key.publickey().export_key()
+
+  de = PKCS1_OAEP.new(RSA.import_key(privateKey))
+  en = PKCS1_OAEP.new(RSA.import_key(publicKey))
   loadText(inputPrivateKey, privateKey.hex())
   loadText(inputPublicKey, publicKey.hex())
 
 # Mở hộp thoại chọn file
-def selectFile():
+def openFile():
   filePath = fd.askopenfilename()
   if filePath:
     return filePath
@@ -140,12 +144,11 @@ def crypto(pathRead: str, pathWrite: str, decryto: bool=False):
 # Chọn mã hoá hay giải mã
 def RSA_crypto(message: bytes, decrytion: bool=False):
   if decrytion:
-    cipher_rsa = PKCS1_OAEP.new(RSA.import_key(privateKey))
-    text = cipher_rsa.decrypt(message)
+    text = de.decrypt(message)
 
   else:
     cipher_rsa = PKCS1_OAEP.new(RSA.import_key(publicKey))
-    text = cipher_rsa.encrypt(message)
+    text = en.encrypt(message)
 
   return text
 
@@ -157,12 +160,15 @@ def writeKey(path: str):
 
 # Nạp khoá
 def getKey(path: str):
-  global privateKey, publicKey
+  global privateKey, publicKey, de, en
   with open(path, "r") as file:
     key = file.read().split("\n\n")
     privateKey = key[0].encode()
     publicKey = key[1].encode()
   
+  de = PKCS1_OAEP.new(RSA.import_key(privateKey))
+  en = PKCS1_OAEP.new(RSA.import_key(publicKey))
+
   loadText(inputPrivateKey, privateKey.hex())
   loadText(inputPublicKey, publicKey.hex())
 
@@ -301,5 +307,6 @@ btnOptionGiaiMa.pack(side="left", padx=(10, 0))
 
 # run
 os.system("cls")
+print("Run successfully")
 root.mainloop()
-print("Build done")
+print("End run")
