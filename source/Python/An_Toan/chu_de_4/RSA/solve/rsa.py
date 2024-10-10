@@ -4,40 +4,13 @@ from Crypto.Cipher import PKCS1_OAEP
 
 def main():
   os.system("cls")
-  fileName = "read.py"
+  fileName = "a.txt"
   path = os.path.join(os.path.abspath(os.path.dirname(__file__)), fileName)
 
   privateKey, publicKey = getKey("text.txt")
   crypto(path, privateKey, publicKey, decryto=True)
 
   print("Build")
-
-def encrypto(pathRead: str, pathWrite: str, privateKey: bytes, publicKey: bytes):
-  content = []
-  with open(pathRead, "r") as file:
-    for line in file:
-      content.append(line)
-
-  with open(pathWrite, "w") as file:
-    for text in content:
-      text = text.encode()
-      data = RSA_crypto(privateKey, publicKey, text)
-      data = data.hex()
-      file.write(data)
-      file.write("\n")
-
-def decrypto(pathRead: str, pathWrite: str, privateKey: bytes, publicKey: bytes):
-  content = []
-  with open(pathRead, "r") as file:
-    for line in file:
-      content.append(line)
-
-  with open(pathWrite, "w") as file:
-    for text in content:
-      text = bytes.fromhex(text)
-      data = RSA_crypto(privateKey, publicKey, text, decrytion=True)
-      data = data.decode()
-      file.write(data)
 
 def crypto(path: str, privateKey: bytes, publicKey: bytes, decryto: bool=False):
   content = []

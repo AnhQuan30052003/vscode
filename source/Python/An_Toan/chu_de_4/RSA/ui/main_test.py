@@ -121,33 +121,34 @@ def loadText(input: tkt.Text, text: str):
 def crypto(pathRead: str, pathWrite: str, decryto: bool=False):
   content = []
   with open(pathRead, "r") as file:
-    for line in file:
-      content.append(line)
+    char = file.read(1)
+    while char:
+      content.append(char)
+      char = file.read(1)
 
   with open(pathWrite, "w") as file:
-    for text in content:
+    for char in content:
       if decryto:
-        text = bytes.fromhex(text)
-        data = RSA_crypto(text, decrytion=True).decode()
+        char = bytes.fromhex(char)
+        data = RSA_crypto(char, decrytion=True).decode()
         file.write(data)
       
       else:
-        text = text.encode()
-        data = RSA_crypto(text).hex()
+        char = char.encode()
+        data = RSA_crypto(char).hex()
         file.write(data)
-        file.write("\n")
 
 # Chọn mã hoá hay giải mã
 def RSA_crypto(message: bytes, decrytion: bool=False):
   if decrytion:
     cipher_rsa = PKCS1_OAEP.new(RSA.import_key(privateKey))
-    text = cipher_rsa.decrypt(message)
+    char = cipher_rsa.decrypt(message)
 
   else:
     cipher_rsa = PKCS1_OAEP.new(RSA.import_key(publicKey))
-    text = cipher_rsa.encrypt(message)
+    char = cipher_rsa.encrypt(message)
 
-  return text
+  return char
 
 def writeKey(path: str):
   with open(path, "w") as file:
