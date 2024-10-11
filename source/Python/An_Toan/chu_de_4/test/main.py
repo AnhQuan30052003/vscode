@@ -37,7 +37,11 @@ def encryto():
   pathWrite = inputFileMaHoa.get("1.0", "end-1c")
 
   if not checkFile(pathRead):
-    messageBox(title="Thông báo", message="Lỗi, kiểm tra đường dẫn file", warning=True)
+    messageBox(title="Thông báo", message="Lỗi, kiểm tra đường dẫn file !", warning=True)
+    return
+  
+  if len(privateKey) == 0 or len(publicKey) == 0:
+    messageBox(title="Thông báo", message="Khoá không đúng định dạng !", warning=True)
     return
 
   root.title("RSA - Đang mã hoá...")
@@ -52,7 +56,11 @@ def decryto():
   pathWrite = inputFileGiaiMa.get("1.0", "end-1c")
 
   if not checkFile(pathRead):
-    messageBox(title="Thông báo", message="Lỗi, kiểm tra đường dẫn file", warning=True)
+    messageBox(title="Thông báo", message="Lỗi, kiểm tra đường dẫn file !", warning=True)
+    return
+  
+  if len(privateKey) == 0 or len(publicKey) == 0:
+    messageBox(title="Thông báo", message="Khoá không đúng định dạng !", warning=True)
     return
 
   root.title("RSA - Đang giải mã...")
@@ -105,8 +113,9 @@ def generateKey():
 
   de = PKCS1_OAEP.new(RSA.import_key(privateKey))
   en = PKCS1_OAEP.new(RSA.import_key(publicKey))
-  loadText(inputPrivateKey, privateKey.hex())
-  loadText(inputPublicKey, publicKey.hex())
+
+  loadText(inputPrivateKey, privateKey.hex(), clock=True)
+  loadText(inputPublicKey, publicKey.hex(), clock=True)
 
 # Mở hộp thoại chọn file
 def openFile():
@@ -117,29 +126,53 @@ def openFile():
   return ""
 
 # Thêm nôi dung text vào input
-def loadText(input: tkt.Text, text: str):
+def loadText(input: tkt.Text, text: str, clock: bool=False):
+  if clock:
+    input.config(state="normal")
+
   input.delete(1.0, tkt.END)
   input.insert(tkt.END, text)
 
+  if clock:
+    input.config(state="disabled")
+
 # Hàm mã hoá - giả mã
 def crypto(pathRead: str, pathWrite: str, decryto: bool=False):
+  modeR, modeW = chooseTypeFileToRead(pathRead)
+
   content = []
-  with open(pathRead, "r") as file:
+  with open(pathRead, modeR) as file:
     for line in file:
       content.append(line)
 
-  with open(pathWrite, "w") as file:
+  with open(pathWrite, modeW) as file:
     for text in content:
       if decryto:
-        text = bytes.fromhex(text)
-        data = RSA_crypto(text, decrytion=True).decode()
+        if modeR == "r":
+          text = bytes.fromhex(text)
+          data = RSA_crypto(text, decrytion=True).decode()
+        else:
+          data = RSA_crypto(text, decrytion=True)
+
         file.write(data)
       
       else:
-        text = text.encode()
-        data = RSA_crypto(text).hex()
-        file.write(data)
-        file.write("\n")
+        if modeR == "r":
+          text = text.encode()
+          data = RSA_crypto(text).hex()
+          file.write(data)
+          file.write("\n")
+
+        else:
+          data = RSA_crypto(text)
+          file.write(data)
+          file.write("\n".encode())
+
+# Chọn loại đọc cho file
+def chooseTypeFileToRead(path: str):
+  textExtensions = ['.txt', '.csv', '.json', '.xml', '.html']
+  _, extension = os.path.splitext(path)
+  return ["r", "w"] if extension in textExtensions else ["rb", "wb"]
 
 # Chọn mã hoá hay giải mã
 def RSA_crypto(message: bytes, decrytion: bool=False):
@@ -147,6 +180,7 @@ def RSA_crypto(message: bytes, decrytion: bool=False):
     text = de.decrypt(message)
 
   else:
+    cipher_rsa = PKCS1_OAEP.new(RSA.import_key(publicKey))
     text = en.encrypt(message)
 
   return text
@@ -168,8 +202,8 @@ def getKey(path: str):
   de = PKCS1_OAEP.new(RSA.import_key(privateKey))
   en = PKCS1_OAEP.new(RSA.import_key(publicKey))
 
-  loadText(inputPrivateKey, privateKey.hex())
-  loadText(inputPublicKey, publicKey.hex())
+  loadText(inputPrivateKey, privateKey.hex(), clock=True)
+  loadText(inputPublicKey, publicKey.hex(), clock=True)
 
 # Kiểm tra file có tồn tại hay không
 def checkFile(path):
