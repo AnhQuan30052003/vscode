@@ -1,4 +1,4 @@
-import os
+import os, base64
 import tkinter as tkt
 from tkinter import filedialog as fd, messagebox
 from Crypto.PublicKey import RSA
@@ -32,31 +32,39 @@ publicKey = ""
 
 # Funcions
 # Mã hoá
-def encryto():
+def active_encrypt():
   pathRead = inputFileBanDau.get("1.0", "end-1c")
   pathWrite = inputFileMaHoa.get("1.0", "end-1c")
 
   if not checkFile(pathRead):
-    messageBox(title="Thông báo", message="Lỗi, kiểm tra đường dẫn file", warning=True)
+    messageBox(title="Thông báo", message="Lỗi, kiểm tra đường dẫn file !", warning=True)
+    return
+  
+  if len(privateKey) == 0 or len(publicKey) == 0:
+    messageBox(title="Thông báo", message="Khoá không đúng định dạng !", warning=True)
     return
 
   root.title("RSA - Đang mã hoá...")
-  crypto(pathRead, pathWrite)
+  crypt(pathRead, pathWrite)
   root.title("RSA - Mã hoá thành công")
   messageBox(title="Thông báo", message="Mã hoá thành công", info=True)
   root.title("RSA")
 
 # Giải mã
-def decryto():
+def active_decrypt():
   pathRead = inputFileMaHoa.get("1.0", "end-1c")
   pathWrite = inputFileGiaiMa.get("1.0", "end-1c")
 
   if not checkFile(pathRead):
-    messageBox(title="Thông báo", message="Lỗi, kiểm tra đường dẫn file", warning=True)
+    messageBox(title="Thông báo", message="Lỗi, kiểm tra đường dẫn file !", warning=True)
+    return
+  
+  if len(privateKey) == 0 or len(publicKey) == 0:
+    messageBox(title="Thông báo", message="Khoá không đúng định dạng !", warning=True)
     return
 
   root.title("RSA - Đang giải mã...")
-  crypto(pathRead, pathWrite, decryto=True)
+  crypt(pathRead, pathWrite, decryption=True)
   root.title("RSA - Giải mã thành công")
   messageBox(title="Thông báo", message="Giải mã thành công", info=True)
   root.title("RSA")
@@ -105,8 +113,9 @@ def generateKey():
 
   de = PKCS1_OAEP.new(RSA.import_key(privateKey))
   en = PKCS1_OAEP.new(RSA.import_key(publicKey))
-  loadText(inputPrivateKey, privateKey.hex())
-  loadText(inputPublicKey, publicKey.hex())
+
+  loadText(inputPrivateKey, privateKey.hex(), clock=True)
+  loadText(inputPublicKey, publicKey.hex(), clock=True)
 
 # Mở hộp thoại chọn file
 def openFile():
@@ -117,37 +126,51 @@ def openFile():
   return ""
 
 # Thêm nôi dung text vào input
-def loadText(input: tkt.Text, text: str):
+def loadText(input: tkt.Text, text: str, clock: bool=False):
+  if clock:
+    input.config(state="normal")
+
   input.delete(1.0, tkt.END)
   input.insert(tkt.END, text)
 
-# Hàm mã hoá - giả mã
-def crypto(pathRead: str, pathWrite: str, decryto: bool=False):
-  content = []
-  with open(pathRead, "r") as file:
-    for line in file:
-      content.append(line)
+  if clock:
+    input.config(state="disabled")
 
-  with open(pathWrite, "w") as file:
-    for text in content:
-      if decryto:
-        text = bytes.fromhex(text)
-        data = RSA_crypto(text, decrytion=True).decode()
-        file.write(data)
-      
+# Hàm mã hoá - giải mã
+def crypt(pathRead: str, pathWrite: str, decryption: bool=False):
+  content = []
+  with open(pathRead, "rb") as file:
+    for line in file:
+      if not decryption:
+        data = RSA_crypt(line)
+        data = base64.b64encode(data) + b"\n"
       else:
-        text = text.encode()
-        data = RSA_crypto(text).hex()
-        file.write(data)
-        file.write("\n")
+        data = line[ : len(line)-1]
+        data = base64.b64decode(data)
+        data = RSA_crypt(data, decryption=True)
+
+      content.append(data)
+
+  with open(pathWrite, "wb") as file:
+    for data in content:
+      file.write(data)
 
 # Chọn mã hoá hay giải mã
-def RSA_crypto(message: bytes, decrytion: bool=False):
-  if decrytion:
-    text = de.decrypt(message)
+def RSA_crypt(message: bytes, decryption: bool=False):
+  index = 0
+  text = b""
+  size = 470 if not decryption else 512
 
-  else:
-    text = en.encrypt(message)
+  while index < len(message):
+    subString = message[index : index + size]
+    
+    if decryption:
+      subString = de.decrypt(subString)
+    else:
+      subString = en.encrypt(subString)
+
+    index += size
+    text += subString
 
   return text
 
@@ -168,8 +191,8 @@ def getKey(path: str):
   de = PKCS1_OAEP.new(RSA.import_key(privateKey))
   en = PKCS1_OAEP.new(RSA.import_key(publicKey))
 
-  loadText(inputPrivateKey, privateKey.hex())
-  loadText(inputPublicKey, publicKey.hex())
+  loadText(inputPrivateKey, privateKey.hex(), clock=True)
+  loadText(inputPublicKey, publicKey.hex(), clock=True)
 
 # Kiểm tra file có tồn tại hay không
 def checkFile(path):
@@ -290,7 +313,7 @@ frameLeft = tkt.Frame(frameButtonOption, width=window_width//2, height=50)
 frameLeft.pack_propagate(False)
 frameLeft.pack(side="left", **styleFrame, expand=True)
 
-btnOptionMaHoa = tkt.Button(frameLeft, text="Mã hoá", **styleButton, command=encryto)
+btnOptionMaHoa = tkt.Button(frameLeft, text="Mã hoá", **styleButton, command=active_encrypt)
 btnOptionMaHoa.config(width=20)
 btnOptionMaHoa.pack(side="right", padx=(0, 10))
 
@@ -298,7 +321,7 @@ frameRight = tkt.Frame(frameButtonOption, width=window_width//2, height=50)
 frameRight.pack_propagate(False)
 frameRight.pack(side="left", **styleFrame, expand=True)
 
-btnOptionGiaiMa = tkt.Button(frameRight, text="Giải mã", **styleButton, command=decryto)
+btnOptionGiaiMa = tkt.Button(frameRight, text="Giải mã", **styleButton, command=active_decrypt)
 btnOptionGiaiMa.config(width=20)
 btnOptionGiaiMa.pack(side="left", padx=(10, 0))
 
