@@ -31,18 +31,16 @@ def openFile():
   md5 = calculate_md5(path).upper()
   
   loadText(inputText, path)
-  loadText(outputText, md5, clock=True)
+  loadText(outputText, md5)
 
-# Thêm nôi dung text vào input
-def loadText(input: tkt.Text, text: str, clock: bool=False):
-  if clock:
-    input.config(state="normal")
+# Thêm nội dung text vào input
+def loadText(input: tkt.Text, text: str):
+  input.config(state="normal")
 
   input.delete(1.0, tkt.END)
   input.insert(tkt.END, text)
 
-  if clock:
-    input.config(state="disabled")
+  input.config(state="disabled")
 
 def calculate_md5(file_path):
   md5_hash = hashlib.md5()
