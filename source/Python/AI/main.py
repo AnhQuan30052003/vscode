@@ -12,11 +12,12 @@ def main():
   # Đọc file lấy dữ liệu
   # fileName = "bfs_dfs.adj"
   # fileName = "bfs_hcs.adj"
-  # fileName = "at.adj"
-  fileName = "cms.adj"
+  fileName = "at.adj"
+  # fileName = "cms.adj"
   # fileName = "a_star.adj"
-  matrix, namePeaks, weight, listH = readMatrix(getPath(fileName), weight=True, weightIsMatrix=True, calculatorH=False)
+  matrix, namePeaks, weight, listH = readMatrix(getPath(fileName), weight=True, weightIsMatrix=False, calculatorH=False)
 
+  # Ma trận rỗng và dừng chương trình
   if len(matrix) == 0:
     print("Dữ liệu trong ma trận rỗng !")
     return
@@ -27,8 +28,8 @@ def main():
   # HCS(matrix, namePeaks, weight, 'A', 'N') # Hill Climbing Search
   # BFS(matrix, namePeaks, weight, 'A', 'N') # Best First Search
 
-  # AT(matrix, namePeaks, weight, 'S', 'R') # Algorithm for Tree
-  CMS(matrix, namePeaks, weight, 'A', 'J') # Cost Minimazation Search
+  AT(matrix, namePeaks, weight, 'S', 'R') # Algorithm for Tree
+  # CMS(matrix, namePeaks, weight, 'A', 'J') # Cost Minimazation Search
 
   # A_Star(matrix, namePeaks, weight, listH, 'A', 'K') # A Star
 

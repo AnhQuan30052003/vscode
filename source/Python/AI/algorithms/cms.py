@@ -40,11 +40,8 @@ def CMS(matrix: list, namePeaks: list, weight: list, start: chr, goal: chr):
 
         father[i] = cur
 
-    G_temp = [G[i] for i in open]
-    listS = list(zip(open, G_temp))
-    listS.sort(key=lambda x : x[1])
+    open.sort(key=lambda x : G[x])
 
-    open = [x[0] for x in listS]
     print(f"Open: ", end="")
     for o in open:
       print(f"{namePeaks[o]}_({G[o]}) ", end="")

@@ -32,11 +32,8 @@ def AT(matrix: list, namePeaks: list, weight: list, start: chr, goal: chr):
         G[i] = weight[cur] + weight[i]
         father[i] = cur
 
-    G_temp = [G[i] for i in open]
-    listS = list(zip(open, G_temp))
-    listS.sort(key=lambda x : x[1])
-
-    open = [x[0] for x in listS]
+    open.sort(key=lambda x : G[x])
+    
     print(f"Open: ", end="")
     for o in open:
       print(f"{namePeaks[o]}_({G[o]}) ", end="")
