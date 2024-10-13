@@ -7,15 +7,17 @@ from algorithms.bfs import *
 from algorithms.at import *
 from algorithms.cms import *
 from algorithms.a_star import *
+from algorithms.branch_bound import *
 
 def main():
   # Đọc file lấy dữ liệu
   # fileName = "bfs_dfs.adj"
   # fileName = "bfs_hcs.adj"
-  fileName = "at.adj"
+  # fileName = "at.adj"
   # fileName = "cms.adj"
   # fileName = "a_star.adj"
-  matrix, namePeaks, weight, listH = readMatrix(getPath(fileName), weight=True, weightIsMatrix=False, calculatorH=False)
+  fileName = "branch_bound.adj"
+  matrix, namePeaks, weight, listH = readMatrix(getPath(fileName), weight=True, weightIsMatrix=True, calculatorH=True)
 
   # Ma trận rỗng và dừng chương trình
   if len(matrix) == 0:
@@ -28,10 +30,11 @@ def main():
   # HCS(matrix, namePeaks, weight, 'A', 'N') # Hill Climbing Search
   # BFS(matrix, namePeaks, weight, 'A', 'N') # Best First Search
 
-  AT(matrix, namePeaks, weight, 'S', 'R') # Algorithm for Tree
+  # AT(matrix, namePeaks, weight, 'S', 'R') # Algorithm for Tree
   # CMS(matrix, namePeaks, weight, 'A', 'J') # Cost Minimazation Search
 
   # A_Star(matrix, namePeaks, weight, listH, 'A', 'K') # A Star
+  Branch_Bound(matrix, namePeaks, weight, listH, 'A', 'U') # Branch and Bound
 
   # drawGraph(matrix) # Vẽ đồ hoạ các đỉnh
 

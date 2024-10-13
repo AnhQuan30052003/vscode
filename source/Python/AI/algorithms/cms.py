@@ -15,7 +15,7 @@ def CMS(matrix: list, namePeaks: list, weight: list, start: chr, goal: chr):
 
   while len(open) > 0:
     cur = open.pop(0)
-    print(f"Xét đỉnh: {namePeaks[cur]}_({G[cur]}), ", end="")
+    print(f"Xét đỉnh: {namePeaks[cur] + str([G[cur]])}, ", end="")
 
     if cur == goal:
       result = [goal]
@@ -24,13 +24,14 @@ def CMS(matrix: list, namePeaks: list, weight: list, start: chr, goal: chr):
     
     close.append(cur)
 
+    Tn = []
     listCur = matrix[cur]
     for i in range(len(listCur)):
       peak = listCur[i]
 
       if peak == 1 and not checkExists(close, i):
         if not checkExists(open, i):
-          open.append(i)
+          Tn.append(i)
           G[i] = G[cur] + weight[cur][i]
 
         else:
@@ -40,11 +41,10 @@ def CMS(matrix: list, namePeaks: list, weight: list, start: chr, goal: chr):
 
         father[i] = cur
 
+    open += Tn
     open.sort(key=lambda x : G[x])
 
-    print(f"Open: ", end="")
-    for o in open:
-      print(f"{namePeaks[o]}_({G[o]}) ", end="")
-    print()
+    print(f"Tn: {[namePeaks[tn] + str([G[tn]]) for tn in Tn]}, ", end="")
+    print(f"Open: {[namePeaks[o] + str([G[o]]) for o in open]}")
 
   print("Không tìm thấy đường đi !")

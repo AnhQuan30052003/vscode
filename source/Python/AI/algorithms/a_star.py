@@ -3,7 +3,7 @@ from utils.check_exists import *
 from utils.setup_start_and_goal import *
 
 def A_Star(matrix: list, namePeaks: list, weight: list, listH: list, start: chr, goal: chr):
-  print("Giải thuật: Cost Minimazation Search")
+  print("Giải thuật: A Star")
   start, goal = setupStartAndGoal(namePeaks, start, goal)
 
   father = [-1] * len(namePeaks)
@@ -13,10 +13,11 @@ def A_Star(matrix: list, namePeaks: list, weight: list, listH: list, start: chr,
   close = []
 
   open.append(start)
+  F[start] = listH[start]
 
   while len(open) > 0:
     cur = open.pop(0)
-    print(f"Xét đỉnh: {namePeaks[cur]}, g({namePeaks[cur]})")
+    print(f"Xét đỉnh: {namePeaks[cur] + str([G[cur]]) + str([F[cur]])}")
 
     if cur == goal:
       result = [goal]
@@ -25,26 +26,33 @@ def A_Star(matrix: list, namePeaks: list, weight: list, listH: list, start: chr,
     
     close.append(cur)
 
+    Tn = []
     listCur = matrix[cur]
     for i in range(len(listCur)):
       peak = listCur[i]
 
-      if peak == 1 and not checkExists(close, i):
-        if not checkExists(open, i):
-          open.append(i)
+      if peak == 1:
+        if not checkExists(open, i) and not checkExists(close, i):
+          Tn.append(i)
+
           G[i] = G[cur] + weight[cur][i]
+          F[i] = G[i] + listH[i]
+          father[i] = cur
 
         else:
-          G_new = G[cur] + weight[cur][i]
-          if G_new <= G[i]:
-            G[i] = G_new
+          G_new_i = G[cur] + weight[cur][i]
+          F_new_i = G_new_i + listH[i]
+          
+          if F_new_i <= F[i]:
+            G[i] = G_new_i
+            F[i] = F_new_i
+            father[i] = cur
 
-        father[i] = cur
+    open += Tn
+    open.sort(key=lambda x : F[x])
 
-    G_temp = [G[i] for i in open]
-    listS = list(zip(open, G_temp))
-    listS.sort(key=lambda x : x[1])
-
-    open = [x[0] for x in listS]
+    print(f"Tn: {[namePeaks[tn] + str([G[tn]]) + str([F[tn]]) for tn in Tn]}")
+    print(f"Open: {[namePeaks[o] + str([G[o]]) + str([F[o]]) for o in open]}")
+    print()
 
   print("Không tìm thấy đường đi !")
