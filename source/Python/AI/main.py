@@ -15,8 +15,8 @@ def main():
   # fileName = "bfs_hcs.adj"
   # fileName = "at.adj"
   # fileName = "cms.adj"
-  # fileName = "a_star.adj"
-  fileName = "branch_bound.adj"
+  fileName = "a_star.adj"
+  # fileName = "branch_bound.adj"
   matrix, namePeaks, weight, listH = readMatrix(getPath(fileName), weight=True, weightIsMatrix=True, calculatorH=True)
 
   # Ma trận rỗng và dừng chương trình
@@ -25,7 +25,7 @@ def main():
     return
   
   # Chạy với thuật toán #
-  # BFS_DFS(matrix, namePeaks, 'A', 'J', DFS=True) # Breath First Search | Depth First Search
+  BFS_DFS(matrix, namePeaks, 'A', 'J', DFS=False) # Breath First Search | Depth First Search
 
   # HCS(matrix, namePeaks, weight, 'A', 'N') # Hill Climbing Search
   # BFS(matrix, namePeaks, weight, 'A', 'N') # Best First Search
@@ -33,8 +33,8 @@ def main():
   # AT(matrix, namePeaks, weight, 'S', 'R') # Algorithm for Tree
   # CMS(matrix, namePeaks, weight, 'A', 'J') # Cost Minimazation Search
 
-  # A_Star(matrix, namePeaks, weight, listH, 'A', 'K') # A Star
-  Branch_Bound(matrix, namePeaks, weight, listH, 'A', 'U') # Branch and Bound
+  A_Star(matrix, namePeaks, weight, listH, 'A', 'K') # A Star
+  # Branch_Bound(matrix, namePeaks, weight, listH, 'A', 'B') # Branch and Bound
 
   # drawGraph(matrix) # Vẽ đồ hoạ các đỉnh
 

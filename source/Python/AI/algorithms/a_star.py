@@ -3,7 +3,7 @@ from utils.check_exists import *
 from utils.setup_start_and_goal import *
 
 def A_Star(matrix: list, namePeaks: list, weight: list, listH: list, start: chr, goal: chr):
-  print("Giải thuật: A Star")
+  print("Giải thuật: A Star\n---")
   start, goal = setupStartAndGoal(namePeaks, start, goal)
 
   father = [-1] * len(namePeaks)
@@ -17,7 +17,7 @@ def A_Star(matrix: list, namePeaks: list, weight: list, listH: list, start: chr,
 
   while len(open) > 0:
     cur = open.pop(0)
-    print(f"Xét đỉnh: {namePeaks[cur] + str([G[cur]]) + str([F[cur]])}")
+    print(f"[+] Xét đỉnh: {namePeaks[cur] + str([G[cur]]) + str([F[cur]])}")
 
     if cur == goal:
       result = [goal]
@@ -55,4 +55,4 @@ def A_Star(matrix: list, namePeaks: list, weight: list, listH: list, start: chr,
     print(f"Open: {[namePeaks[o] + str([G[o]]) + str([F[o]]) for o in open]}")
     print()
 
-  print("Không tìm thấy đường đi !")
+  print("[!] Không tìm thấy đường đi !")

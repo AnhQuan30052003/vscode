@@ -4,7 +4,7 @@ from utils.setup_start_and_goal import *
 
 def BFS_DFS(matrix: list, namePeaks: list, start: chr, goal: chr, DFS: bool=False):
   name = "Depth First Search" if DFS else "Breath First Search"
-  print(f"Giải thuật: {name}")
+  print(f"Giải thuật: {name}\n---")
   start, goal = setupStartAndGoal(namePeaks, start, goal)
 
   father = [-1] * len(namePeaks)
@@ -15,6 +15,7 @@ def BFS_DFS(matrix: list, namePeaks: list, start: chr, goal: chr, DFS: bool=Fals
 
   while len(open) > 0:
     cur = open.pop(0)
+    print(f"[+] Xét đỉnh {namePeaks[cur]}")
 
     # Tìm thấy đỉnh cần đến
     if cur == goal:
@@ -35,11 +36,14 @@ def BFS_DFS(matrix: list, namePeaks: list, start: chr, goal: chr, DFS: bool=Fals
         Tn.append(i)
         father[i] = cur
 
-
     if not DFS:
       open += Tn
     else:
       open = Tn + open
+      
+    print(f"Tn: {[namePeaks[tn] for tn in Tn]}")
+    print(f"Open: {[namePeaks[o] for o in open]}")
+    print()
 
   print("Không tìm thấy đường đi !")
   
