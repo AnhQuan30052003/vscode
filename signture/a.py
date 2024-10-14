@@ -7,6 +7,10 @@ from reportlab.lib.pagesizes import letter
 from io import BytesIO
 from PIL import Image, ImageDraw, ImageFont
 
+def getPath(fileName: str):
+  pathCur = os.path.abspath(os.path.dirname(__file__))
+  return os.path.join(pathCur, fileName)
+
 def create_pdf(file_name):
   c = canvas.Canvas(file_name, pagesize=letter)
   c.drawString(100, 750, "Họ và Tên: Nguyễn Anh Quân")
@@ -21,7 +25,7 @@ def add_signature_to_pdf(input_pdf, output_pdf, signature_text):
   d.text((10, 10), signature_text, font=font, fill=(0, 0, 0))
 
   # Lưu chữ ký thành tạm file hình ảnh
-  signature_img_path = "signature.png"
+  signature_img_path = getPath("signature.png")
   img.save(signature_img_path)
 
   # Đọc PDF gốc
@@ -48,8 +52,8 @@ def add_signature_to_pdf(input_pdf, output_pdf, signature_text):
     pdf_writer.write(output_file)
 
 # Tạo file PDF
-# create_pdf("info.pdf")
+create_pdf(getPath("info.pdf"))
 
 # Thêm chữ ký vào file PDF
 signatureText = "Nguyễn Anh Quan"
-add_signature_to_pdf("info.pdf", "signed_info.pdf", signatureText)
+add_signature_to_pdf(getPath("info.pdf"), getPath("signed_info.pdf"), signatureText)
