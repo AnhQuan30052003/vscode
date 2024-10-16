@@ -34,7 +34,6 @@ def A_Star(matrix: list, namePeaks: list, weight: list, listH: list, start: chr,
       if peak == 1:
         if not checkExists(open, i) and not checkExists(close, i):
           Tn.append(i)
-
           G[i] = G[cur] + weight[cur][i]
           F[i] = G[i] + listH[i]
           father[i] = cur
