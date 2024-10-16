@@ -25,7 +25,7 @@ def main():
     return
   
   # Chạy với thuật toán #
-  BFS_DFS(matrix, namePeaks, 'A', 'J', DFS=False) # Breath First Search | Depth First Search
+  # BFS_DFS(matrix, namePeaks, 'A', 'J', DFS=False) # Breath First Search | Depth First Search
 
   # HCS(matrix, namePeaks, weight, 'A', 'N') # Hill Climbing Search
   # BFS(matrix, namePeaks, weight, 'A', 'N') # Best First Search
@@ -33,7 +33,7 @@ def main():
   # AT(matrix, namePeaks, weight, 'S', 'R') # Algorithm for Tree
   # CMS(matrix, namePeaks, weight, 'A', 'J') # Cost Minimazation Search
 
-  A_Star(matrix, namePeaks, weight, listH, 'A', 'K') # A Star
+  A_Star(matrix, namePeaks, weight, listH, 'A', 'J') # A Star
   # Branch_Bound(matrix, namePeaks, weight, listH, 'A', 'B') # Branch and Bound
 
   # drawGraph(matrix) # Vẽ đồ hoạ các đỉnh

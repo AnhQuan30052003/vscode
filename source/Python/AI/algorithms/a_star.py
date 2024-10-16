@@ -37,6 +37,7 @@ def A_Star(matrix: list, namePeaks: list, weight: list, listH: list, start: chr,
           G[i] = G[cur] + weight[cur][i]
           F[i] = G[i] + listH[i]
           father[i] = cur
+          print(f"Father[{namePeaks[i]}] = {namePeaks[cur]}")
 
         else:
           G_new_i = G[cur] + weight[cur][i]
@@ -46,6 +47,7 @@ def A_Star(matrix: list, namePeaks: list, weight: list, listH: list, start: chr,
             G[i] = G_new_i
             F[i] = F_new_i
             father[i] = cur
+            print(f"Cập nhật G[{namePeaks[i]}], F[{namePeaks[i]}]. Father[{namePeaks[i]}] = {namePeaks[cur]}")
 
     open += Tn
     open.sort(key=lambda x : F[x])
