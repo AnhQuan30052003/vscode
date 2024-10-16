@@ -15,8 +15,8 @@ def main():
   # fileName = "bfs_hcs.adj"
   # fileName = "at.adj"
   # fileName = "cms.adj"
-  fileName = "a_star.adj"
-  # fileName = "branch_bound.adj"
+  # fileName = "a_star.adj"
+  fileName = "branch_bound.adj"
   matrix, namePeaks, weight, listH = readMatrix(getPath(fileName), weight=True, weightIsMatrix=True, calculatorH=True)
 
   # Ma trận rỗng và dừng chương trình
@@ -33,8 +33,8 @@ def main():
   # AT(matrix, namePeaks, weight, 'S', 'R') # Algorithm for Tree
   # CMS(matrix, namePeaks, weight, 'A', 'J') # Cost Minimazation Search
 
-  A_Star(matrix, namePeaks, weight, listH, 'A', 'J') # A Star
-  # Branch_Bound(matrix, namePeaks, weight, listH, 'A', 'B') # Branch and Bound
+  # A_Star(matrix, namePeaks, weight, listH, 'A', 'J') # A Star
+  Branch_Bound(matrix, namePeaks, weight, listH, 'A', 'B') # Branch and Bound
 
   # drawGraph(matrix) # Vẽ đồ hoạ các đỉnh
 

@@ -60,13 +60,13 @@ def Branch_Bound(matrix: list, namePeaks: list, weight: list, listH: list, start
             G[i] = G_new_i
             F[i] = F_new_i
             father[i] = cur
-            print(f"Cập nhật G[{namePeaks[i]}], F[{namePeaks[i]}]. father[{namePeaks[i]}] = {namePeaks[cur]}")
+            print(f"Cập nhật G[{namePeaks[i]}], F[{namePeaks[i]}]. Father[{namePeaks[i]}] = {namePeaks[cur]}")
 
         elif checkExists(close, i):
           G[i] = G[cur] + weight[cur][i]
           F[i] = G[i] + listH[i]
           father[i] = cur
-          print(f"Cập nhật father[{namePeaks[i]}] = {namePeaks[cur]}")
+          print(f"Cập nhật Father[{namePeaks[i]}] = {namePeaks[cur]}")
 
 
     Tn.sort(key= lambda x : F[x])
