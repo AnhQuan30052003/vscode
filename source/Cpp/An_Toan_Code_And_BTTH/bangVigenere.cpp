@@ -14,12 +14,12 @@ int main() {
   getMatrixVigenere();
   // printVigenereTable();
 
-  string banRo = "networksecurity";
-  // string khoa = "LEG";
-  string banMa = "PVRLHFMJCRNFKKW";
+  string banRo = "PERMUTATION";
+  string khoa = "CHECKABLE";
+  // string banMa = "PVRLHFMJCRNFKKW";
 
-  // cout << banRoSangBanMa(banRo, khoa);
-  cout << timKhoa(banRo, banMa);
+  cout << banRoSangBanMa(banRo, khoa);
+  // cout << timKhoa(banRo, banMa);
 
   return 0;
 }
@@ -43,10 +43,10 @@ void printVigenereTable() {
 }
 
 string banRoSangBanMa(string banRo, string khoa) {
-  string banRoUpper, banMa;
+  string banMa;
   for (int i = 0, k = 0; i < banRo.length(); i++) {
-    char row = banRo[i] - 32 - 65;
-    char col = khoa[k++]-65;
+    char row = banRo[i] - 65;
+    char col = khoa[k++] - 65;
     banMa += a[row][col];
     if (k == khoa.length()) k = 0;
   }
