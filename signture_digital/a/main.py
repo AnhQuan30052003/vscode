@@ -21,7 +21,7 @@ def create_signature_image():
   textSignature = "Quân"
   textFullName = "Nguyễn Anh Quân"
   denta = (len(textFullName) // 2) - (len(textSignature) // 2)
-  denta *= 10
+  denta *= 10-1
   
   pathFont = os.path.join(getPath(""), "font", "AlexBrush-Regular.ttf")
   font = ImageFont.truetype(pathFont, 30)
