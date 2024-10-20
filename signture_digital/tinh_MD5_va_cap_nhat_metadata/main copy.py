@@ -17,7 +17,7 @@ def calculate_md5(path: str):
   return md5_hash.hexdigest().upper()
 
 def update_metadata(fileInput: str, fileOutput: str, text: str="" , remove: bool=False):
-  keyPDF = "author"
+  keyPDF = "keywords"
   doc = fitz.open(fileInput)
 
   meta = doc.metadata
@@ -28,7 +28,8 @@ def update_metadata(fileInput: str, fileOutput: str, text: str="" , remove: bool
   else:
     meta[keyPDF] = text
 
-  doc.set_metadata(meta)
+  # doc.set_metadata(meta)
+  doc.metadata = meta
   doc.saveIncr()
   doc.close()
 
@@ -43,11 +44,11 @@ def main():
   a = get_path(["a.pdf"])
   b = get_path(["b.pdf"])
 
-  # update_metadata(b, b, text="Anh Quân")
-  # read_metadata(b)
-  # print(f"MD5 của b.pdf: {calculate_md5(b)}")
-  a = get_path(["a.txt"])
-  print(f"MD5 của a.txt: {calculate_md5(a)}")
+  update_metadata(b, b, text="Anh Quân")
+  # update_metadata(a, b, text="") # BD3834D156CC7E278950B6ABB2650974
+  read_metadata(b)
+  print(f"MD5 của b.pdf: {calculate_md5(b)}")
+
 
   print("Build done.")
 main()
