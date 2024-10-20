@@ -9,9 +9,9 @@ from PIL import Image, ImageDraw, ImageFont
 
 os.system("cls")
 
-def getPath(fileName: str):
+def get_path(files: list):
   pathCur = os.path.abspath(os.path.dirname(__file__))
-  return os.path.join(pathCur, fileName)
+  return os.path.join(pathCur, *files)
 
 def create_signature_image():
   img = Image.new('RGB', (350, 100), color=(255, 255, 255))
@@ -23,20 +23,20 @@ def create_signature_image():
   denta = (len(textFullName) // 2) - (len(textSignature) // 2)
   denta *= 10-1
   
-  pathFont = os.path.join(getPath(""), "font", "AlexBrush-Regular.ttf")
+  pathFont = get_path(["font", "AlexBrush-Regular.ttf"])
   font = ImageFont.truetype(pathFont, 30)
   d.text((110 + denta, 20), textSignature, font=font, fill=(0, 0, 0))
 
-  pathFont = os.path.join(getPath(""), "font", "Roboto-Light.ttf")
+  pathFont = get_path(["font", "Roboto-Light.ttf"])
   font = ImageFont.truetype(pathFont, 20)
   d.text((110, 60), textFullName, font=font, fill=(0, 0, 0))
 
-  fingerprint_img_path = getPath("van_tay.png")
+  fingerprint_img_path = get_path(["file", "van_tay.png"])
   fingerprint_img = Image.open(fingerprint_img_path)
   fingerprint_img = fingerprint_img.resize((80, 80))
   img.paste(fingerprint_img, (10, 10))
 
-  signature_img_path = getPath("signature_img.png")
+  signature_img_path = get_path(["file", "signature_img.png"])
   img.save(signature_img_path)
 
   return signature_img_path
@@ -67,6 +67,8 @@ def add_signature_to_pdf(input_pdf, output_pdf):
   with open(output_pdf, 'wb') as output_file:
     pdf_writer.write(output_file)
 
-add_signature_to_pdf(getPath("a.pdf"), getPath("b.pdf"))
+input = get_path(["file", "a.pdf"])
+output = get_path(["file", "b.pdf"])
+add_signature_to_pdf(input, output)
 
 print("Build done.")
