@@ -1,6 +1,6 @@
 import os
 import pikepdf  
-import fitz  # PyMuPDF
+import fitz
 
 def getPath(fileName: str):
   pathCur = os.path.abspath(os.path.dirname(__file__))

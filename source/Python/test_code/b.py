@@ -1,5 +1,1 @@
-import os
-
-os.system("cls")
-
-
+#  Đây là file a.txt
