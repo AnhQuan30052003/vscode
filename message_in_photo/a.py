@@ -1,20 +1,34 @@
-import os
-from cryptosteganography import CryptoSteganography
+import tkinter as tk
+from tkinter import filedialog
+from PIL import Image, ImageTk
 
-os.system("cls")
+def open_image():
+    # Mở hộp thoại chọn file
+    filepath = filedialog.askopenfilename(
+        filetypes=[("Image Files", "*.png")]
+    )
+    
+    if filepath:
+        # Mở ảnh đã chọn và chuyển đổi nó để hiển thị trong tkinter
+        img = Image.open(filepath)
+        img = img.resize((250, 250))  # Resize ảnh để vừa với giao diện
+        img_tk = ImageTk.PhotoImage(img)
+        
+        # Hiển thị ảnh trên giao diện
+        label.config(image=img_tk)
+        label.image = img_tk  # Lưu trữ ảnh để tránh bị xóa
 
-path_cur = os.path.abspath(os.path.dirname(__file__))
-path = os.path.join(path_cur, "avt.jpg")
-path1 = os.path.join(path_cur, "avt1.jpg")
+# Tạo cửa sổ chính
+root = tk.Tk()
+root.title("Image Viewer")
 
-# Tạo đối tượng mã hóa với khóa
-crypto_steganography = CryptoSteganography('secret-key')
+# Tạo một button để chọn ảnh
+button = tk.Button(root, text="Chọn Ảnh", command=open_image)
+button.pack(pady=20)
 
-# Mã hóa một thông điệp vào ảnh
-message = "anh quan"
-crypto_steganography.hide(path, path1, message)
-print(f"Đã giấu thông điệp: {message}")
+# Tạo label để hiển thị ảnh
+label = tk.Label(root)
+label.pack()
 
-# Giải mã thông điệp từ ảnh
-secret_message = crypto_steganography.retrieve(path1)
-print(f"Giãi mã thông điệp: {secret_message}")
+# Chạy vòng lặp chính của tkinter
+root.mainloop()
