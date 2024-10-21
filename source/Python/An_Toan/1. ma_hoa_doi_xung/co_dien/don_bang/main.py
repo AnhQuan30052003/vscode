@@ -15,6 +15,7 @@ def setupUI():
   y = (screen_height // 2) - (window_height // 2)
   root.geometry(f"{window_width}x{window_height}+{x}+{y}")
   root.title("Phá mã Mã hoá đơn bảng")
+  root.resizable(False, False)
 
 def buildFrame():
   obj = tkt.Frame(
