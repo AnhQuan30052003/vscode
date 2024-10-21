@@ -14,27 +14,28 @@ def get_path(files: list):
   return os.path.join(pathCur, *files)
 
 def create_signature_image():
-  img = Image.new('RGB', (350, 100), color=(255, 255, 255))
-  # img = Image.new('RGBA', (300, 100), color=(255, 255, 255, 0)) # màu trong suốt
+  img = Image.new('RGB', (400, 200), color=(255, 255, 255))
+  # img = Image.new('RGBA', (400, 200), color=(255, 255, 255, 0)) # màu trong suốt
   d = ImageDraw.Draw(img)
 
-  textSignature = "Quân"
+  textSignature = "Quan"
   textFullName = "Nguyễn Anh Quân"
   denta = (len(textFullName) // 2) - (len(textSignature) // 2)
-  denta *= 10-1
+  denta *= 3
   
-  pathFont = get_path(["font", "AlexBrush-Regular.ttf"])
-  font = ImageFont.truetype(pathFont, 30)
-  d.text((110 + denta, 20), textSignature, font=font, fill=(0, 0, 0))
+  # pathFont = get_path(["font", "AlexBrush-Regular.ttf"])
+  pathFont = get_path(["font", "My Everything TRIAL.ttf"])
+  font = ImageFont.truetype(pathFont, 70)
+  d.text((150 + denta, 10), textSignature, font=font, fill=(0, 0, 255))
 
   pathFont = get_path(["font", "Roboto-Light.ttf"])
   font = ImageFont.truetype(pathFont, 20)
-  d.text((110, 60), textFullName, font=font, fill=(0, 0, 0))
+  d.text((150, 140), textFullName, font=font, fill=(0, 0, 0))
 
-  fingerprint_img_path = get_path(["file", "van_tay.png"])
+  fingerprint_img_path = get_path(["file", "van_tay_red.png"])
   fingerprint_img = Image.open(fingerprint_img_path)
-  fingerprint_img = fingerprint_img.resize((80, 80))
-  img.paste(fingerprint_img, (10, 10))
+  fingerprint_img = fingerprint_img.resize((130, 130))
+  img.paste(fingerprint_img, (10, 40))
 
   signature_img_path = get_path(["file", "signature_img.png"])
   img.save(signature_img_path)
@@ -52,7 +53,7 @@ def add_signature_to_pdf(input_pdf, output_pdf):
   # Tạo một canvas tạm để thêm chữ ký
   packet = BytesIO()
   can = canvas.Canvas(packet, pagesize=letter)
-  can.drawImage(signature_img_path, 350, 100, 200, 50)
+  can.drawImage(signature_img_path, 350, 200, 200, 100)
   can.save()
 
   # Thêm chữ ký vào trang đầu tiên của PDF
