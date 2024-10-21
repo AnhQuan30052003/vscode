@@ -1,4 +1,4 @@
-import os
+import os, unicodedata
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from PyPDF2 import PdfWriter, PdfReader
@@ -9,6 +9,11 @@ from PIL import Image, ImageDraw, ImageFont
 
 os.system("cls")
 
+def remove_accents(text):
+  text = unicodedata.normalize('NFD', text)
+  text = ''.join(char for char in text if unicodedata.category(char) != 'Mn')
+  return text
+
 def get_path(files: list):
   pathCur = os.path.abspath(os.path.dirname(__file__))
   return os.path.join(pathCur, *files)
@@ -18,7 +23,8 @@ def create_signature_image():
   # img = Image.new('RGBA', (400, 200), color=(255, 255, 255, 0)) # màu trong suốt
   d = ImageDraw.Draw(img)
 
-  textSignature = "Quan"
+  textSignature = "Quân"
+  textSignature = remove_accents(textSignature)
   textFullName = "Nguyễn Anh Quân"
   denta = (len(textFullName) // 2) - (len(textSignature) // 2)
   denta *= 3
