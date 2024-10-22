@@ -26,7 +26,6 @@ pathImgRight = ""
 
 
 # Hàm xử lý
-
 # Thông báo
 def messageBox(title: str, message: str, info: bool=False, warning: bool=False):
   if info:
@@ -53,15 +52,6 @@ def decrypt():
     return
   
   decrypt_message_in_photo(pathImgRight)
-
-
-# Hiển thị nội dung
-def get_show_content(text: tkt.Text, show: bool=False):
-  if not show:
-    text.get("1.0", "end-1c")
-    pass
-  else:
-    pass
 
 # Mở file và load ảnh vào khung
 def open_file_left():
@@ -118,7 +108,7 @@ styleFrame = {
 styleButton = {
   "padx": 5,
   "pady": 5,
-  "width": 10,
+  "width": 12,
 }
 
 # left
@@ -140,7 +130,7 @@ frameButtonLeft.pack(pady=5)
 buttonChooseLeft = tkt.Button(frameButtonLeft, text="Chọn", **styleButton, command=open_file_left)
 buttonChooseLeft.pack(side="left", padx=(120, 5))
 
-buttonEncryptLeft = tkt.Button(frameButtonLeft, text="Mã hoá", **styleButton, command=encrypt)
+buttonEncryptLeft = tkt.Button(frameButtonLeft, text="Ẩn thông điệp", **styleButton, command=encrypt)
 buttonEncryptLeft.pack(side="left", padx=5)
 
 frameText = tkt.Frame(frameLeft, width=window_width, height=120)
@@ -169,7 +159,7 @@ frameButtonRight.pack(pady=5)
 buttonChooseRight = tkt.Button(frameButtonRight, text="Chọn", **styleButton, command=open_file_right)
 buttonChooseRight.pack(side="left", padx=(120, 5))
 
-buttonEncryptRight = tkt.Button(frameButtonRight, text="Giải mã", **styleButton, command=decrypt)
+buttonEncryptRight = tkt.Button(frameButtonRight, text="Hiện thông điệp", **styleButton, command=decrypt)
 buttonEncryptRight.pack(side="left", padx=5)
 
 frameText = tkt.Frame(frameRight, width=window_width, height=120)
