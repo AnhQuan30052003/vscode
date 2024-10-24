@@ -84,7 +84,7 @@ def encrypt_message_in_photo(file: str, message: str):
   secret = lsb.hide(file, message.decode("latin1"))
   fileImageOuput = fd.asksaveasfilename(defaultextension=".png")
   secret.save(fileImageOuput)
-  messageBox("Thông báo", "Mã hoá thành công", info=True)
+  messageBox("Thông báo", "Đã ẩn thông điệp.", info=True)
 
 def decrypt_message_in_photo(file: str):
   try:
